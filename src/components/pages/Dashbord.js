@@ -1,34 +1,30 @@
 import React from 'react';
-import '../css/Artworks.css';
+import '../css/Dashbord.css';
+import DashbordInfo from '../DashbordInfo';
+import DashbordData from '../DashbordData';
+import DashbordData2 from '../DashbordData2';
+import { userData } from "../../dummyData";
 import AdminNavbar from '../AdminNavbar';
+import DashbordChart from '../DashbordChart';
+
+
 
 export default function Dashbord (){
 
   
       return (
-  
-
-        <div className="A"> 
-        <AdminNavbar/>
-
-        <center>
-        <h1>De'lart Dashbord</h1></center>
-   
-       
-
-        
-          <div className='C'>
-           <img className="Photo" src='https://www.artshedonline.com.au/assets/images/easels.jpg' alt="" width="1350" height="500"></img>
-          
-        
-
-          
+            <div className="home">
+            <AdminNavbar />
+            <DashbordInfo />
+            <DashbordChart data={userData} title="User Analytics" grid dataKey="Active User"/>
+            <div className="homeWidgets">
+              <DashbordData/>
+              <DashbordData2/>
+            </div>
           </div>
-          
-          
-  
 
-</div>
+  
       );
+      
   
 }
