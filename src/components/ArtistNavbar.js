@@ -56,7 +56,16 @@ function ArtistNavbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Artist01
+              My Artworks
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link
+              to='/artistdashbord'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+            Dashbord
             </Link>
           </li>
           

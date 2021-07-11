@@ -24,7 +24,7 @@ import Customer_Artists from './components/pages/Customer_Artists';
 import Customer_Products from './components/pages/Customer_Products';
 import Customer_Pencilarts from './components/pages/Customer_Pencilarts';
 import Customer_Exhibitions from './components/pages/Customer_Exhibitions';
-
+import ArtistDashbord from './components/pages/ArtistDashbord';
 function App() {
   return (
     <Router>
@@ -53,6 +53,7 @@ function App() {
         <Route path='/customer_artists' component={Customer_Artists} />
         <Route path='/customer_pencilarts' component={Customer_Pencilarts} />
         <Route path='/customer_exhibitions' component={Customer_Exhibitions} />
+        <Route path='/artistdashbord' component={ArtistDashbord} />
        
         
       </Switch>
