@@ -77,6 +77,31 @@ export default function Artworks() {
       </CardActions>
     </Card>
     </div>
+    <div className="E">
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image="https://images.unsplash.com/photo-1551732998-9573f695fdbb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Artwork3
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Artwork description comes here...<br /><br />Rs. 3000.00
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        
+        <Button size="small" color="primary">
+          View Artwork
+        </Button>
+      </CardActions>
+    </Card>
+    </div>
     
     </div>
   );
