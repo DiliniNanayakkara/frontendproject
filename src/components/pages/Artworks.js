@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Artworks.css';
-import ArtistNavbar from '../ArtistNavbar';
+import Navbar from '../Navbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -24,7 +24,7 @@ export default function Artworks() {
 
   return (
      <div className="A"> 
-      <ArtistNavbar/>
+      <Navbar/>
 
      
     <div className="B">

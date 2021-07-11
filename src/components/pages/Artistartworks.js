@@ -1,18 +1,18 @@
 import React from 'react';
-import '../css/Artworks.css';
-import AdminNavbar from '../AdminNavbar';
+import '../css/Artistartworks.css';
+import ArtistNavbar from '../ArtistNavbar';
 
-export default function Admin02 (){
+export default function Artistartworks (){
 
   
       return (
   
 
         <div className="A"> 
-        <AdminNavbar/>
+        <ArtistNavbar/>
 
         <center>
-        <h1>De'lart Admin02</h1></center>
+        <h1>De'lart Artista pena artworks page eka. okkogema ewa thina </h1></center>
    
        
 

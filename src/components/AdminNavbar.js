@@ -43,31 +43,14 @@ function AdminNavbar() {
           
           <li className='nav-item'>
             <Link
-              to='/admin01'
+              to='/addmodarator'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Admin01
+              Add Modarator
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link
-              to='/admin02'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Admin02
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/admin03'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-            Admin03
-            </Link>
-          </li>
+        
           <li>
             <Link
               to='/'

@@ -1,19 +1,18 @@
 import React from 'react';
-import '../css/Profile.css';
-import ArtistNavbar from '../ArtistNavbar';
+import '../css/Artworks.css';
+import AdminNavbar from '../AdminNavbar';
 
-export default function Profile (){
+export default function AddModarator (){
 
   
       return (
   
 
         <div className="A"> 
-        <ArtistNavbar/>
+        <AdminNavbar/>
 
         <center>
-        <h1>De'lart Artist Profile , pages wela Profile page eka thama me thiyenne... Nav bar eka components wla ArtistsNavbar.js,
-            css eka css folder eke Profile.css eka.</h1></center>
+        <h1>De'lart add modarator</h1></center>
    
        
 

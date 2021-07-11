@@ -66,15 +66,7 @@ function Navbar() {
               Products
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link
-              to='/artists'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Artists
-            </Link>
-          </li>
+          
           <li className='nav-item'>
             <Link
               to='/login'

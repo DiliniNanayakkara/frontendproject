@@ -43,20 +43,20 @@ function ArtistNavbar() {
           
           <li className='nav-item'>
             <Link
-              to='/Profile'
+              to='/artistartworks'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Profile
+              Artworks
             </Link>
           </li>
           <li className='nav-item'>
             <Link
-              to='/Artist01'
+              to='/artistproduct'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              My Artworks
+              Products
             </Link>
           </li>
           <li className='nav-item'>

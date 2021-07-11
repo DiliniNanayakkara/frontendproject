@@ -75,6 +75,15 @@ function RegCusNavbar() {
               Artists
             </Link>
           </li>
+          <li className='nav-item'>
+            <Link
+              to='/buyerdashbord'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              BuyerDashbord
+            </Link>
+          </li>
           
           <li>
             <Link
