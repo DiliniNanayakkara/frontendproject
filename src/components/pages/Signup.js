@@ -6,6 +6,7 @@ export default function Signup() {
     <>
     <Navbar/>
       <center><h1 className='SignUp'>SignUp/Login</h1></center>
+      
     </>
   );
 }
