@@ -2,9 +2,11 @@ import React from 'react';
 import '../css/Products.css';
 import Navbar from '../Navbar';
 
+
 export default function Products (){
 
   
+
       return (
   
 
