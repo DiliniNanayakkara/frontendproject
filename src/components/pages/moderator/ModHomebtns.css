@@ -3,14 +3,18 @@
   .btn {
     padding: 8px 20px;
     border-radius: 4px;
+ 
     outline: none;
     border: none;
     font-size: 18px;
-    color: #fff;
+    color: rgb(151, 34, 34);
     cursor: pointer;
     background-color: var(--primary);
   }
   .helpcenterbtn {
+   font-size: 35px;
+    width: 400px;
+    height: 200px;
     flex: 1;
     margin: 0px 20px;
     padding: 30px;
@@ -21,12 +25,31 @@
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   }
   
-  .btn:hover {
+  .helpcenterbtn:hover {
+    background-color: brown;
     padding: 6px 18px;
     transition: all 0.3s ease-out;
-    background-color: transparent;
-    color: #fff;
+    background-color:blanchedalmond;
+    
+    
     border-radius: 4px;
     border: 2px solid var(--primary);
     transition: all 0.3s ease-out;
+  }
+  .container {
+   background-image: url('../../../assests/home.png');
+    margin-top: 20px;
+    flex: 1;
+    margin: 0px 20px;
+    width: 1250px;
+    padding: 30px;
+    border-radius: 0px;
+    background-color: rgb(196, 136, 169);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75)
+
+  }
+  .itemcontainer{
+    padding: 30px;
   }
