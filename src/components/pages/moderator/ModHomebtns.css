@@ -12,14 +12,14 @@
     background-color: var(--primary);
   }
   .helpcenterbtn {
-   font-size: 35px;
-    width: 400px;
-    height: 200px;
+   font-size: 25px;
+    width: 300px;
+    height: 100px;
     flex: 1;
     margin: 0px 20px;
     padding: 30px;
     border-radius: 10px;
-    background-color: rgb(131, 236, 82);
+    background-color: rgb(242, 245, 241);
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
@@ -29,7 +29,7 @@
     background-color: brown;
     padding: 6px 18px;
     transition: all 0.3s ease-out;
-    background-color:blanchedalmond;
+    background-color:rgb(236, 219, 84);
     
     
     border-radius: 4px;
@@ -38,6 +38,7 @@
   }
   .container {
    background-image: url('../../../assests/home.png');
+   height: 500px;
    margin-left: 100px;
     margin-top: 20px;
     flex: 1;
