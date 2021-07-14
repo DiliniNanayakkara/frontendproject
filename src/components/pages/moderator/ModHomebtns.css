@@ -38,6 +38,7 @@
   }
   .container {
    background-image: url('../../../assests/home.png');
+   margin-left: 100px;
     margin-top: 20px;
     flex: 1;
     margin: 0px 20px;
@@ -52,4 +53,5 @@
   }
   .itemcontainer{
     padding: 30px;
+    margin-left: 40px;
   }
