@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../Navbar.css';
 import {Logout} from '../../Logout';
+import { colors } from '@material-ui/core';
 
 
 function Navbar() {
@@ -38,8 +39,9 @@ function Navbar() {
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          
+        <h1 >Moderator</h1>
         <li>
+       
             <Link
               to='/'
               className='nav-links-mobile'
