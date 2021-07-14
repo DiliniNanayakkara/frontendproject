@@ -1,18 +1,19 @@
 import React from 'react';
-import '../css/Artworks.css';
-import AdminNavbar from '../AdminNavbar';
+import '../css/ArtistDashbord.css';
+import ArtistNavbar from '../ArtistNavbar';
 
-export default function Admin02 (){
+export default function Dashbord (){
 
   
       return (
   
 
         <div className="A"> 
-        <AdminNavbar/>
+        <ArtistNavbar/>
 
         <center>
-        <h1>De'lart Admin02</h1></center>
+        <h1>De'lart Artist Dashbord , pages wela Dashbord page eka thama me thiyenne... Nav bar eka components wla ArtistsNavbar.js,
+            css eka css folder eke ArtistDashbord.css eka.</h1></center>
    
        
 

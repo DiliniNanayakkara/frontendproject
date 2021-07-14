@@ -1,19 +1,31 @@
 import React, { useState } from 'react';
-import { Logout } from './Logout';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import '../../Navbar.css';
+import {Logout} from '../../Logout';
 
 
-function AdminNavbar() {
+function Navbar() {
   const [click, setClick] = useState(false);
-
+  const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
 
-  
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
 
   return (
     <>
@@ -26,32 +38,8 @@ function AdminNavbar() {
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/dashbord' className='nav-links' onClick={closeMobileMenu}>
-              Dashbord
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/users'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-            Users
-            </Link>
-          </li>
           
-          <li className='nav-item'>
-            <Link
-              to='/addmodarator'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Add Modarator
-            </Link>
-          </li>
-        
-          <li>
+        <li>
             <Link
               to='/'
               className='nav-links-mobile'
@@ -60,12 +48,12 @@ function AdminNavbar() {
               Logout
             </Link>
           </li>
-          
         </ul>
         <Logout />
+       
       </nav>
     </>
   );
 }
 
-export default AdminNavbar;
+export default Navbar;

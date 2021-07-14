@@ -1,34 +1,108 @@
 import React from 'react';
 import '../css/Artworks.css';
 import Navbar from '../Navbar';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
-export default function Artworks (){
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
+});
 
-  
-      return (
-  
+export default function Artworks() {
+  const classes = useStyles();
 
-        <div className="A"> 
-        <Navbar/>
+  return (
+     <div className="A"> 
+      <Navbar/>
 
-        <center>
-        <h1>De'lart ArtWorks page</h1></center>
-   
-       
-
+     
+    <div className="B">
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image="https://images.unsplash.com/photo-1580089056071-11f31b94fefe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80"
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Artwork1
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Artwork description comes here...<br /><br />Rs. 4500.00
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
         
-          <div className='C'>
-           <img className="Photo" src='https://www.artshedonline.com.au/assets/images/easels.jpg' alt="" width="1350" height="500"></img>
-          
+        <Button size="small" color="primary">
+          View Artwork
+        </Button>
+      </CardActions>
+    </Card>
+    </div>
+    <div className="D">
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image="https://images.unsplash.com/photo-1559102877-4a2cc0e37fce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=652&q=80"
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Artwork2
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Artwork description comes here...<br /><br />Rs. 3500.00
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
         
-
-          
-          </div>
-          
-          
-  
-
-</div>
-      );
-  
+        <Button size="small" color="primary">
+          View Artwork
+        </Button>
+      </CardActions>
+    </Card>
+    </div>
+    <div className="E">
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          className={classes.media}
+          image="https://images.unsplash.com/photo-1551732998-9573f695fdbb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Artwork3
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Artwork description comes here...<br /><br />Rs. 3000.00
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        
+        <Button size="small" color="primary">
+          View Artwork
+        </Button>
+      </CardActions>
+    </Card>
+    </div>
+    
+    </div>
+  );
 }

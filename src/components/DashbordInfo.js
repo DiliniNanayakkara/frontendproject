@@ -5,34 +5,34 @@ export default function FeaturedInfo() {
   return (
     <div className="featured">
       <div className="featuredItem">
-        <span className="featuredTitle">Revanue</span>
+        <span className="featuredTitle">System Users</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">$2,415</span>
+          <span className="featuredMoney">238</span>
           <span className="featuredMoneyRate">
-            -11.4 <ArrowDownward  className="featuredIcon negative"/>
+            +31 New Users<ArrowUpward className="featuredIcon"/>
           </span>
         </div>
-        <span className="featuredSub">Compared to last month</span>
+        <span className="featuredSub">3min ago joined last user</span>
       </div>
       <div className="featuredItem1">
-        <span className="featuredTitle">Sales</span>
+        <span className="featuredTitle">Orders</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">$4,415</span>
+          <span className="featuredMoney">34</span>
           <span className="featuredMoneyRate">
-            -1.4 <ArrowDownward className="featuredIcon negative"/>
+          -2 <ArrowDownward className="featuredIcon negative"/>
           </span>
         </div>
         <span className="featuredSub">Compared to last month</span>
       </div>
       <div className="featuredItem2">
-        <span className="featuredTitle">Cost</span>
+        <span className="featuredTitle"></span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">$2,225</span>
+          <span className="featuredMoney">Reports</span>
           <span className="featuredMoneyRate">
-            +2.4 <ArrowUpward className="featuredIcon"/>
+          
           </span>
         </div>
-        <span className="featuredSub">Compared to last month</span>
+        <span className="featuredSub">Include progress compared to last month</span>
       </div>
     </div>
   );
