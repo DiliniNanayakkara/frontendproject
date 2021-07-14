@@ -67,13 +67,6 @@ function App() {
         <Route path='/customized_artist' component={Customized_Artist} />
         <Route path='/artist_profile' component={Artist_Profile} />
         <Route path='/customer_profile' component={Customer_Profile} />
-<<<<<<< HEAD
-       
-       
-=======
-        <Route path='/admin_profile' component={Admin_Profile} />
-
->>>>>>> 9a131bedcc3cd346997abcf1266b8d7ee04aab45
         
       </Switch>
     </Router>
