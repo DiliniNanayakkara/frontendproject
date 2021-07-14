@@ -24,6 +24,8 @@ import Customer_Exhibitions from './components/pages/Customer_Exhibitions';
 import ArtistDashbord from './components/pages/ArtistDashbord';
 import BuyerDashbord from './components/pages/BuyerDashbord';
 import ModeratorHome from './components/pages/moderator/ModeratorHome';
+import HelpCenter from './components/pages/moderator/HelpCenter';
+import Advertiesment from  './components/pages/moderator/Advertiesment';
 function App() {
   return (
     <Router>
@@ -52,6 +54,8 @@ function App() {
         <Route path='/artistdashbord' component={ArtistDashbord} />
         <Route path='/buyerdashbord' component={BuyerDashbord} />
         <Route path='/moderatorHome' component={ModeratorHome} />
+        <Route path='/helpcenter' component={HelpCenter} />
+        <Route path='/advertiesment' component={Advertiesment} />
        
         
       </Switch>
