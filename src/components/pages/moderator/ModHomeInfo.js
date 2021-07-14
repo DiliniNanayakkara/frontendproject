@@ -10,7 +10,7 @@ export default function ModHomeInfo() {
       <button className='helpcenterbtn'>Help Center</button>
     </Link>
 
-    <Link to='signup'>
+    <Link to='reports'>
       <button className='helpcenterbtn'>Reports</button>
     </Link>
 

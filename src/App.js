@@ -26,6 +26,7 @@ import BuyerDashbord from './components/pages/BuyerDashbord';
 import ModeratorHome from './components/pages/moderator/ModeratorHome';
 import HelpCenter from './components/pages/moderator/HelpCenter';
 import Advertiesment from  './components/pages/moderator/Advertiesment';
+import Reports from './components/pages/moderator/Reports';
 function App() {
   return (
     <Router>
@@ -56,6 +57,7 @@ function App() {
         <Route path='/moderatorHome' component={ModeratorHome} />
         <Route path='/helpcenter' component={HelpCenter} />
         <Route path='/advertiesment' component={Advertiesment} />
+        <Route path='/reports' component={Reports} />
        
         
       </Switch>
