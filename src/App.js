@@ -27,6 +27,12 @@ import ModeratorHome from './components/pages/moderator/ModeratorHome';
 import HelpCenter from './components/pages/moderator/HelpCenter';
 import Advertiesment from  './components/pages/moderator/Advertiesment';
 import Reports from './components/pages/moderator/Reports';
+import Customized_Artist from './components/pages/Customized_Artist';
+import Artist_Profile from './components/pages/Artist_Profile';
+import Customer_Profile from './components/pages/Customer_Profile';
+import Admin_Profile from './components/pages/Admin_Profile';
+
+
 function App() {
   return (
     <Router>
@@ -58,7 +64,11 @@ function App() {
         <Route path='/helpcenter' component={HelpCenter} />
         <Route path='/advertiesment' component={Advertiesment} />
         <Route path='/reports' component={Reports} />
-       
+        <Route path='/customized_artist' component={Customized_Artist} />
+        <Route path='/artist_profile' component={Artist_Profile} />
+        <Route path='/customer_profile' component={Customer_Profile} />
+        <Route path='/admin_profile' component={Admin_Profile} />
+
         
       </Switch>
     </Router>
