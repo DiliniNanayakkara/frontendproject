@@ -18,7 +18,7 @@ export default function ModHomeInfo() {
       <button className='helpcenterbtn'>Manege Advertiesment</button>
     </Link>
 
-    <Link to='signup'>
+    <Link to='/complaints'>
       <button className='helpcenterbtn'>Complaints Handle</button>
     </Link>
 
