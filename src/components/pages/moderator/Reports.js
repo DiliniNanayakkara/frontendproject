@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import NewUsersChart from './NewUsersChart';
+import './ReportHomePage.css';
 
 
 
@@ -13,49 +14,35 @@ export default function Dashbord (){
 
   
       return (
-            <div className="home">
+        <div>
             <ModeratorNavbar />
-            <div>
+     
       
       <div className="itemcontainer">
     
-    <Link to='/newuserchart'>
-       <button className='helpcenterbtn'>Newly registered users</button>
+     <Link to='/newuserchart'>
+       <button className='reportitembtn'>Newly registered users</button>
      </Link>
-
-    
-             
+              
       <Link to='reports'>
-       <button className='helpcenterbtn'>Products</button>
+       <button className='reportitembtn'>Products</button>
      </Link>
-     </div>
-    </div>
-             
-  
- 
-
-   
-      <div className="itemcontainer">
-             
+    
       <Link to='advertiesment' >
-       <button className='helpcenterbtn'>Return</button>
-     </Link>
-       
-            
-             
+       <button className='reportitembtn'>Sold ArtWorks</button>
+     </Link> 
+     
+
       
      <Link to='/complaints'>
-       <button className='helpcenterbtn'>Complaints Handle</button>
-     </Link>
-       
-             </div>
-     
- 
+       <button className='reportitembtn'>Recied Artworks</button>
+     </Link>  
+     <Link to='/complaints'>
+       <button className='reportitembtn'>Return</button>
+     </Link>      
     
-           
-           
-           
-          </div>
+  </div>
+</div>
 
   
       );
