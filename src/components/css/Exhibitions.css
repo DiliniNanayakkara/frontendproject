@@ -1,3 +1,130 @@
 .C {
     margin-top: 20px;
 }
+.exhibition {
+    width: 900px;
+    height: 800px;
+    
+    background-color:rgb(255, 255, 255);
+    margin-top:20px;
+    box-shadow: 0 4px 8px 0 rgb(7, 115, 148), 0 6px 20px 0 rgba(5, 77, 145, 0.288);
+    border-radius:2%;
+}
+.Photo {
+    box-shadow: 0 4px 8px 0 rgb(88, 78, 78), 0 6px 20px 0 rgba(209, 8, 8, 0.288);
+}
+.button1 {
+ 
+    background-color: #ec0d0d;
+    border: none;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ margin: 4px 2px;
+    cursor: pointer;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .closed {
+    background-color: #ec0d0d;
+    border: none;
+    color: white;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ margin: 4px 2px;
+    cursor: pointer;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .A1 {
+      color:#f73030;
+  }
+  .B {
+      color:rgb(110, 109, 109);
+  }
+  .buy1 {
+    background-color: #290101;
+    border: none;
+    color: white;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ 
+    cursor: pointer;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .notavailable {
+    background-color: #290101;
+    border: none;
+    color: white;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ 
+    cursor: pointer;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .watch {
+    background-color: #ec0d0d;
+    border: none;
+    color: white;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ margin: 4px 2px;
+    cursor: pointer;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+ 
+.exhibition h2 {
+    margin:20px;
+    
+}
+.event {
+    width: 880px;
+    height: 600px;
+    margin:10px;
+    background-color: aliceblue;
+    
+  
+    
+    
+
+}
+.status {
+    width: 95%;
+    margin-top: 50px;
+   
+    box-shadow: 0 4px 8px 0 rgba(3, 80, 143, 0.76), 0 6px 20px 0 rgba(15, 156, 212, 0.164);
+    border-radius:5%;
+}
+.status th {
+    background-color:white;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius:5%;
+}
+.status td p {
+    color:rgb(110, 109, 109);
+}
+.status td {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius:5%;
+}
