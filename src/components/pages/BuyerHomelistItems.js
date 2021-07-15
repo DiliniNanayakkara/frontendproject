@@ -13,28 +13,54 @@ import StarIcon from "@material-ui/icons/Star";
 import SendIcon from "@material-ui/icons/Send";
 import ImageIcon from "@material-ui/icons/Image";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
+import { NavLink, Route } from "react-router-dom";
 
 export const mainListItems = (
   <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Home" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItem>
+    <NavLink
+      to="./"
+      activeStyle={{
+        fontWeight: "normal",
+        color: "black",
+      }}
+    >
+      <ListItem button>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home" />
+      </ListItem>
+    </NavLink>
 
-    <ListItem button>
-      <ListItemIcon>
-        <InboxIcon />
-      </ListItemIcon>
-      <ListItemText primary="Advertisements" />
-    </ListItem>
+    <NavLink
+      to=""
+      activeStyle={{
+        fontWeight: "normal",
+        color: "black",
+      }}
+    >
+      <ListItem button>
+        <ListItemIcon>
+          <ShoppingCartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Orders" />
+      </ListItem>
+    </NavLink>
+
+    <NavLink
+      to="./exhibitions"
+      activeStyle={{
+        fontWeight: "normal",
+        color: "black",
+      }}
+    >
+      <ListItem button>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary="Exhibitions" />
+      </ListItem>
+    </NavLink>
   </div>
 );
 
