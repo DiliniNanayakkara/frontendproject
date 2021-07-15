@@ -40,32 +40,21 @@ function Navbar() {
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           
         <li className='nav-item'>
-            <Link
-              to='/moderatorHome'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Modetrator
-            </Link>
+           
           </li>
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
               Home
             </Link>
           </li>
-          <li
-            className='nav-item'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          >
+          <li className='nav-item'>
             <Link
-              to='/artworks'
+              to='/Artworks'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Artworks <i className='fas fa-caret-down' />
+              Artworks
             </Link>
-            {dropdown && <Dropdown />}
           </li>
           <li className='nav-item'>
             <Link
