@@ -13,12 +13,12 @@
 .Photo {
     box-shadow: 0 4px 8px 0 rgb(88, 78, 78), 0 6px 20px 0 rgba(209, 8, 8, 0.288);
 }
-.button1 {
+.butto1 {
  
     background-color: #ec0d0d;
     border: none;
     color: white;
-    
+    padding:10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

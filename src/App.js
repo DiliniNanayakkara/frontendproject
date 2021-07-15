@@ -31,6 +31,8 @@ import Customized_Artist from './components/pages/Customized_Artist';
 import Artist_Profile from './components/pages/Artist_Profile';
 import Customer_Profile from './components/pages/Customer_Profile';
 import Complaints from './components/pages/moderator/Complaints';
+import Customizeart from './components/pages/Customizeart';
+import Createexhibition from './components/pages/Createexhibition';
 
 
 
@@ -69,6 +71,8 @@ function App() {
         <Route path='/artist_profile' component={Artist_Profile} />
         <Route path='/customer_profile' component={Customer_Profile} />
         <Route path='/complaints' component={Complaints} />
+        <Route path='/createexhibition' component={Createexhibition} />
+        <Route path='/customizeart' component={Customizeart} />
         
       </Switch>
     </Router>

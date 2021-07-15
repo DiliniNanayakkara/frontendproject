@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/Exhibitions.css';
 import Navbar from '../Navbar';
+import { Link } from 'react-router-dom';
+
 export default function Exhibitions (){
 
   
@@ -29,7 +31,7 @@ export default function Exhibitions (){
 <td>Nimaya</td>
 <td><h2 className="A1">Happening Now</h2><p>Historical Art Exhibition.Available Arts:2000</p></td>
 <td className="B">200LKR</td>
-<td><button className="closed">closed</button></td>
+<td>closed</td>
 <td><button className="watch">Watch</button></td>
 
 
@@ -61,7 +63,13 @@ export default function Exhibitions (){
   </center>
  
                  </div>
-                 <center><button className="button1">Create Exhibition</button></center>
+                 <center>
+                     
+                       <Link to = '/'>
+                       <button className="butto1">Create Exhibition</button>
+                       </Link>
+                      
+                       </center>
                 
 
            </div>
