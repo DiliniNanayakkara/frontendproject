@@ -11,12 +11,12 @@ const state = {
       backgroundColor: 'rgba(75,192,192,1)',
       borderColor: 'rgba(0,0,0,1)',
       borderWidth: 2,
-      data: [30, 29, 80, 11, 56]
+      data: [10, 29, 15, 11, 56]
     }
   ]
 }
 
-export default class ProductChart extends React.Component {
+export default class SoldArtworks extends React.Component {
   render() {
     return (
       <div className="itemcontainer" >

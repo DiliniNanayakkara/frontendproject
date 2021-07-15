@@ -28,12 +28,10 @@ export default function Dashbord (){
        <button className='reportitembtn'>Products</button>
      </Link>
     
-      <Link to='advertiesment' >
+      <Link to='/soldartworksreport' >
        <button className='reportitembtn'>Sold ArtWorks</button>
      </Link> 
-     
-
-      
+          
      <Link to='/complaints'>
        <button className='reportitembtn'>Recied Artworks</button>
      </Link>  

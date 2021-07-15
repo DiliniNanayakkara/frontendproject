@@ -33,7 +33,7 @@ import Customer_Profile from './components/pages/Customer_Profile';
 import Complaints from './components/pages/moderator/Complaints';
 import NewUsersChart from './components/pages/moderator/NewUsersChart';
 import ProductChart from './components/pages/moderator/ProductsChart';
-
+import SoldArtworks from './components/pages/moderator/SoldArtworks';
 
 
 function App() {
@@ -73,6 +73,7 @@ function App() {
         <Route path='/complaints' component={Complaints} />
         <Route path='/newuserchart' component={NewUsersChart} />
         <Route path='/productchart' component={ProductChart} />
+        <Route path='/soldartworksreport' component={SoldArtworks} />
 
         
       </Switch>
