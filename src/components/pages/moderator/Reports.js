@@ -24,7 +24,7 @@ export default function Dashbord (){
        <button className='reportitembtn'>Newly registered users</button>
      </Link>
               
-      <Link to='reports'>
+      <Link to='productchart'>
        <button className='reportitembtn'>Products</button>
      </Link>
     

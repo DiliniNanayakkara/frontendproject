@@ -32,6 +32,7 @@ import Artist_Profile from './components/pages/Artist_Profile';
 import Customer_Profile from './components/pages/Customer_Profile';
 import Complaints from './components/pages/moderator/Complaints';
 import NewUsersChart from './components/pages/moderator/NewUsersChart';
+import ProductChart from './components/pages/moderator/ProductsChart';
 
 
 
@@ -71,6 +72,8 @@ function App() {
         <Route path='/customer_profile' component={Customer_Profile} />
         <Route path='/complaints' component={Complaints} />
         <Route path='/newuserchart' component={NewUsersChart} />
+        <Route path='/productchart' component={ProductChart} />
+
         
       </Switch>
     </Router>
