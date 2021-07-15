@@ -11,7 +11,7 @@ export default function ModHomeInfo() {
    
     <div>
       
-      <div className="itemcontainer">
+      <div>
     
     <Link to='/helpcenter'>
        <button className='helpcenterbtn'>Help Center</button>
@@ -23,13 +23,9 @@ export default function ModHomeInfo() {
        <button className='helpcenterbtn'>Reports</button>
      </Link>
      </div>
-    </div>
-             
-  
- 
-
-   
-      <div className="itemcontainer">
+    </div>          
+    
+      <div >
              
       <Link to='advertiesment' >
        <button className='helpcenterbtn'>Manege Advertiesment</button>
