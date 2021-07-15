@@ -18,7 +18,7 @@ import { NavLink, Route } from "react-router-dom";
 export const mainListItems = (
   <div>
     <NavLink
-      to="./"
+      to="./c_home"
       activeStyle={{
         fontWeight: "normal",
         color: "black",
@@ -33,7 +33,7 @@ export const mainListItems = (
     </NavLink>
 
     <NavLink
-      to=""
+      to="/customer_home"
       activeStyle={{
         fontWeight: "normal",
         color: "black",
@@ -48,7 +48,7 @@ export const mainListItems = (
     </NavLink>
 
     <NavLink
-      to="./exhibitions"
+      to="./customer_exhibitions"
       activeStyle={{
         fontWeight: "normal",
         color: "black",

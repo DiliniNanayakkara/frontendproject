@@ -13,7 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
 import '../../App.css';
-import AdminNavbar from '../AdminNavbar';
+
 
 // export default function Login() {
 //   return (
@@ -67,7 +67,7 @@ export default function Customized_Artist() {
     return (
 
       <>
-          <AdminNavbar/>
+         
       
 
        
@@ -127,7 +127,7 @@ export default function Customized_Artist() {
                 required
                 fullWidth
                 id="Publish Date"
-                label="Publish Date"
+                label="Deadline"
                 name="Publish Date"
                 autoComplete="Publish Date"
                 // autoFocus
@@ -144,14 +144,12 @@ export default function Customized_Artist() {
                 color="primary"
                 className={classes.submit}
               >
-                Create Exhibitions
+                Submit
               </Button>
               <Grid container>
                
                  <Grid item>
-                  <Link to="/pencilarts" variant="body2">
-                    {"Don't Customize Pencile art? Back"}
-                  </Link>
+                 
                 </Grid> 
               </Grid>
               <Box mt={5}>

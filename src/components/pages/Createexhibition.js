@@ -160,9 +160,7 @@ export default function Customized_Artist() {
               <Grid container>
                
                  <Grid item>
-                  <Link to="/exhibitions" variant="body2">
-                    {"Don't Create an Exhibition? Back"}
-                  </Link>
+                 
                 </Grid> 
               </Grid>
               <Box mt={5}>

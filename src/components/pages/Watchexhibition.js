@@ -93,12 +93,7 @@ export default function SignIn() {
             Watch Now
           </Button>
           <Grid container>
-           
-            <Grid item>
-              <Link href="/exhibitions" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
-            </Grid>
+    
           </Grid>
         </form>
       </div>
