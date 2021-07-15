@@ -15,13 +15,13 @@ import Typography from '@material-ui/core/Typography';
 
 
 export default function Artworks() {
-  const [artworkList, setArtworkList] = useState([]);
+  const [drawingsList, setDrawingsList] = useState([]);
   const [click, setClick] = useState(false);
   
   const closeMobileMenu = () => setClick(false);
   useEffect(() => {
-    axios.get('http://localhost:3001/products').then((response) => {
-           setArtworkList(response.data);
+    axios.get('http://localhost:3001/drawings').then((response) => {
+           setDrawingsList(response.data);
     });
 }, []);
 
@@ -33,7 +33,7 @@ export default function Artworks() {
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li className='item'>
             <Link
-              to='/products'
+              to='/artworks'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -42,52 +42,55 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/productsbrushes'
+              to='/artworkshistorical'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-            Brushes
+            Historical
             </Link>
           </li>
           <li className='item'>
             <Link
-              to='/productscanvas'
+              to='/artworksdrawing'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-            Art Boards & Canvas
+            Drawings
             </Link>
           </li>
           <li className='item'>
             <Link
-              to='/productssupplies'
+              to='/artworksfineart'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-            Painting Supplies
+            Fine Arts
             </Link>
           </li>
           <li className='item'>
             <Link
-              to='/productseasels'
+              to='/artworkspainting'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-            Easels
+            Paintings
             </Link>
           </li>
+          
+          
         </ul>
       </nav>
   
   
       <div>
               
-              {artworkList.map((val) => {
+              {drawingsList.map((val) => {
                     return <div className = "Arts"> 
-                          <div className="img"><img src="https://media.istockphoto.com/photos/paint-brushes-picture-id510006691?s=612x612"></img></div> 
-                          <div className="name"> {val.tool_name}</div> 
-                          <div className="price">Rs. {val.tool_price}.00</div>
-                          <button className="but">View Product <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                          <div className="img"> <img src="https://www.creativeboom.com/uploads/articles/a4/a40eeac492a143d5bb34412dfe8f275a8834e41c_810.jpg"></img></div> 
+                          <div className="name"> {val.artwork_name}</div> 
+                          <div className="des"> {val.artwork_category} , {val.artwork_description}</div>
+                          <div className="price">Rs. {val.artwork_price}.00</div>
+                          <button className="but">View Artwork <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                   </div>;
               })}
               

@@ -3,7 +3,16 @@ import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Artworks from './components/pages/Artworks';
+import ArtworksDetail from './components/pages/ArtworkDetail';
+import ArtworksDrawing from './components/pages/ArtworksDrawing';
+import ArtworksPainting from './components/pages/ArtworksPainting';
+import ArtworksHistorical from './components/pages/ArtworksHistorical';
+import ArtworksFineart from './components/pages/ArtworksFineart';
 import Products from './components/pages/Products';
+import ProductsBrushes from './components/pages/ProductsBrushes';
+import ProductsCanvas from './components/pages/ProductsCanvas';
+import ProductsSupplies from './components/pages/ProductsSupplies';
+import ProductsEasels from './components/pages/ProductsEasels';
 import Signup from './components/pages/Signup';
 import Login from './components/pages/Login';
 import Pencilarts from './components/pages/Pencilarts';
@@ -43,7 +52,16 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/products' component={Products} />
+        <Route path='/productsbrushes' component={ProductsBrushes} />
+        <Route path='/productscanvas' component={ProductsCanvas} />
+        <Route path='/productssupplies' component={ProductsSupplies} />
+        <Route path='/productseasels' component={ProductsEasels} />
         <Route path='/artworks' component={Artworks} />
+        <Route path='/artworkdetail' component={ArtworksDetail} />
+        <Route path='/artworksdrawing' component={ArtworksDrawing} />
+        <Route path='/artworkspainting' component={ArtworksPainting} />
+        <Route path='/artworkshistorical' component={ArtworksHistorical} />
+        <Route path='/artworksfineart' component={ArtworksFineart} />
         <Route path='/signup' component={Signup} />
         <Route path='/login' component={Login} />
         <Route path='/pencilarts' component={Pencilarts} />

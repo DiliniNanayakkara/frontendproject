@@ -20,7 +20,7 @@ export default function Artworks() {
   
   const closeMobileMenu = () => setClick(false);
   useEffect(() => {
-    axios.get('http://localhost:3001/products').then((response) => {
+    axios.get('http://localhost:3001/supplies').then((response) => {
            setArtworkList(response.data);
     });
 }, []);

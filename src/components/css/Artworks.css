@@ -13,3 +13,71 @@
     margin-top: 50px;
     margin-left: 500px;
 }
+.Arts{
+    width: 30%;
+    height: 300px;
+    margin-left: 20px;
+    margin: 20px;
+    float: left;
+    background-color:beige;
+    
+  }
+  .img img{
+      margin-left: 5px;
+      margin-top: 5px;
+      width: 400px;
+      height:180px;
+  }
+  .name{
+      margin-left: 35px;
+      margin-top: 6px;
+      font-weight: 600;
+      font-size: 17px;
+  }
+  .des{
+      font-size: 13px;
+      margin-left: 35px;
+      margin-top: 5px;
+  }
+  .price{
+    font-size: 15px;
+    margin-top:5px;
+    margin-left: 310px;
+}
+.but{
+    margin-top: 0px;
+    color: black;
+    margin-left: 35px;
+    background-color: beige;
+    opacity: 1;
+    border: 2px solid #555555;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.but:hover {
+    background-color: #555555;
+    color: white;
+  }
+  .nav{
+      margin-top: 30px;
+      background:rgb(173, 115, 115);
+      opacity:0.6;
+      height: 40px;
+      width: 100%;
+  }
+  .nav .item{
+      margin-top: 6px;
+      font-size: 20px;
+      float: left;
+      color: black;
+      margin-left: 50px;
+  }
+  
+  .nav-links:hover {
+    background-color:black;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+  }
