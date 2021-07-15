@@ -1,5 +1,5 @@
 import React, {useState, useEffect }from 'react';
-import '../css/Artworks.css';
+import '../css/Products.css';
 import Navbar from '../Navbar';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
