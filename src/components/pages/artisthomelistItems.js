@@ -13,6 +13,9 @@ import StarIcon from "@material-ui/icons/Star";
 import SendIcon from "@material-ui/icons/Send";
 import ImageIcon from "@material-ui/icons/Image";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
+import { useHistory } from "react-router-dom";
+import { Link } from "@material-ui/core";
+import { NavLink, Route } from "react-router-dom";
 
 export const mainListItems = (
   <div>
@@ -28,12 +31,21 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Orders" />
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ImageIcon />
-      </ListItemIcon>
-      <ListItemText primary="portofolio" />
-    </ListItem>
+
+    <NavLink
+      to="./portofolio"
+      activeStyle={{
+        fontWeight: "normal",
+        color: "black",
+      }}
+    >
+      <ListItem button>
+        <ListItemIcon>
+          <ImageIcon />
+        </ListItemIcon>
+        <ListItemText primary="portofolio" />
+      </ListItem>
+    </NavLink>
 
     <ListItem button>
       <ListItemIcon>
