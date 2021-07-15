@@ -74,7 +74,7 @@ import Portofolio from "./components/pages/Portofolio";
 // import Complaints from "./components/pages/moderator/Complaints";
 import Customizeart from "./components/pages/Customizeart";
 import Createexhibition from "./components/pages/Createexhibition";
-
+import Watchexhibition from "./components/pages/Watchexhibition";
 
 function App() {
   return (
@@ -151,6 +151,7 @@ function App() {
         {/* <Route path="/complaints" component={Complaints} /> */}
         <Route path="/createexhibition" component={Createexhibition} />
         <Route path="/customizeart" component={Customizeart} />
+        <Route path="/watchexhibition" component={Watchexhibition} />
 
       </Switch>
     </Router>

@@ -32,7 +32,9 @@ export default function Exhibitions (){
 <td><h2 className="A1">Happening Now</h2><p>Historical Art Exhibition.Available Arts:2000</p></td>
 <td className="B">200LKR</td>
 <td>closed</td>
-<td><button className="watch">Watch</button></td>
+<td><Link to ='/watchexhibition'>
+<button className="watch">Watch</button>
+</Link></td>
 
 
 </tr>
@@ -65,7 +67,7 @@ export default function Exhibitions (){
                  </div>
                  <center>
                      
-                       <Link to = '/'>
+                       <Link to = '/createexhibition'>
                        <button className="butto1">Create Exhibition</button>
                        </Link>
                       
