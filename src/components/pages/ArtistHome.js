@@ -127,11 +127,6 @@ export default function Dashboard() {
   const handleDrawerOpen = () => {
     setOpen(true);
   };
-  const history = useHistory();
-
-  const routePortofolio = () => {
-    history.push("/potofolio");
-  };
 
   const handleDrawerClose = () => {
     setOpen(false);

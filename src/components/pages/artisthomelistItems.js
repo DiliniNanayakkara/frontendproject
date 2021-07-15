@@ -19,12 +19,29 @@ import { NavLink, Route } from "react-router-dom";
 
 export const mainListItems = (
   <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Home" />
-    </ListItem>
+    <NavLink
+      to="./"
+      activeStyle={{
+        fontWeight: "normal",
+        color: "black",
+      }}
+    >
+      <ListItem button>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home" />
+      </ListItem>
+    </NavLink>
+
+    <NavLink
+      to="./orders"
+      activeStyle={{
+        fontWeight: "normal",
+        color: "black",
+      }}
+    ></NavLink>
+
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
@@ -47,12 +64,20 @@ export const mainListItems = (
       </ListItem>
     </NavLink>
 
-    <ListItem button>
-      <ListItemIcon>
-        <InboxIcon />
-      </ListItemIcon>
-      <ListItemText primary="Upload artworks" />
-    </ListItem>
+    <NavLink
+      to="./orders"
+      activeStyle={{
+        fontWeight: "normal",
+        color: "black",
+      }}
+    >
+      <ListItem button>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary="Upload artworks" />
+      </ListItem>
+    </NavLink>
   </div>
 );
 
