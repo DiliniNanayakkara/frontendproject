@@ -19,7 +19,7 @@ const state = {
 export default class SoldArtworks extends React.Component {
   render() {
     return (
-      <div className="itemcontainer" >
+      <div  >
         <Bar
           data={state}
           options={{

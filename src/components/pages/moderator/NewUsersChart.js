@@ -19,7 +19,7 @@ const state = {
 export default class NewUsersChart extends React.Component {
   render() {
     return (
-      <div className="itemcontainer" >
+      <div >
         <Bar
           data={state}
           options={{

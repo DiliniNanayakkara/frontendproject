@@ -1,0 +1,27 @@
+.helpcontainer{
+    background-image: url('../../../assests/helpcenterhome.jpg');
+    background-repeat: no-repeat;
+    background-size: 600px 600px;
+     margin-top: 20px;
+     flex: 1;
+     margin: 0px 20px;
+     width: 1250px;
+     height: 500px;
+     padding: 30px;
+     border-radius: 0px;
+     background-color: rgb(95, 14, 102);
+     cursor: pointer;
+     -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75)
+}
+.helpwelcom{
+    padding: 0%;
+}
+
+
+.helpbtnsubmit{
+    padding: 20px;
+    margin-left: 700px;
+    width: 400px;
+    margin-top: 20px;
+}
