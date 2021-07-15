@@ -76,3 +76,30 @@
     border-radius: 4px;
     transition: all 0.2s ease-out;
   }
+  .footer{
+    width: 100%;
+    height:425px;
+    background-color:black;
+    margin-top: 1500px;
+  }
+  .footercard {
+    background-color: black;
+    height:400px;
+    width: 24%;
+    float:left;
+    margin: 0.5%;
+  
+  }
+  .footercard h1 {
+    color:white;
+    margin-left:50px;
+  }
+  .footercard h3 {
+    color:white;
+    margin-left:50px;
+  }
+  .footercard p {
+    color:white;
+    margin-top: 2px;
+    margin-left:50px;
+  }
