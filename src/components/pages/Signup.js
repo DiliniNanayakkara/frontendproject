@@ -90,12 +90,12 @@ export default function Registration() {
 
   return (
     <>
-      <Navbar />
+      {/*} <Navbar />
       <center>
         <h1 className="SignUp">SignUp/Login</h1>
       </center>
 
-      <Navbar />
+  <Navbar />*/}
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success">
           This is a success message!

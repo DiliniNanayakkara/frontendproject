@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/Home.css';
 import Navbar from '../Navbar';
-import home  from '../../assests/home.png';
 export default function Home (){
   
   
@@ -11,10 +10,6 @@ export default function Home (){
 
         <div className="A"> 
         <Navbar />
-        
-   
-       
-
         <center>
           <div className='C'>
            <center><img className="Photo" src= { require('../../assests/home.png').default} alt="" width="1200" height="334"></img>
@@ -149,32 +144,27 @@ If you find an artwork that interests you, do contact us and ask more. We are ha
         
         </div>
         <div className="footercard">
-        <h3>Contact Us</h3>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
+        <h3>Are you an Artist</h3>
+          <p>How to join Delart</p>
+          <p>Login for Artist</p>
+          <p>Art Gallery</p>
+          <h3>Are you an Buyer</h3>
+          <p>How to join Delart</p>
+          <p>Login for Buyer</p>
+          <p>Art Gallery</p>
+          <p>Artists</p>
+         
+         
         </div>
         <div className="footercard">
-        <h3>Contact Us</h3>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
-          <p>Contact Us</p>
+        <h3>Sign Up</h3>
+          <p>Artist can usr this system for sell their Artworks.Buyers can purches Artworks.
+            First SignUp ! it's Free!
+          </p>
+          <center><div className="fbutton">SignUp</div></center>
         </div>
         </div>
        
-
 </div>
       );
   

@@ -1,15 +1,10 @@
-.C {
-    margin-top: 20px;
-    width:1200px;
-
-}
-.photo {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+.C p {
+    margin-left:100px;
+    margin-right:100px;
 }
 .footercard {
   background-color: black;
-  height:500px;
+  height:400px;
   width: 24%;
   float:left;
   margin: 0.5%;
@@ -56,6 +51,22 @@
     border-radius:50%;
     margin-top: 150px;
     float:left;
+}
+.fbutton {
+    background-color: #ec0d0d;
+    
+    margin-top:100px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.822), 0 6px 20px 0 rgba(255, 254, 254, 0.76);
+
 }
 .button {
  
@@ -165,7 +176,7 @@
   }
   .XY {
    
-    margin-top:100px;
+    margin-top:150px;
      box-shadow: 0 4px 8px 0 rgba(226, 11, 11, 0.2), 0 6px 20px 0 rgba(228, 13, 13, 0.19);
      color:rgb(187, 9, 9);
      position: relative;

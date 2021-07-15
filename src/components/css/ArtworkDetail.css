@@ -1,0 +1,43 @@
+.detailimg{
+    width:600px;
+    margin-left: 120px;
+    margin-top: 100px;
+    float: left;
+}
+.proname{
+    float: left;
+    margin-left: 100px;
+    margin-top: 80px;
+    font-size: 18px;
+   
+}
+.detailimg2{
+    width:100px;
+    
+    margin-top: 40px;
+    float: left;
+}
+.detailimg3{
+    width:100px;
+    opacity: 0.4;
+    margin-left: 20px;
+    margin-top: 40px;
+    float: left;
+}
+.quantity{
+    float: left;
+    margin-top: 30px;
+    
+}
+.quantity2{
+    float: left;
+    margin-top: 100px;
+    width: 150px;
+    height:50px;
+    font-size: 17px;
+    margin-right: 100px;
+}
+.cartbtn{
+    float: left;
+    margin-top: 80px;
+}
