@@ -36,6 +36,7 @@ import NewUsersChart from './components/pages/moderator/NewUsersChart';
 import ProductChart from './components/pages/moderator/ProductsChart';
 import SoldArtworks from './components/pages/moderator/SoldArtworks';
 import QuesSubmission from './components/pages/moderator/QuesSubmission';
+import RecivedArtworksChart from './components/pages/moderator/RecivedArtwoksChart';
 
 
 // import React from "react";
@@ -115,6 +116,7 @@ function App() {
         <Route path='/productchart' component={ProductChart} />
         <Route path='/soldartworksreport' component={SoldArtworks} />
         <Route path='/questionsubmitform' component={QuesSubmission}/>
+        <Route path='/recivedartworkschart' component={RecivedArtworksChart}/>
 
         
 
