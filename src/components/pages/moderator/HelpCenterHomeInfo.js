@@ -12,8 +12,8 @@ export default function HelpCenterHomeInfo() {
       
    
     <div >
-    <h1 className="helpwelcom">Welcome to De 'l art Help center</h1>
-     </div>
+    <h1 className="helpwelcom">Welcome to De 'lart help center</h1>
+    </div>
        
          
 <div className="">
