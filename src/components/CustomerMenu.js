@@ -9,6 +9,11 @@ export const CustomerMenu = [
       title: 'Exhibitions',
       path: '/customer_exhibitions',
       cName: 'dropdown-link'
+    },
+    {
+      title: 'About Artists',
+      path: '/artists',
+      cName: 'dropdown-link'
     }
    
   ];

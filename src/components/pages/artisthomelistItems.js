@@ -20,7 +20,7 @@ import { NavLink, Route } from "react-router-dom";
 export const mainListItems = (
   <div>
     <NavLink
-      to="./"
+      to="./a_home"
       activeStyle={{
         fontWeight: "normal",
         color: "black",
@@ -78,7 +78,22 @@ export const mainListItems = (
         <ListItemText primary="Upload artworks" />
       </ListItem>
     </NavLink>
+    <NavLink
+      to="./exhibitions"
+      activeStyle={{
+        fontWeight: "normal",
+        color: "black",
+      }}
+    >
+      <ListItem button>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary="Create Exhibitions" />
+      </ListItem>
+    </NavLink>
   </div>
+  
 );
 
 export const secondaryListItems = (

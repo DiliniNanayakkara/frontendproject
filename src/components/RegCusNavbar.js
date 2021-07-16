@@ -38,25 +38,13 @@ function RegCusNavbar() {
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        
           <li className='nav-item'>
-            <Link to='/customer_home' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/c_home' className='nav-links' onClick={closeMobileMenu}>
               Home
             </Link>
           </li>
-          <li
-            className='nav-item'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          >
-            <Link
-              to='/customer_artworks'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Artworks <i className='fas fa-caret-down' />
-            </Link>
-            {customer_dropdown && <Customer_Dropdown />}
-          </li>
+          
           <li className='nav-item'>
             <Link
               to='/customer_products'
@@ -72,19 +60,32 @@ function RegCusNavbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Artists
+              Artworks
             </Link>
           </li>
           <li className='nav-item'>
             <Link
-              to='/buyerdashbord'
+              to='/customer_home'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              BuyerDashbord
+              Dashbord
             </Link>
           </li>
-          
+          <li
+            className='nav-item'
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
+            <Link
+              to='/customer_artists'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Others <i className='fas fa-caret-down' />
+            </Link>
+            {customer_dropdown && <Customer_Dropdown />}
+          </li>
           <li>
             <Link
               to='/'
