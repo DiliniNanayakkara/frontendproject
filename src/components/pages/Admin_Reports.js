@@ -172,6 +172,70 @@ const data2 = [
     },
   ];
 
+  const data3 = [
+    {
+      name: "January",
+      Profit: 15000,
+      // amt: 2400
+    },
+    {
+      name: "February",
+      Profit: 8000,
+      // amt: 2210
+    },
+    {
+      name: "March",
+      Profit: 2000,
+      // amt: 2290
+    },
+    {
+      name: "April",
+      Profit: 15000,
+      // amt: 2000
+    },
+    {
+        name: "May",
+        Profit: 10000,
+        // amt: 2000
+      },
+    {
+      name: "June",
+      Profit: 16000,
+      // amt: 2181
+    },
+    {
+      name: "July",
+      Profit: 11000,
+      // amt: 2500
+    },
+    {
+      name: "August",
+      Profit: 0,
+      // amt: 2100
+    },
+    {
+      name: "September",
+      Profit: 0,
+      // amt: 2100
+    },
+    {
+      name: "October",
+      Profit: 0,
+      // amt: 2100
+    },
+    {
+      name: "November",
+      Profit: 0,
+      // amt: 2100
+    },
+    {
+      name: "December",
+      Profit: 0,
+      // amt: 2100
+    },
+  ];
+
+
 export default function App() {
     const classes = useStyles();
   return (
@@ -229,6 +293,36 @@ export default function App() {
             <Tooltip />
             <Legend />
             <Bar dataKey="Total_orders" fill="#8884d8" />
+            </BarChart>
+
+            <div>
+            <Button variant="contained" color="secondary">
+                Download as a PDF
+            </Button>
+            </div>
+        </paper>  
+        </div>  
+
+        <div  className={classes.root} >
+        <paper style={{backgroundColor: '#ebe6e6'}} elevation={3}>
+        <center><h1>Profit Summary</h1></center> 
+            <BarChart
+                width={800}
+                height={400}
+                data={data3}
+                margin={{
+                    top: 5,
+                    right: 30,
+                    left: 20,
+                    bottom: 5
+                }}
+            >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="Profit" fill="#8884d8" />
             </BarChart>
 
             <div>

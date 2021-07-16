@@ -1,6 +1,6 @@
 import "./DashbordInfo.css";
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
-
+import { Link } from 'react-router-dom';
 export default function FeaturedInfo() {
   return (
     <div className="featured">
@@ -29,6 +29,11 @@ export default function FeaturedInfo() {
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">Reports</span>
           <span className="featuredMoneyRate">
+          <div>
+          <Link to = '/admin_reports'>
+              {/* <button className="buttonreport">View Reports</button> */}
+          </Link>
+          </div>
           
           </span>
         </div>

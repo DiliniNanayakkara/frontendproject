@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 // import '../css/Profile.css';
-import RegCusNavbar from '../RegCusNavbar';
+import AdminNavbar from '../AdminNavbar';
 
 const useStyles = makeStyles((theme) => ({
     root_main: {
@@ -53,7 +53,7 @@ export default function Customer_Profile (){
     return (
 
         <div className="A"> 
-            <RegCusNavbar/>
+            <AdminNavbar/>
 
             <div className={classes.root_main}>
                 <Paper style={{backgroundColor: '#ebe6e6'}} >
@@ -61,12 +61,20 @@ export default function Customer_Profile (){
                         <Grid item xs={5}>
                             <Paper className={classes.paper2}>
                                 
-                                <img src="https://i.pinimg.com/originals/15/c0/ee/15c0eeb114df1bde0ae90cfe619685fd.png" style={{width:'95%', height:'auto'}}/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN9S4BZjQjJrZYGcQSiWxGW-Y7dk26BhPc54dJDWG7SaEtE6pp3DYIvSQKcaQPy5WK2qI&usqp=CAU" style={{width:'95%', height:'auto'}}/>
 
                                 <Typography variant="body2" color="textPrimary" component="p">
-                                    <h1>Amasha Gamage</h1>
+                                    <h1>Janani Dissanayake</h1>
+                                </Typography>
+                                {/* <Typography variant="body2" color="textPrimary" component="p">
+                                    <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
                                 </Typography>
                                 
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    <h3>Hi! 👻 I am a professional artist who comes to show my artwork. You can see my portfolio and I hope you will 
+                                        enjoy it! If you have any questions do not hesitate to ask, I will answer immediately! 👻</h3>
+                                </Typography> */}
+                               
                             </Paper>
                         </Grid>
                         <Grid item xs={7} className={classes.root_font1} >
@@ -83,7 +91,7 @@ export default function Customer_Profile (){
                                 <TextField
                                     id="standard-read-only-input"
                                     label="Name:"
-                                    defaultValue="Amasha Gamage"
+                                    defaultValue="Janani Dissanayake"
                                     InputProps={{
                                         readOnly: true,
                                     }}
@@ -91,7 +99,7 @@ export default function Customer_Profile (){
                                 <TextField
                                     id="standard-read-only-input"
                                     label="Email address:"
-                                    defaultValue="amashag@gmail.com"
+                                    defaultValue="jananid@gmail.com"
                                     InputProps={{
                                         readOnly: true,
                                     }}
@@ -107,19 +115,19 @@ export default function Customer_Profile (){
                                 <TextField
                                     id="standard-read-only-input"
                                     label="Address:"
-                                    defaultValue="195, Peradeniya, Kandy"
+                                    defaultValue="23, Oak Garden, Kandy"
                                     InputProps={{
                                         readOnly: true,
                                     }}
                                 />
-                                <TextField
+                                {/* <TextField
                                     id="standard-read-only-input"
                                     label="Issued upcoming exhibitions:"
                                     defaultValue="None"
                                     InputProps={{
                                         readOnly: true,
                                     }}
-                                />
+                                /> */}
                                 {/* <TextField
                                     id="standard-read-only-input"
                                     label="Customized Artist (Yes / No):"
@@ -133,7 +141,21 @@ export default function Customer_Profile (){
                                         Edit
                                     </Button>
                                 </div>
-                                
+                                {/* <Grid container>
+                                    <Grid item xs={7}>
+                                        <Typography style={{marginTop: '36.5px'}} variant="body2" color="textPrimary" component="p">
+                                            <p>Do you Want to register as a customized potrait artist?</p>
+                                        </Typography>
+                                    </Grid>
+
+                                    <Grid item xs={5}>
+                                        <div>
+                                            <Button style={{marginTop: '36.5px'}} variant="contained" fullWidth >
+                                                Register
+                                            </Button>
+                                        </div>
+                                    </Grid>
+                                </Grid> */}
                             </Paper>    
                         </Grid>
                     </Grid>
