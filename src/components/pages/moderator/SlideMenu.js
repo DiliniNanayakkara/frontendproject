@@ -56,7 +56,7 @@ const Header = () => {
           </SidebarHeader>
           <SidebarContent>
             <Menu iconShape="square">
-                <Link to ='/'>
+                <Link to ='/moderatorHome'>
                 <MenuItem active={true} icon={<FiHome />}>
                 Home
               </MenuItem>

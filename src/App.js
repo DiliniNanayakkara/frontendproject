@@ -4,7 +4,17 @@ import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Artworks from './components/pages/Artworks';
+import ArtworksDrawing from './components/pages/ArtworksDrawing';
+import ArtworkDetail from './components/pages/ArtworkDetail';
+import ArtworksFineart from './components/pages/ArtworksFineart';
+import ArtworksHistorical from './components/pages/ArtworksHistorical';
+import ArtworksPainting from './components/pages/ArtworksPainting';
 import Products from './components/pages/Products';
+import ProductsBrushes from './components/pages/ProductsBrushes';
+import ProductDetail from './components/pages/ProductDetail';
+import ProductsCanvas from './components/pages/ProductsCanvas';
+import ProductsEasels from './components/pages/ProductsEasels';
+import ProductsSupplies from './components/pages/ProductsSupplies';
 import Signup from './components/pages/Signup';
 import Login from './components/pages/Login';
 import Pencilarts from './components/pages/Pencilarts';
@@ -14,6 +24,9 @@ import AddModarator from './components/pages/AddModarator';
 import Users from './components/pages/Users';
 import ArtistHome from './components/pages/ArtistHome';
 import Orders from './components/pages/Orders';
+import Cart from './components/pages/Cart';
+import Checkout from './components/pages/Checkout';
+import ViewArtist from './components/pages/ViewArtist';
 import Artistartworks from './components/pages/Artistartworks';
 import ArtistProduct from './components/pages/ArtistProduct';
 import Customer_Home from './components/pages/Customer_Home';
@@ -87,7 +100,20 @@ function App() {
 
         <Route path='/' exact component={Home} />
         <Route path='/products' component={Products} />
+        <Route path='/productdetail' component={ProductDetail} />
+        <Route path='/productsbrushes' component={ProductsBrushes} />
+        <Route path='/productscanvas' component={ProductsCanvas} />
+        <Route path='/productseasels' component={ProductsEasels} />
+        <Route path='/productssupplies' component={ProductsSupplies} />
+        <Route path='/cart' component={Cart} />
+        <Route path='/viewartist' component={ViewArtist} />
+        <Route path='/checkout' component={Checkout} />
         <Route path='/artworks' component={Artworks} />
+        <Route path='/artworksdrawing' component={ArtworksDrawing} />
+        <Route path='/artworkdetail' component={ArtworkDetail} />
+        <Route path='/artworksfineart' component={ArtworksFineart} />
+        <Route path='/artworkshistorical' component={ArtworksHistorical} />
+        <Route path='/artworkspainting' component={ArtworksPainting} />
         <Route path='/signup' component={Signup} />
         <Route path='/login' component={Login} />
         <Route path='/pencilarts' component={Pencilarts} />
