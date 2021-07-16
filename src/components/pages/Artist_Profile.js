@@ -171,7 +171,7 @@ export default function Artist_Profile (){
                                 </img>
 
                                 <Typography variant="body2" color="textPrimary" component="p">
-                                    <h1>Shamila Perera</h1>
+                                    <h1>Dilini Nanayakkara</h1>
                                 </Typography>
                                 <Typography variant="body2" color="textPrimary" component="p">
                                     <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
@@ -198,7 +198,7 @@ export default function Artist_Profile (){
                                 <TextField
                                     id="standard-read-only-input"
                                     label="Name:"
-                                    defaultValue="Shamila Perera"
+                                    defaultValue="Dilini Nanayakkara"
                                     InputProps={{
                                         readOnly: true,
                                     }}
@@ -206,7 +206,7 @@ export default function Artist_Profile (){
                                 <TextField
                                     id="standard-read-only-input"
                                     label="Email address:"
-                                    defaultValue="shamilap@gmail.com"
+                                    defaultValue="dilinin@gmail.com"
                                     InputProps={{
                                         readOnly: true,
                                     }}
