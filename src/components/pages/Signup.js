@@ -20,19 +20,23 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import { red } from "@material-ui/core/colors";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        All Rights Recieved
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
   );
 }
+
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
@@ -64,6 +68,8 @@ export default function Registration() {
   const [passwordReg, setPasswordReg] = useState("");
   const [firstReg, setfirstReg] = useState("");
   const [lastReg, setLastReg] = useState("");
+  const [errorMsg, seterrorMsg] = useState("");
+  const [numberReg, setNumberReg] = useState("");
 
   Axios.defaults.withCredentials = true;
   const handleClick = () => {
@@ -77,12 +83,25 @@ export default function Registration() {
 
     setOpen(false);
   };
+
+  const validation = (val) => {
+    if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(val)) {
+      /* return true */
+      seterrorMsg("");
+      //   console.log("if");
+    } else {
+      seterrorMsg("invalisd");
+      //   console.log("else");
+    }
+  };
+
   const register = () => {
     Axios.post("http://localhost:3001/register", {
       username: usernameReg,
       password: passwordReg,
       first: firstReg,
       last: lastReg,
+      number: numberReg,
     }).then((response) => {});
     handleClick();
     history.push("/login");
@@ -152,9 +171,38 @@ export default function Registration() {
                   autoComplete="email"
                   onChange={(e) => {
                     setUsernameReg(e.target.value);
+                    validation(e.target.value);
                   }}
                 />
+                <span id="validation" style={{ color: "red" }}>
+                  {errorMsg};
+                </span>
               </Grid>
+              <Grid item xs={12}>
+                <RadioGroup
+                  row
+                  aria-label="position"
+                  name="position"
+                  defaultValue="top"
+                >
+                  <FormControlLabel
+                    value=" Buyer"
+                    id="myid"
+                    control={<Radio color="primary" />}
+                    label="Buyer"
+                    labelPlacement="start"
+                  />
+
+                  <FormControlLabel
+                    value="Seller"
+                    id="myid"
+                    control={<Radio color="primary" />}
+                    label="Seller"
+                    labelPlacement="start"
+                  />
+                </RadioGroup>
+              </Grid>
+
               <Grid item xs={12}>
                 <TextField
                   variant="outlined"
@@ -170,12 +218,28 @@ export default function Registration() {
                   autoComplete="current-password"
                 />
               </Grid>
+
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="contactnumber"
+                  label="contact number"
+                  type="contactnumber"
+                  id="number"
+                  onChange={(e) => {
+                    setNumberReg(e.target.value);
+                  }}
+                />
+              </Grid>
+
               <Grid item xs={12}>
                 <FormControlLabel
                   control={
                     <Checkbox value="allowExtraEmails" color="primary" />
                   }
-                  label="agree to term and conditions"
+                  label="I agree to term and conditions"
                 />
               </Grid>
             </Grid>

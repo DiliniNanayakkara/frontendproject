@@ -25,7 +25,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        All Rights Recieved
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -38,7 +38,8 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
   },
   image: {
-    backgroundImage: "url(https://source.unsplash.com/random)",
+    backgroundImage:
+      "url(https://images.unsplash.com/photo-1541753866388-0b3c701627d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -159,7 +160,7 @@ export default function Registration() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="./Signup" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                   <h1>{loginStatus}</h1>
