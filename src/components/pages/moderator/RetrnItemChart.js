@@ -9,18 +9,18 @@ const state = {
            'April', 'May'],
   datasets: [
     {
-      label: 'Recived artworks',
+      label: 'Return Items',
       backgroundColor: 'rgba(75,192,192,1)',
       borderColor: 'rgba(0,0,0,1)',
       borderWidth: 2,
       fontSize: 20,
       
-      data: [30, 29, 80, 11, 56]
+      data: [10, 12, 8, 5, 5]
     }
   ]
 }
 
-export default class RecivedArtworksChart extends React.Component {
+export default class ReternItemChart extends React.Component {
   render() {
     return (
       <div width = {"100px"}  >

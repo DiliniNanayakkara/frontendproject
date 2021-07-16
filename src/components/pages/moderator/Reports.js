@@ -36,7 +36,7 @@ export default function Dashbord (){
      <Link to='/recivedartworkschart'>
        <button className='reportitembtn'>Recived Artworks</button>
      </Link>  
-     <Link to='/productchart'>
+     <Link to='/returnitemchart'>
        <button className='reportitembtn'>Return</button>
      </Link>    
      
