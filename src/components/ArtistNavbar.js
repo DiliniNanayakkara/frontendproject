@@ -27,8 +27,8 @@ function ArtistNavbar() {
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <Link to='/artisthome' className='nav-links' onClick={closeMobileMenu}>
-              ArtistHome
+            <Link to='/a_home' className='nav-links' onClick={closeMobileMenu}>
+            Home
             </Link>
           </li>
           <li className='nav-item'>
@@ -37,7 +37,7 @@ function ArtistNavbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-            Orders
+            Upload
             </Link>
           </li>
           
@@ -69,13 +69,14 @@ function ArtistNavbar() {
             </Link>
           </li>
           
+          
           <li>
             <Link
               to='/'
               className='nav-links-mobile'
               onClick={closeMobileMenu}
             >
-              Logout
+              Exhibition
             </Link>
           </li>
           

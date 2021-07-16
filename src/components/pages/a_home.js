@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Home.css';
-import RegCusNavbar from '../RegCusNavbar';
+import ArtistNavbar from '../ArtistNavbar';
 export default function Home (){
   
   
@@ -9,7 +9,7 @@ export default function Home (){
         
 
         <div className="A"> 
-        <RegCusNavbar />
+        <ArtistNavbar />
         <center>
           <div className='C'>
            <center><img className="Photo" src= { require('../../assests/home.png').default} alt="" width="1200" height="334"></img>

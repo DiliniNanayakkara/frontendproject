@@ -44,26 +44,26 @@ If you find an artwork that interests you, do contact us and ask more. We are ha
         
          <center> <div className="all" >
            <h1>Tour Our Art Works Gallery</h1>
-          <div className="pencilarts">
-            <div className="Arts">
+          <div className="pencilarts1">
+            <div className="Arts1">
             <center><img className="p" src='https://www.cmuse.org/wp-content/uploads/2020/05/learn-oil-painting-lessons-online.jpg' alt="" width="220" height="180"></img></center>
             <p>1200LkR</p>
             <div className="buy"><button>Buy</button></div>
 
             </div>
-            <div className="Arts">
+            <div className="Arts1">
               <center><img className="p" src='https://m.media-amazon.com/images/I/91ZTBvEQU4L._AC_SL1500_.jpg' alt="" width="220" height="180"></img></center>
               <p>1200LkR</p>
               <div className="buy"><button>Buy</button></div>
               
             </div>
-            <div className="Arts">
+            <div className="Arts1">
             <center><img className="p" src='https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/70acf3fc-aaac-4b39-b5c0-adb2978390ff/watercolorpainting-53.jpg' alt="" width="220" height="180"></img></center>
             <p>1200LkR</p>
             <div className="buy"><button>Buy</button></div>
               
             </div>
-            <div className="Arts">
+            <div className="Arts1">
             <center><img className="p" src='https://webneel.com/daily/sites/default/files/images/daily/12-2013/1-watercolor-painting-by-vilas%20kulkarn.jpg' alt="" width="220" height="180"></img></center>
             <p>1200LkR</p>
             <div className="buy"><button>Buy</button></div>

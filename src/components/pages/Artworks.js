@@ -28,7 +28,7 @@ export default function Artworks() {
   return (
      <div className="A"> 
       <Navbar/>
-      
+      <center>
       <nav className='nav'>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li className='item'>
@@ -42,7 +42,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/artworkshistorical'
+              to='/artworks'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -51,7 +51,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/artworksdrawing'
+              to='/artworks'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -60,7 +60,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/artworksfineart'
+              to='/artworks'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -69,7 +69,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/artworkspainting'
+              to='/artworks'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -79,7 +79,7 @@ export default function Artworks() {
         </ul>
       </nav>
   
-  
+      </center>
       <div>
               
               {artworkList.map((val) => {

@@ -67,9 +67,6 @@ export default function Exhibitions (){
                  </div>
                  <center>
                      
-                       <Link to = '/createexhibition'>
-                       <button className="butto1">Create Exhibition</button>
-                       </Link>
                       
                        </center>
                 

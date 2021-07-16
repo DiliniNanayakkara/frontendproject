@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Exhibitions.css';
-import Navbar from '../Navbar';
+import ArtistNavbar from '../ArtistNavbar';
 import { Link } from 'react-router-dom';
 
 export default function Exhibitions (){
@@ -10,7 +10,7 @@ export default function Exhibitions (){
   
 
         <div className="A"> 
-       <Navbar/>
+       <ArtistNavbar/>
        <center><img className="Photo" src= { require('../../assests/exhi.png').default} alt="" width="1200" height="334"></img>
            </center>
            <center><div className="exhibition" >

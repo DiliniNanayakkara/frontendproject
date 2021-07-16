@@ -13,7 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
 import '../../App.css';
-import AdminNavbar from '../AdminNavbar';
+
 
 // export default function Login() {
 //   return (
@@ -67,8 +67,7 @@ export default function Customized_Artist() {
     return (
 
       <>
-          <AdminNavbar/>
-      
+       
 
        
       <Grid container component="main" className={classes.root}>
