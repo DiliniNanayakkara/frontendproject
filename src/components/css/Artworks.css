@@ -72,8 +72,9 @@
       margin-top: 6px;
       font-size: 20px;
       float: left;
+      width: 150px;
       color: black;
-      margin-left: 50px;
+      margin-left: 100px;
   }
   
   .nav-links:hover {
