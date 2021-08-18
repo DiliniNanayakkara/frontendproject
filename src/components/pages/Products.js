@@ -51,7 +51,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/products'
+              to='/productscanvas'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -60,7 +60,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/products'
+              to='/productssupplies'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -69,7 +69,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/products'
+              to='/productseasels'
               className='nav-links'
               onClick={closeMobileMenu}
             >
