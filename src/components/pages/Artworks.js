@@ -42,7 +42,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/artworks'
+              to='/artworkshistorical'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -51,7 +51,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/artworks'
+              to='/artworksdrawing'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -60,7 +60,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/artworks'
+              to='/artworksfineart'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -69,7 +69,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/artworks'
+              to='/artworkspainting'
               className='nav-links'
               onClick={closeMobileMenu}
             >
