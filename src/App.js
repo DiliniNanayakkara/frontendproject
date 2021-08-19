@@ -33,6 +33,10 @@ import Artistartworksfineart from './components/pages/Artistartworksfineart';
 import Artistartworksdrawing from './components/pages/Artistartworksdrawing';
 import Artistartworkspainting from './components/pages/Artistartworkspainting';
 import ArtistProduct from './components/pages/ArtistProduct';
+import ArtistProductBrushes from './components/pages/ArtistProductBrushes';
+import ArtistProductCanvas from './components/pages/ArtistProductCanvas';
+import ArtistProductSupplies from './components/pages/ArtistProductSupplies';
+import ArtistProductEasels from './components/pages/ArtistProductEasels';
 import Customer_Home from './components/pages/Customer_Home';
 import Customer_Artworks from './components/pages/Customer_Artworks';
 import Customer_Artists from './components/pages/Customer_Artists';
@@ -133,6 +137,10 @@ function App() {
         <Route path='/artistartworksdrawing' component={Artistartworksdrawing} />
         <Route path='/artistartworkspainting' component={Artistartworkspainting} />
         <Route path='/artistproduct' component={ArtistProduct} />
+        <Route path='/artistproductbrushes' component={ArtistProductBrushes} />
+        <Route path='/artistproductcanvas' component={ArtistProductCanvas} />
+        <Route path='/artistproductsupplies' component={ArtistProductSupplies} />
+        <Route path='/artistproducteasels' component={ArtistProductEasels} />
         <Route path='/customer_home' component={Customer_Home} />
         <Route path='/customer_artworks' component={Customer_Artworks} />
         <Route path='/customer_products' component={Customer_Products} />
