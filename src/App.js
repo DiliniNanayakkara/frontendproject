@@ -28,6 +28,10 @@ import Cart from './components/pages/Cart';
 import Checkout from './components/pages/Checkout';
 import ViewArtist from './components/pages/ViewArtist';
 import Artistartworks from './components/pages/Artistartworks';
+import Artistartworkshistorical from './components/pages/Artistartworkshistorical';
+import Artistartworksfineart from './components/pages/Artistartworksfineart';
+import Artistartworksdrawing from './components/pages/Artistartworksdrawing';
+import Artistartworkspainting from './components/pages/Artistartworkspainting';
 import ArtistProduct from './components/pages/ArtistProduct';
 import Customer_Home from './components/pages/Customer_Home';
 import Customer_Artworks from './components/pages/Customer_Artworks';
@@ -124,6 +128,10 @@ function App() {
         <Route path='/artisthome' component={ArtistHome} />
         <Route path='/orders' component={Orders} />
         <Route path='/artistartworks' component={Artistartworks} />
+        <Route path='/artistartworkshistorical' component={Artistartworkshistorical} />
+        <Route path='/artistartworksfineart' component={Artistartworksfineart} />
+        <Route path='/artistartworksdrawing' component={Artistartworksdrawing} />
+        <Route path='/artistartworkspainting' component={Artistartworkspainting} />
         <Route path='/artistproduct' component={ArtistProduct} />
         <Route path='/customer_home' component={Customer_Home} />
         <Route path='/customer_artworks' component={Customer_Artworks} />
