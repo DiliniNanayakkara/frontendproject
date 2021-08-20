@@ -27,50 +27,50 @@ import '../../App.css';
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      height: '100vh',
-    },
-    image: {
-      backgroundImage: 'url(https://hative.com/wp-content/uploads/2013/07/pencil-drawing-of-tiger.jpg)',
-    
-    
-      
-      backgroundRepeat: 'no-repeat',
-      backgroundColor:
-        theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    },
-    paper: {
-      margin: theme.spacing(8, 4),
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    },
-    avatar: {
-      margin: theme.spacing(1),
-      backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-      width: '100%', // Fix IE 11 issue.
-      marginTop: theme.spacing(1),
-    },
-    submit: {
-      margin: theme.spacing(3, 0, 2),
-    },
-  }));
+  root: {
+    height: '100vh',
+  },
+  image: {
+    backgroundImage: 'url(https://lh3.googleusercontent.com/mehW75a70IHxl7SgIu9lx-rp83cVmETtufM-lIZQjfFmcBKkbgZLRRVf8JvwtluHuz0)',
+
+
+
+    backgroundRepeat: 'no-repeat',
+    backgroundColor:
+      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  },
+  paper: {
+    margin: theme.spacing(8, 4),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(1),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+}));
 
 
 export default function Customized_Artist() {
-    const classes = useStyles();
-  
-    return (
+  const classes = useStyles();
 
-      <>
-         
-      
+  return (
 
-       
+    <>
+
+
+
+
       <Grid container component="main" className={classes.root}>
         <CssBaseline />
         <Grid item xs={false} sm={4} md={7} className={classes.image} />
@@ -83,7 +83,7 @@ export default function Customized_Artist() {
               Customize Pencile Arts
             </Typography>
             <form className={classes.form} noValidate>
-            <h3>ArtistId:</h3>
+              <h3>ArtistId:</h3>
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -105,9 +105,9 @@ export default function Customized_Artist() {
                 label="Category type"
                 type="Category type"
                 id="Category type"
-                // autoComplete="current-password"
+              // autoComplete="current-password"
               />
-               <h3>Add Images:</h3>
+              <h3>Add Images:</h3>
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -117,7 +117,7 @@ export default function Customized_Artist() {
                 label="Add Images"
                 type="Add Images"
                 id="Add Images"
-                // autoComplete="current-password"
+              // autoComplete="current-password"
               />
               <button>choose files</button>
               <h3>Deadline: </h3>
@@ -130,9 +130,9 @@ export default function Customized_Artist() {
                 label="Deadline"
                 name="Publish Date"
                 autoComplete="Publish Date"
-                // autoFocus
+              // autoFocus
               />
-             
+
               {/* <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
@@ -147,19 +147,19 @@ export default function Customized_Artist() {
                 Submit
               </Button>
               <Grid container>
-               
-                 <Grid item>
-                 
-                </Grid> 
+
+                <Grid item>
+
+                </Grid>
               </Grid>
               <Box mt={5}>
-                
+
               </Box>
             </form>
           </div>
         </Grid>
-       </Grid>
+      </Grid>
 
-       </>
-    );
-  }
+    </>
+  );
+}
