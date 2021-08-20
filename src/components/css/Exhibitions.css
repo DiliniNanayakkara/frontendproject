@@ -121,6 +121,7 @@
 }
 .status td p {
     color:rgb(110, 109, 109);
+    width: 400px;
 }
 .status td {
     background-color: white;
