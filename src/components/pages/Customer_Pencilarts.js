@@ -113,7 +113,11 @@ export default function Pencilarts() {
                                     <p>Thanks!</p></td>
                               <td className="B">2000LKR</td>
 
-                              <td><button className="notavailable">Show Artist Artworks</button></td>
+                              <td>
+                                    <Link to='/pencilartist_profile'>
+                                          <button className="notavailable">Show Artist Artworks</button>
+                                    </Link>
+                              </td>
 
 
                         </tr>
