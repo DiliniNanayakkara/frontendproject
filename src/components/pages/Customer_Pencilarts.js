@@ -68,6 +68,7 @@ export default function Pencilarts() {
 
                         </tr>
                         <tr>
+                              <td>Dilini</td>
                               <td><h2>More Info</h2><p>Hello!</p>
 
 
