@@ -9,10 +9,35 @@
     width: 500px;
     float: left;
 
-    height: 600px;
+    height: 400px;
 }
 .pencilartistname {
     width: 600px;
     float: left;
     margin-left: 100px;
+    margin-top: 50px;
+}
+.pencilartwork {
+    width: 1000px;
+    margin-left: 100px;
+    margin-top: 500px;
+}
+.pencilartworkphoto {
+    width: 1400px;
+    height: 1000px;
+    background: grey;
+}
+.pencilartphoto {
+    width: 29.5%;
+    height: 400px;
+    background: white;
+    border-radius: 20px;
+    float: left;
+    margin: 20px;
+}
+.pencilartp {
+    width:97%;
+    height: 350px;
+    margin-top: 25px;
+    background: red;
 }

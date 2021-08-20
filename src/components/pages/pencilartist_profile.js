@@ -14,7 +14,7 @@ export default function Pencilarts() {
 
             <h1>Nimaya Perera</h1>
             <div className="pencilartistpro1">
-                <img className="pencilartistpro" src="https://www.creativeboom.com/uploads/articles/a4/a40eeac492a143d5bb34412dfe8f275a8834e41c_810.jpg"></img>
+                <img className="pencilartistpro" src="https://i.ebayimg.com/images/g/p0UAAOSwJZBddPj~/s-l300.jpg"></img>
             </div>
             <div class="pencilartistname">
                 <h2>Nimaya Perera</h2>
@@ -29,8 +29,37 @@ export default function Pencilarts() {
 
                     Please message me first for inquiries before placing an order.</p>
             </div>
+            <div className="pencilartwork">
+                <h2>Artist Artworks</h2>
 
+            </div>
+            <center>
+                <div className="pencilartworkphoto">
+                    <div className="pencilartphoto">
+                        <center>
+                            <div className="pencilartp">
 
+                            </div>
+                        </center>
+                    </div>
+                    <div className="pencilartphoto">
+
+                    </div>
+                    <div className="pencilartphoto">
+
+                    </div>
+                    <div className="pencilartphoto">
+
+                    </div>
+                    <div className="pencilartphoto">
+
+                    </div>
+                    <div className="pencilartphoto">
+
+                    </div>
+
+                </div>
+            </center>
 
 
 
