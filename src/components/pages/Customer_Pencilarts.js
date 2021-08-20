@@ -46,7 +46,7 @@ export default function Pencilarts() {
                               <td>Nimaya</td>
                               <td><h2>More Info</h2><p>Historical Art Exhibition.Available Arts:2000</p></td>
                               <td className="B">2000LKR</td>
-                              <td><button className="notavailable">Not Available</button></td>
+                              <td><button className="notavailable">Show Artist Artworks</button></td>
 
 
 
