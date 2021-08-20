@@ -1,6 +1,18 @@
 .pencilartistpro {
-    width: 200px;
-    height:200px;
-    margin-left: 100px;
+    width: 400px;
+    height:400px;
+    margin-left: 50px;
     margin-top: 20px;
+    border-radius: 400px;
+}
+.pencilartistpro1 {
+    width: 500px;
+    float: left;
+
+    height: 600px;
+}
+.pencilartistname {
+    width: 600px;
+    float: left;
+    margin-left: 100px;
 }
