@@ -34,7 +34,47 @@ export default function Pencilarts() {
 
                   </div>
 
+                  <table className="status">
+                        <tr>
+                              <th>Artist</th>
+                              <th>More Info</th>
+                              <th>Start Price</th>
+                              <th>Artworks</th>
 
+                        </tr>
+                        <tr>
+                              <td>Nimaya</td>
+                              <td><h2 className="A1">Happening Now</h2><p>Historical Art Exhibition.Available Arts:2000</p></td>
+                              <td className="B">200LKR</td>
+                              <td><Link to='/watchexhibition'>
+                                    <button className="watch">Watch</button>
+                              </Link></td>
+
+
+                        </tr>
+                        <tr>
+                              <td>Dilini</td>
+                              <td><h2 className="A1">Happening Tomarrow</h2><p>Pencile Art Exhibition.Available Arts:100</p></td>
+                              <td className="B">200LKR</td>
+
+                              <td><button className="notavailable">Not Available</button></td>
+
+
+                        </tr>
+                        <tr>
+                              <td>Amasha</td>
+                              <td><h2 className="A1">Happening 2021/07/20</h2><p>Illustrators Art Exhibition.Available Arts:2000</p></td>
+                              <td className="B">200LKR</td>
+
+                              <td><button className="notavailable">Not Available</button></td>
+
+
+                        </tr>
+
+
+
+
+                  </table>
 
 
             </div>
