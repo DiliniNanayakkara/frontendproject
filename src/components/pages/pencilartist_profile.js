@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Pencilarts.css';
-import Navbar from '../Navbar';
+import RegCusNavbar from '../RegCusNavbar';
 import { Link } from 'react-router-dom';
 export default function Pencilarts() {
 
@@ -10,7 +10,7 @@ export default function Pencilarts() {
 
 
         <div className="A">
-            <Navbar />
+            <RegCusNavbar />
             <center>
                 <h1>De'lart PencilArts</h1></center>
 
