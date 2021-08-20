@@ -48,7 +48,7 @@ export default function Pencilarts() {
 
 
 
-                                    <p>I am a freelance artist and I do any kind of illustration including digital pencil sketches. I can sketch anything you want me to, from people, to animals, to nature, etc.
+                                    <p>I am a artist and I do any kind of illustration including digital pencil sketches. I can sketch anything you want me to, from people, to animals, to nature, etc.
 
 
 
@@ -78,7 +78,23 @@ export default function Pencilarts() {
                         </tr>
                         <tr>
                               <td>Amasha</td>
-                              <td><h2>More Info</h2><p>Illustrators Art Exhibition.Available Arts:2000</p></td>
+                              <td><h2>More Info</h2><p>Hello!</p>
+
+
+
+                                    <p>I am a artist and I do any kind of illustration including digital pencil sketches. I can sketch anything you want me to, from people, to animals, to nature, etc.
+
+
+
+                                          I will deliver work according to the package you choose for this gig. You will get a 3000px x 3000px image in 300 dpi, printable resolution.
+
+
+
+                                          Please message me first for inquiries before placing an order.</p>
+
+
+
+                                    <p>Thanks!</p></td>
                               <td className="B">2000LKR</td>
 
                               <td><button className="notavailable">Show Artist Artworks</button></td>
