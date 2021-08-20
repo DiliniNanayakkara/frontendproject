@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   image: {
-    backgroundImage: 'url(https://lh3.googleusercontent.com/mehW75a70IHxl7SgIu9lx-rp83cVmETtufM-lIZQjfFmcBKkbgZLRRVf8JvwtluHuz0)',
+    backgroundImage: 'url(https://mymodernmet.com/wp/wp-content/uploads/2018/02/best-graphite-drawing-pencils-e1518094911603.jpg)',
 
 
 
