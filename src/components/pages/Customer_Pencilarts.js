@@ -56,7 +56,7 @@ export default function Pencilarts() {
                               <td><h2>More Info</h2><p>Pencile Art Exhibition.Available Arts:100</p></td>
                               <td className="B">2000LKR</td>
 
-                              <td><button className="notavailable">Not Available</button></td>
+                              <td><button className="notavailable">Show Artist Artworks</button></td>
 
 
                         </tr>
@@ -65,7 +65,7 @@ export default function Pencilarts() {
                               <td><h2>More Info</h2><p>Illustrators Art Exhibition.Available Arts:2000</p></td>
                               <td className="B">2000LKR</td>
 
-                              <td><button className="notavailable">Not Available</button></td>
+                              <td><button className="notavailable">Show Artist Artworks</button></td>
 
 
                         </tr>
