@@ -63,7 +63,7 @@ export default function Pencilarts() {
                         </tr>
                         <tr>
                               <td>Amasha</td>
-                              <td><h2 className="A1">Happening 2021/07/20</h2><p>Illustrators Art Exhibition.Available Arts:2000</p></td>
+                              <td><h2>More Info</h2><p>Illustrators Art Exhibition.Available Arts:2000</p></td>
                               <td className="B">200LKR</td>
 
                               <td><button className="notavailable">Not Available</button></td>
