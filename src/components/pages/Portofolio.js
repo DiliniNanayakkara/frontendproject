@@ -28,6 +28,7 @@ import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 
 import StarBorderIcon from "@material-ui/icons/StarBorder";
+import Axios from "axios";
 
 function srcset(image, width, height, rows = 1, cols = 1) {
   return `${image}?w=${width * cols}&h=${height * rows}&fit=crop&auto=format 1x,
@@ -140,6 +141,13 @@ export default function Dashboard() {
     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  /*
+  const viewPortofolio = () => {
+    axios.get("http://localhost:3001/viewPortofolio").then((res) => {
+      const arts = res.data;
+      this.setState({ arts });
+    });
+  };*/
 
   return (
     <div className={classes.root}>
