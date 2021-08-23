@@ -17,72 +17,74 @@ function ArtistNavbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+       <div className="AllNavItem">
+    <div className="logo">
+    <a className="active" >  <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           De'lart
           <i class="fas fa-palette"></i>
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/a_home' className='nav-links' onClick={closeMobileMenu}>
-            Home
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/orders'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-            Upload
-            </Link>
-          </li>
-          
-          <li className='nav-item'>
-            <Link
+        </Link></a>
+    </div>
+    <div class="topnav">
+  
+  <a >  <Link to='/a_home'  onClick={closeMobileMenu}>
+              Home
+            </Link></a>
+            <a> <Link
               to='/artistartworks'
-              className='nav-links'
+            
               onClick={closeMobileMenu}
             >
               Artworks
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
+            </Link></a>
+           
+  <a> <Link
               to='/artistproduct'
-              className='nav-links'
+             
               onClick={closeMobileMenu}
             >
               Products
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/artistdashbord'
-              className='nav-links'
+            </Link></a>
+            <a > <Link
+              to='/exhibitions'
+           
               onClick={closeMobileMenu}
             >
-            Dashbord
-            </Link>
-          </li>
+              Exhibitions
+            </Link></a>
           
-          
-          <li>
-            <Link
+            <a > <Link
+              to='/artists'
+           
+              onClick={closeMobileMenu}
+            >
+              Artists
+            </Link></a>
+  <a > <Link
+              to='/Artist_profile'
+            
+              onClick={closeMobileMenu}
+            >
+              Dashbord
+            </Link></a>
+            <a > <Link
+              to='/orders'
+            
+              onClick={closeMobileMenu}
+            >
+              Upload
+            </Link></a>
+            <a > <Link
               to='/'
-              className='nav-links-mobile'
+            
               onClick={closeMobileMenu}
             >
-              Exhibition
-            </Link>
-          </li>
-          
-        </ul>
-        <Logout />
-      </nav>
+            LogOut
+            </Link></a>
+
+            
+</div>
+</div>
+     
     </>
   );
 }

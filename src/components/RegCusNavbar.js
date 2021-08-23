@@ -29,75 +29,74 @@ function RegCusNavbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+     <div className="AllNavItem">
+    <div className="logo">
+    <a className="active" >  <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           De'lart
           <i class="fas fa-palette"></i>
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-        
-          <li className='nav-item'>
-            <Link to='/c_home' className='nav-links' onClick={closeMobileMenu}>
+        </Link></a>
+    </div>
+    <div class="topnav">
+  
+  <a >  <Link to='/c_home' className='nav-links' onClick={closeMobileMenu}>
               Home
-            </Link>
-          </li>
-          
-          <li className='nav-item'>
-            <Link
-              to='/customer_products'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Products
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
+            </Link></a>
+            <a> <Link
               to='/customer_artists'
               className='nav-links'
               onClick={closeMobileMenu}
             >
               Artworks
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
+            </Link></a>
+           
+  <a> <Link
+              to='/customer_products'
+             
+              onClick={closeMobileMenu}
+            >
+              Products
+            </Link></a>
+            <a > <Link
+              to='/customer_exhibitions'
+           
+              onClick={closeMobileMenu}
+            >
+              Exhibitions
+            </Link></a>
+            <a > <Link
+              to='/customer_pencilarts'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Commissions
+            </Link></a>
+            <a > <Link
+              to='/artists'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Artists
+            </Link></a>
+  <a > <Link
               to='/customer_home'
               className='nav-links'
               onClick={closeMobileMenu}
             >
               Dashbord
-            </Link>
-          </li>
-          <li
-            className='nav-item'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          >
-            <Link
-              to='/customer_artists'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Others <i className='fas fa-caret-down' />
-            </Link>
-            {customer_dropdown && <Customer_Dropdown />}
-          </li>
-          <li>
-            <Link
+            </Link></a>
+            <a > <Link
               to='/'
-              className='nav-links-mobile'
+            
               onClick={closeMobileMenu}
             >
-              Logout
-            </Link>
-          </li>
-        </ul>
-        <Logout />
-      </nav>
+            LogOut
+            </Link></a>
+
+            
+</div>
+</div>
+    
+          
     </>
   );
 }
