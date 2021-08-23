@@ -1,14 +1,48 @@
+.topnav {
+  margin-top: 50px;
+  overflow: hidden;
+  float: right;
+  margin-right: 120px;
+}
+.active {
+  float: left;
+  margin-top: 40px;
+}
+.AllNavItem {
+  height: 100px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+}
+.topnav a {
+  margin-top: 50px;
+  color: #050505;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(73, 72, 72);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
 .navbar {
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
+  overflow: hidden;
+  background-color: #333;
 }
 
 .navbar-logo {
   color: rgb(0, 0, 0);
-  justify-self: start;
+  margin-left: 100px;
   float: left;
   cursor: pointer;
   text-decoration: none;
@@ -32,9 +66,12 @@
 }
 
 .nav-item {
-  display: flex;
-  align-items: center;
-  height: 80px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .nav-links {
@@ -79,7 +116,6 @@
   }
 
   .nav-menu.active {
-    background: #181515;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
