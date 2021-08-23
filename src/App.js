@@ -58,6 +58,7 @@ import SoldArtworks from "./components/pages/moderator/SoldArtworks";
 import QuesSubmission from "./components/pages/moderator/QuesSubmission";
 import RecivedArtworksChart from "./components/pages/moderator/RecivedArtwoksChart";
 import ReternItemChart from "./components/pages/moderator/RetrnItemChart";
+import Moderator_Profile from "./components/pages/moderator_profile";
 
 import Portofolio from "./components/pages/Portofolio";
 // import Complaints from "./components/pages/moderator/Complaints";
@@ -147,6 +148,7 @@ function App() {
         <Route path="/questionsubmitform" component={QuesSubmission} />
         <Route path="/recivedartworkschart" component={RecivedArtworksChart} />
         <Route path="/returnitemchart" component={ReternItemChart} />
+        <Route path="/moderator_profile" component={Moderator_Profile} />
 
         {/* <Route path="/" exact component={Home} />
         <Route path="/products" component={Products} />
