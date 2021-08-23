@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         '& > *': {
             margin: theme.spacing(1),
-            width: theme.spacing(100),
+            width: theme.spacing(1000),
             height: theme.spacing.auto,
         },
     },
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
       root_font1: {
         '& .MuiTextField-root': {
           margin: theme.spacing(1),
-          width: '25ch',
+          width: '600px',
          
         },
       },
@@ -163,7 +163,7 @@ export default function Artist_Profile (){
                                         </Typography>
                                     </CardContent>
                                 </Card> */}
-                                <img src="https://i.pinimg.com/236x/6e/0b/fd/6e0bfd58680cdea7699d6989e2fb7f75.jpg" style={{width:'95%', height:'auto'}}>
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" style={{width:'100px', height:'auto'}}>
 
                                     {/* <view>
                                         <Ionicons name="ios-arrow-back" color="#4F8EF7" size={25} style={{ position: 'absolute', top: 30, left: 10 }} />
