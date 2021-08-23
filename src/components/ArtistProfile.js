@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 // import '../css/Profile.css';
-import ArtistNavbar from "../ArtistNavbar";
+import ArtistNavbar from "ArtistNavbar.js";
 import { HorizontalSplit } from "@material-ui/icons";
 import { yellow } from "@material-ui/core/colors";
 const useStyles = makeStyles((theme) => ({
@@ -142,7 +142,7 @@ export default function Artist_Profile() {
                 </img>
 
                 <Typography variant="body2" color="textPrimary" component="p">
-                  <h1>Shamila Perera</h1>
+                  {/* <h1>Shamila Perera</h1> */}
                   <h1>Dilini Nanayakkara</h1>
                 </Typography>
                 <Typography variant="body2" color="textPrimary" component="p">
@@ -173,7 +173,7 @@ export default function Artist_Profile() {
                 <TextField
                   id="standard-read-only-input"
                   label="Name:"
-                  defaultValue="Shamila Perera"
+                  // defaultValue="Shamila Perera"
                   defaultValue="Dilini Nanayakkara"
                   InputProps={{
                     readOnly: true,
@@ -182,7 +182,7 @@ export default function Artist_Profile() {
                 <TextField
                   id="standard-read-only-input"
                   label="Email address:"
-                  defaultValue="shamilap@gmail.com"
+                  // defaultValue="shamilap@gmail.com"
                   defaultValue="dilinin@gmail.com"
                   InputProps={{
                     readOnly: true,
