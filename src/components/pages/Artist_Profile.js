@@ -181,6 +181,27 @@ export default function Artist_Profile (){
                                     <h3>Hi! 👻 I am a professional artist who comes to show my artwork. You can see my portfolio and I hope you will 
                                         enjoy it! If you have any questions do not hesitate to ask, I will answer immediately! 👻</h3>
                                 </Typography>
+                                <div className={classes.root_button}>
+                                    <Button variant="contained" color="secondary">
+                                        Edit Profile
+                                    </Button>
+                                </div>
+                                <div className={classes.root_button}>
+                                    <Button variant="contained" color="secondary">
+                                        View Orders
+                                    </Button>
+                                </div>
+                                <p>Do you Want to register as a customized potrait artist?</p>
+                              
+                                   
+                                    <div className={classes.root_button}>
+                                    <Button variant="contained" color="secondary">
+                                        Register As Pencile Artist
+                                    </Button>
+                                </div>
+
+                                  
+                                
                                
                             </Paper>
                         </Grid>
@@ -235,26 +256,8 @@ export default function Artist_Profile (){
                                         readOnly: true,
                                     }}
                                 />
-                                <div className={classes.root_button}>
-                                    <Button variant="contained" color="secondary">
-                                        Edit
-                                    </Button>
-                                </div>
-                                <Grid container>
-                                    <Grid item xs={7}>
-                                        <Typography style={{marginTop: '36.5px'}} variant="body2" color="textPrimary" component="p">
-                                            <p>Do you Want to register as a customized potrait artist?</p>
-                                        </Typography>
-                                    </Grid>
-
-                                    <Grid item xs={5}>
-                                        <div>
-                                            <Button style={{marginTop: '36.5px'}} variant="contained" fullWidth >
-                                                Register
-                                            </Button>
-                                        </div>
-                                    </Grid>
-                                </Grid>
+                               
+                               
                             </Paper>    
                         </Grid>
                     </Grid>
