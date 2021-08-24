@@ -71,6 +71,22 @@ function meRedirect(history) {
   history.push("/products");
 }
 
+function artistRedirect(history) {
+  history.push("/artistDashboard");
+}
+
+function buyerRedirect(history) {
+  history.push("/buyerDashboard");
+}
+
+function adminRedirect(history) {
+  history.push("/admin_profile");
+}
+
+function modRedirect(history) {
+  history.push("/moderatorhome");
+}
+
 export default function Registration() {
   let history = useHistory();
 
@@ -92,8 +108,16 @@ export default function Registration() {
       } else {
         setLoginStatus(response.data[0].username);
         meRedirect(history);
-        return;
+        if (response.data[0].role == "artist");
+        artistRedirect(history);
+        if (response.data[0].role == "buyer");
+        buyerRedirect(history);
+        if (response.data[0].role == "admin");
+        adminRedirect(history);
+        if (response.data[0].role == "moderator");
+        modRedirect(history);
       }
+      return;
     });
   };
 
