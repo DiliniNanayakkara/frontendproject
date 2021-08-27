@@ -123,6 +123,28 @@
   margin-bottom: 1rem;
   color: rgb(37, 36, 36);
 }
+.role {
+  float: left;
+}
+.role a {
+  display: inline-block;
+  color: rgb(34, 34, 34);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.role a:hover {
+  background-color: red;
+  color: white;
+}
+.selectrole {
+  list-style-type: none;
+  margin-left: 300px;
+  width: 10%;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(219, 219, 219);
+}
 
 .form-inputs1 {
   margin-bottom: 0.5rem;

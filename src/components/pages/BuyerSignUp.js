@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import '../css/Form.css';
-import SignUpArtist from './SignUpArtist';
+import SignUpBuyer from './SignUpBuyer';
 import Login from './Login';
-import { Link } from 'react-router-dom';
+
 const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -12,9 +12,9 @@ const Form = () => {
   return (
     <>
       <div className='form-container'>
-        
+      
         {!isSubmitted ? (
-          <SignUpArtist submitForm={submitForm} />
+          <SignUpBuyer submitForm={submitForm} />
         ) : (
           <Login />
         )}

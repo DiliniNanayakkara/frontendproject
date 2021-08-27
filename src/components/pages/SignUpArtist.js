@@ -12,6 +12,14 @@ const FormSignup = ({ submitForm }) => {
   return (
     <div className="A">
        <Navbar/>
+       <div className="formbtn">
+       <ul className="selectrole">
+       <li className="role"><a href="signup">Artist</a></li>
+  <li className="role"><a href="BuyerSignUp">Buyer</a></li>
+ 
+   
+</ul>
+       </div>
        <div className="leftside">
   
        <div className="circle"></div>
@@ -21,7 +29,7 @@ const FormSignup = ({ submitForm }) => {
      
       <form onSubmit={handleSubmit} className='form1' noValidate>
         <h1>
-          Get started with us today! Create your account by filling out the
+          Get started with us as a Artist today! Create your account by filling out the
           information below.
         </h1>
        
@@ -129,10 +137,22 @@ const FormSignup = ({ submitForm }) => {
           <label className='form-label1'>Location</label>
           <input
             className='form-input1'
-            type='textarea'
+            type='text'
             name='location'
             placeholder='Enter your Location Details'
             value={values.location}
+            onChange={handleChange}
+          />
+         
+        </div>
+        <div className='form-inputs1'>
+          <label className='form-label1'>Description</label>
+          <input
+            className='form-input1'
+            type='text'
+            name='description'
+            placeholder='Enter your Info'
+            value={values.description}
             onChange={handleChange}
           />
          

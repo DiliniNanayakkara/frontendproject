@@ -68,13 +68,17 @@ import Createexhibition from "./components/pages/Createexhibition";
 import Watchexhibition from "./components/pages/Watchexhibition";
 import c_home from "./components/pages/c_home";
 import a_home from "./components/pages/a_home";
+import SignUpBuyer from "./components/pages/SignUpBuyer";
+import BuyerSignUp from "./components/pages/BuyerSignUp";
 import Pencilartist_profile from "./components/pages/pencilartist_profile";
+import StaffSignUp from "./components/pages/StaffSignUp";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/BuyerSignUp" component={BuyerSignUp} />
         <Route path="/products" component={Products} />
         <Route path="/productdetail" component={ProductDetail} />
         <Route path="/productsbrushes" component={ProductsBrushes} />
@@ -100,6 +104,9 @@ function App() {
         <Route path="/artisthome" component={ArtistHome} />
         <Route path="/orders" component={Orders} />
         <Route path="/artistartworks" component={Artistartworks} />
+        <Route path="/SignUpBuyer" component={SignUpBuyer} />
+        <Route path="/StaffSignUp" component={StaffSignUp} />
+        
         <Route
           path="/artistartworkshistorical"
           component={Artistartworkshistorical}
