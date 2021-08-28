@@ -20,10 +20,11 @@ export default function Artworks() {
   
   const closeMobileMenu = () => setClick(false);
   useEffect(() => {
-    axios.get('http://localhost:3001/artworks').then((response) => {
+    axios.get('http://localhost:5000/artworks').then((response) => {
+           console.log(response.data);
            setArtworkList(response.data);
     });
-}, []);
+  }, []);
 
   return (
      <div className="A"> 
@@ -37,7 +38,7 @@ export default function Artworks() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-            All
+            All 
             </Link>
           </li>
           <li className='item'>
@@ -83,22 +84,42 @@ export default function Artworks() {
       <div>
               
               {artworkList.map((val) => {
-                    return <div className = "Arts"> 
+                
+                    return <div className = "cards"> 
+                    
+                          <div className="image">
+                            <img src={'http://localhost:5000/' + val.artwork_image}></img>
+                          </div>
                           
-                          <div className="img"> <img src="https://www.creativeboom.com/uploads/articles/a4/a40eeac492a143d5bb34412dfe8f275a8834e41c_810.jpg"></img></div> 
+                          <div className="cardbody">
                           <div className="name"> {val.artwork_name}</div> 
-                          <div className="des"> {val.artwork_category} , {val.artwork_description}</div>
+                          <div className="categ"> ({val.artwork_category}) </div>
+                          <div className="artist"> Artist - {val.artwork_artist}</div>
                           <div className="price">Rs. {val.artwork_price}.00</div>
+                          
                           <Link
+              to={`/artworkdetail/${val.artwork_id}`} 
+              onClick={closeMobileMenu}
+            ><button >
+            View Artwork   
+            </button> </Link>
+                          {/* <button>View Artwork</button> */}
+                          </div>
+                          
+                          {/* <div className="img"> <img align="center" src={'http://localhost:3001/' + val.image} alt=""></img></div> 
+                          <div className="name"> {val.name}</div> 
+                          <div className="des"> {val.category} , {val.artist}</div>
+                          <div className="price">Rs. {val.artwork_price}.00</div> */}
+                          {/* <Link
               to='/artworkdetail'
               onClick={closeMobileMenu}
             ><button className="but">
-            View Artwork         <i class="fa fa-arrow-right" aria-hidden="true"></i></button> </Link>
-                  </div>;
+            View Artwork         <i class="fa fa-arrow-right" aria-hidden="true"></i></button> </Link> */}
+                  </div>
               })}
               
         </div>
-         <div className="footer">
+        <div className="footer">
         <div className="footercard">
           <h1>De'lart</h1>
           <h3>Contact Us</h3>
