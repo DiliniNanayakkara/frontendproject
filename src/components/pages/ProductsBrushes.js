@@ -98,7 +98,7 @@ export default function ProductsBrushes() {
                           <div className="price">Rs. {val.tool_price}.00</div>
                           
                           <Link
-              to={`/productdetail`} 
+              to={`/productdetail/${val.tool_id}`} 
               onClick={closeMobileMenu}
             ><button >
             View Product  
