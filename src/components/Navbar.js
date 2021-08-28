@@ -42,7 +42,7 @@ function Navbar() {
               Home
             </Link></a>
   <a > <Link
-              to='/Artworks'
+              to='/artworks'
            
               onClick={closeMobileMenu}
             >
@@ -57,7 +57,7 @@ function Navbar() {
               Products
             </Link></a>
             <a > <Link
-              to='/Artworks'
+              to='/artworks'
            
               onClick={closeMobileMenu}
             >
