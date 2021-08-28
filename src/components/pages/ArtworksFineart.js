@@ -95,7 +95,12 @@ export default function Artworks() {
                           <div className="artist"> Artist - {val.artwork_artist}</div>
                           <div className="price">Rs. {val.artwork_price}.00</div>
                           
-                          <button>View Artwork</button>
+                          <Link
+              to={`/artworkdetail/${val.artwork_id}`} 
+              onClick={closeMobileMenu}
+            ><button >
+            View Artwork   
+            </button> </Link>
                           </div>
                           
                           {/* <div className="img"> <img align="center" src={'http://localhost:3001/' + val.image} alt=""></img></div> 
