@@ -107,7 +107,23 @@ return (
           />
           {errors.password && <p>{errors.password}</p>}
         </div>
+        <div className="form-inputs1">
+          <label className="form-label1">Confirm Password</label>
+          <input
+            className="form-input1"
+            type="password"
+            name="password2"
+            placeholder="Confirm your password"
+            value={values.password2}
+            onChange={handleChange}
+          />
+          {errors.password2 && <p>{errors.password2}</p>}
+        </div>
+
+    
        
+
+        
       </form>
     </div>
   </div>
