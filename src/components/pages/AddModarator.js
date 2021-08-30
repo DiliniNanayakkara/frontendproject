@@ -120,10 +120,27 @@ return (
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
 
-    
+      
+        <div className="form-inputs1">
+          <label className="form-label1">First Name</label>
+          <input
+            className="form-input1"
+            type="text"
+            name="firstname"
+            placeholder="Enter your First Name"
+            value={values.firstname}
+            onChange={handleChange}
+          />
+          {errors.firstname && <p>{errors.firstname}</p>}
+        </div>
        
 
-        
+        <button className="form-input-btn1" type="submit" onClick={register}>
+          Sign up
+        </button>
+        <span className="form-input-login1">
+          Already have an account? Login <a href="/login">here</a>
+        </span>
       </form>
     </div>
   </div>
