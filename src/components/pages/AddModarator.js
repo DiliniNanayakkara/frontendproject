@@ -197,7 +197,12 @@ return (
         </div>
      
 
-      
+        <button className="form-input-btn1" type="submit" onClick={register}>
+          Sign up
+        </button>
+        <span className="form-input-login1">
+          Already have an account? Login <a href="/login">here</a>
+        </span>
       </form>
     </div>
   </div>
