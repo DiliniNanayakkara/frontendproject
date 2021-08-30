@@ -13,6 +13,14 @@ const useForm3 = (callback, validate) => {
     nic: "",
     role: "",
   });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
 };
 
 export default useForm3;
