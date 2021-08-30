@@ -172,9 +172,19 @@ return (
 
           {errors.profile && <p>{errors.profile}</p>}
         </div> 
+        <div className="form-inputs1">
+          <label className="form-label1">NIC</label>
+          <input
+            className="form-input1"
+            type="number"
+            name="nic"
+            placeholder="Enter your NIC"
+            value={values.nic}
+            onChange={handleChange}
+          />
+          {errors.nic && <p>{errors.nic}</p>}
+        </div>
       
-     
-
       </form>
     </div>
   </div>
