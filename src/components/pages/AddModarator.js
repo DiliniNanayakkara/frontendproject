@@ -83,7 +83,21 @@ return (
           filling out the information below.
         </h1>
 
+        <div className="form-inputs1">
+          <label className="form-label1">User Name</label>
+          <input
+            className="form-input1"
+            type="email"
+            name="email"
+            placeholder="Enter your email for the username"
+            value={values.email}
+            onChange={handleChange}
+          />
+          {errors.email && <p>{errors.email}</p>}
+        </div>
        
+
+    
      
 
       </form>
