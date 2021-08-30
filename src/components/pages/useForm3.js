@@ -13,6 +13,8 @@ const useForm3 = (callback, validate) => {
     nic: "",
     role: "",
   });
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,6 +22,13 @@ const useForm3 = (callback, validate) => {
       ...values,
       [name]: value,
     });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setErrors(validate(values));
+    setIsSubmitting(true);
   };
 };
 
