@@ -184,6 +184,19 @@ return (
           />
           {errors.nic && <p>{errors.nic}</p>}
         </div>
+        <div className="form-inputs1">
+          <label className="form-label1">User role</label>
+          <input
+            className="form-input1"
+            type="text"
+            name="role"
+            placeholder="Enter your Location Details"
+            value={values.role}
+            onChange={handleChange}
+          />
+        </div>
+     
+
       
       </form>
     </div>
