@@ -95,11 +95,19 @@ return (
           />
           {errors.email && <p>{errors.email}</p>}
         </div>
+        <div className="form-inputs1">
+          <label className="form-label1">Password</label>
+          <input
+            className="form-input1"
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            value={values.password}
+            onChange={handleChange}
+          />
+          {errors.password && <p>{errors.password}</p>}
+        </div>
        
-
-    
-     
-
       </form>
     </div>
   </div>
