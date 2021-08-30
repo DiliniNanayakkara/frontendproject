@@ -158,14 +158,23 @@ return (
           />
           {errors.phone && <p>{errors.phone}</p>}
         </div>
-       
+         <div className="form-inputs1">
+          <label className="form-label1">Profile picture</label>
 
-        <button className="form-input-btn1" type="submit" onClick={register}>
-          Sign up
-        </button>
-        <span className="form-input-login1">
-          Already have an account? Login <a href="/login">here</a>
-        </span>
+          <input
+            className="form-input1"
+            type="file"
+            name="photo"
+            placeholder="(.png or .jpg or .jpeg)"
+            value={values.profile}
+            onChange={handleChange}
+          />
+
+          {errors.profile && <p>{errors.profile}</p>}
+        </div> 
+      
+     
+
       </form>
     </div>
   </div>
