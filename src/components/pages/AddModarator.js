@@ -57,3 +57,39 @@ const FormSignup = ({ submitForm }) => {
     });
   };
 */
+ 
+return (
+  <div className="A">
+    <AdminNavbar />
+   
+    <div className="leftside">
+      <div className="circle"></div>
+      <h1>
+        <span>SignUp</span>
+        <br />
+        <span>With</span>
+        <br />
+        <span>Delart</span>
+        <br />
+        <span>Today</span>
+        <br />
+      </h1>
+    </div>
+
+    <div className="form-content-right1">
+      <form onSubmit={handleSubmit} className="form1" noValidate>
+        <h1>
+          Get started with us as a Artist today! Create your account by
+          filling out the information below.
+        </h1>
+
+       
+     
+
+      </form>
+    </div>
+  </div>
+);
+};
+
+export default FormSignup;
