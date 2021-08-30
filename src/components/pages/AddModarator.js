@@ -133,6 +133,31 @@ return (
           />
           {errors.firstname && <p>{errors.firstname}</p>}
         </div>
+        <div className="form-inputs1">
+          <label className="form-label1">Last Name</label>
+          <input
+            className="form-input1"
+            type="text"
+            name="lastname"
+            placeholder="Enter your Last Name"
+            value={values.lastname}
+            onChange={handleChange}
+          />
+          {errors.lastname && <p>{errors.lastname}</p>}
+        </div>
+
+        <div className="form-inputs1">
+          <label className="form-label1">Contact Number</label>
+          <input
+            className="form-input1"
+            type="number"
+            name="phone"
+            placeholder="Enter your Contact Number"
+            value={values.phone}
+            onChange={handleChange}
+          />
+          {errors.phone && <p>{errors.phone}</p>}
+        </div>
        
 
         <button className="form-input-btn1" type="submit" onClick={register}>
