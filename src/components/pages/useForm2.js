@@ -11,6 +11,14 @@ const useForm2 = (callback, validate) => {
     photo: "",
     location: "",
   });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
 };
 
 export default useForm2;
