@@ -14,7 +14,7 @@ const FormSignup = ({ submitForm }) => {
 
   const register = () => {
     axios
-      .post("http://localhost:3001/register2", {
+      .post("http://localhost:5000/register", {
         values: values,
       })
       .then((response) => console.log(response));
