@@ -1,10 +1,10 @@
 import "../../App.css";
 import Navbar from "../Navbar";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-import Axios from "axios";
+import axios from "axios";
 
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
@@ -19,6 +19,7 @@ import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import { render } from "react-dom";
 
 function Copyright() {
   return (
@@ -67,63 +68,88 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function meRedirect(history) {
-  history.push("/products");
-}
+// function meRedirect(history) {
+//   history.push("/products");
+// }
 
-function artistRedirect(history) {
-  history.push("/artistDashboard");
-}
+// function artistRedirect(history) {
+//   history.push("/artistDashboard");
+// }
 
-function buyerRedirect(history) {
-  history.push("/buyerDashboard");
-}
+// function buyerRedirect(history) {
+//   history.push("/buyerDashboard");
+// }
 
-function adminRedirect(history) {
-  history.push("/admin_profile");
-}
+// function adminRedirect(history) {
+//   history.push("/admin_profile");
+// }
 
-function modRedirect(history) {
-  history.push("/moderatorhome");
-}
+// function modRedirect(history) {
+//   history.push("/moderatorhome");
+// }
 
-export default function Registration() {
-  let history = useHistory();
+export default function Login() {
+  //let history = useHistory();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const [loginStatus, setLoginStatus] = useState("");
 
-  Axios.defaults.withCredentials = true;
+  axios.defaults.withCredentials = true;
   const classes = useStyles();
 
   const login = () => {
-    Axios.post("http://localhost:3001/login", {
-      username: username,
-      password: password,
-    }).then((response) => {
-      if (response.data.message) {
-        setLoginStatus(response.data.message);
-      } else {
-        setLoginStatus(response.data[0].username);
-        meRedirect(history);
-        if (response.data[0].role == "artist");
-        artistRedirect(history);
-        if (response.data[0].role == "buyer");
-        buyerRedirect(history);
-        if (response.data[0].role == "admin");
-        adminRedirect(history);
-        if (response.data[0].role == "moderator");
-        modRedirect(history);
-      }
-      return;
-    });
+    //const { handleChange, handleSubmit, values, errors } = useForm();
+
+    axios
+      .post("http://localhost:3001/login", {
+        //values: values,
+        username: username,
+        password: password,
+      })
+      .then((response) => {
+        if (response.data.message) {
+          setLoginStatus(response.data.message);
+        } else {
+          setLoginStatus(response.data[0].username);
+          console.log(response);
+        }
+      });
   };
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/login2").then((response) => {
+      console.log(response);
+    });
+  }, []);
+
+  // const login = () => {
+  //   axios.post("http://localhost:3001/login", {
+  //     username: username,
+  //     password: password,
+  //   }).then((response) => {
+  //     if (response.data.message) {
+  //       setLoginStatus(response.data.message);
+  //     } else {
+  //       setLoginStatus(response.data[0].username);
+  //       meRedirect(history);
+  //       if (response.data[0].role == "artist");
+  //       artistRedirect(history);
+  //       if (response.data[0].role == "buyer");
+  //       buyerRedirect(history);
+  //       if (response.data[0].role == "admin");
+  //       adminRedirect(history);
+  //       if (response.data[0].role == "moderator");
+  //       modRedirect(history);
+  //     }
+  //     return;
+  //   });
+  // };
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Grid container component="main" className={classes.root}>
         <CssBaseline />
@@ -144,7 +170,7 @@ export default function Registration() {
                 fullWidth
                 id="email"
                 label="Email Address"
-                name="email"
+                name="username"
                 autoComplete="email"
                 onChange={(e) => {
                   setUsername(e.target.value);
@@ -194,6 +220,8 @@ export default function Registration() {
                 <Copyright />
               </Box>
             </form>
+
+            {/* <h1>{loginStatus}</h1> */}
           </div>
         </Grid>
       </Grid>
