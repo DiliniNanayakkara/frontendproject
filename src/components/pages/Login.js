@@ -103,7 +103,7 @@ export default function Login() {
     //const { handleChange, handleSubmit, values, errors } = useForm();
 
     axios
-      .post("http://localhost:3001/login", {
+      .post("http://localhost:3000/login", {
         //values: values,
         username: username,
         password: password,
@@ -119,7 +119,7 @@ export default function Login() {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:3001/login2").then((response) => {
+    axios.get("http://localhost:5000/login").then((response) => {
       console.log(response);
     });
   }, []);
