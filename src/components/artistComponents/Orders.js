@@ -12,6 +12,7 @@ import axios from "axios";
 function createData(id, date, name, shipTo, paymentMethod, amount) {
   return { id, date, name, shipTo, paymentMethod, amount };
 }
+
 const getOrders = (Id) => {
   axios.get("http://localhost:5000/getOrders").then((responce) => {
     console.log("success");
@@ -46,6 +47,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Orders() {
   const classes = useStyles();
+
+  const [orderList, setOrderList] = useState([]);
+  const [click, setClick] = useState(false);
+
+  const closeMobileMenu = () => setClick(false);
+  useEffect(() => {
+    axios.get("http://localhost:5000/getOrders").then((response) => {
+      setOrderList(response.data);
+    });
+  }, []);
+
   return (
     <React.Fragment>
       <Title>Recent Orders</Title>
@@ -60,15 +72,15 @@ export default function Orders() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.date}</TableCell>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.shipTo}</TableCell>
-              <TableCell>{row.paymentMethod}</TableCell>
-              <TableCell align="right">{row.amount}</TableCell>
-            </TableRow>
-          ))}
+          {orderList.map((val) => {
+            <TableRow key={val.Id}>
+              <TableCell>{val.date}</TableCell>
+              <TableCell>{val.name}</TableCell>
+              <TableCell>{val.shipTo}</TableCell>
+              <TableCell>{val.paymentMethod}</TableCell>
+              <TableCell align="right">{val.amount}</TableCell>
+            </TableRow>;
+          })}
         </TableBody>
       </Table>
       <div className={classes.seeMore}>
