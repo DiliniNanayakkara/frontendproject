@@ -31,7 +31,7 @@ We make sure to bring valuable high-quality stuff</p></center>
             </div>
           
           <div className="XX">
-          <h1 className="text">Find Arts You Love</h1>
+          <h1 className="text1">Find Arts You Love</h1>
           </div>
 
           <h2 className="title">Discover Art You Love From the Online Gallery</h2>
@@ -76,7 +76,7 @@ If you find an artwork that interests you, do contact us and ask more. We are ha
             </div>
           
           <div className="XY">
-          <h1 className="text">Customize your Pencil Art</h1>
+          <h1 className="text1">Customize your Pencil Art</h1>
           </div>
 
           <h2 className="title">Custom Black pencile Portrails</h2>
@@ -106,7 +106,7 @@ If you find an artwork that interests you, do contact us and ask more. We are ha
           </div></center>
           
           <div className="XY">
-          <h1 className="text">Buy the Art Tools you need.</h1>
+          <h1 className="text1">Buy the Art Tools you need.</h1>
           </div>
 
           

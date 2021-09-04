@@ -1,5 +1,5 @@
 import React, {useState, useEffect }from 'react';
-import '../css/Products.css';
+import '../css/Artworks.css';
 import Navbar from '../Navbar';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -14,16 +14,17 @@ import Typography from '@material-ui/core/Typography';
 
 
 
-export default function Artworks() {
-  const [artworkList, setArtworkList] = useState([]);
+export default function Products() {
+  const [toolList, setToolList] = useState([]);
   const [click, setClick] = useState(false);
   
   const closeMobileMenu = () => setClick(false);
   useEffect(() => {
-    axios.get('http://localhost:3001/products').then((response) => {
-           setArtworkList(response.data);
+    axios.get('http://localhost:5000/products').then((response) => {
+           console.log(response.data);
+           setToolList(response.data);
     });
-}, []);
+  }, []);
 
   return (
      <div className="A"> 
@@ -37,12 +38,12 @@ export default function Artworks() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-            All
+            All 
             </Link>
           </li>
           <li className='item'>
             <Link
-              to='/products'
+              to='/productsbrushes'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -51,16 +52,16 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/products'
+              to='/productscanvas'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-            Art Boards & Canvas
+            Boards/Canvas
             </Link>
           </li>
           <li className='item'>
             <Link
-              to='/products'
+              to='/productssupplies'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -69,7 +70,7 @@ export default function Artworks() {
           </li>
           <li className='item'>
             <Link
-              to='/products'
+              to='/productseasels'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -78,21 +79,47 @@ export default function Artworks() {
           </li>
         </ul>
       </nav>
-      </center>
   
+      </center>
       <div>
               
-              {artworkList.map((val) => {
-                    return <div className = "Arts"> 
-                          <div className="img"><img src="https://media.istockphoto.com/photos/paint-brushes-picture-id510006691?s=612x612"></img></div> 
+              {toolList.map((val) => {
+                
+                    return <div className = "cards"> 
+                    
+                          <div className="image">
+                            <img src={'http://localhost:5000/' + val.tool_image}></img>
+                          </div>
+                          
+                          <div className="cardbody">
                           <div className="name"> {val.tool_name}</div> 
+                          <div className="categ"> ({val.tool_category}) </div>
+            
                           <div className="price">Rs. {val.tool_price}.00</div>
-                          <button className="but">View Product <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                  </div>;
+                          
+                          <Link
+              to={`/productdetail`} 
+              onClick={closeMobileMenu}
+            ><button >
+            View Product  
+            </button> </Link>
+                          {/* <button>View Artwork</button> */}
+                          </div>
+                          
+                          {/* <div className="img"> <img align="center" src={'http://localhost:3001/' + val.image} alt=""></img></div> 
+                          <div className="name"> {val.name}</div> 
+                          <div className="des"> {val.category} , {val.artist}</div>
+                          <div className="price">Rs. {val.artwork_price}.00</div> */}
+                          {/* <Link
+              to='/artworkdetail'
+              onClick={closeMobileMenu}
+            ><button className="but">
+            View Artwork         <i class="fa fa-arrow-right" aria-hidden="true"></i></button> </Link> */}
+                  </div>
               })}
               
         </div>
-         <div className="footer">
+        <div className="footer">
         <div className="footercard">
           <h1>De'lart</h1>
           <h3>Contact Us</h3>

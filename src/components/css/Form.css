@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+.circle {
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  background: #410202;
+  margin-top: 150px;
+}
+.circle:hover {
+  background: #080808;
+}
+.leftside {
+  float: right;
+  margin-right: 100px;
+}
+
+.leftside h1 {
+  color: #d4d4d4;
+  text-align: center;
+  line-height: 50px;
+  margin-top: -350px;
+  -moz-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px)
+    skewX(1deg) skewY(1deg);
+  -webkit-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px)
+    skewX(1deg) skewY(1deg);
+  -o-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px)
+    skewX(1deg) skewY(1deg);
+  -ms-transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px)
+    skewX(1deg) skewY(1deg);
+  transform: scale(1) rotate(-5deg) translateX(0px) translateY(0px) skewX(1deg)
+    skewY(1deg);
+  /*-----------------------*/
+  text-shadow: 1px 1px #f7f33a, 2px 2px #f7f33a, 3px 3px #f7f33a,
+    4px 4px #f7f33a, 5px 5px #f7f33a, 6px 6px #852525, 7px 7px #bd1a1a,
+    8px 8px #bd1a1a, 9px 9px #bd1a1a, 10px 10px #bd1a1a, 11px 11px #bd1a1a,
+    12px 12px #bd1a1a, 13px 13px #bd1a1a, 14px 14px #bd1a1a, 15px 15px #bd1a1a,
+    16px 16px #000000, 17px 17px #000000, 18px 18px #000000, 19px 19px #000000,
+    20px 20px #000000, 21px 21px #000000, 22px 22px #000000, 23px 23px #000000,
+    24px 24px #ffffff, 25px 25px #f5f5f5, 26px 26px 6px #fdfdfd;
+}
+
+.leftside span:nth-child(3),
+.leftside span:nth-child(7) {
+  font-size: 60px;
+}
+
+.leftside span:nth-child(1),
+.leftside span:nth-child(9),
+.leftside span:nth-child(5) {
+  font-size: 110px;
+}
+
+.form-container1 {
+  margin: 100px auto;
+  width: 1000px;
+
+  position: relative;
+  border-radius: 10px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.close-btn1 {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  font-size: 1.5rem;
+  z-index: 1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-content-left1 {
+  background: linear-gradient(
+    90deg,
+    rgb(39, 176, 255) 0%,
+    rgb(0, 232, 236) 100%
+  );
+  border-radius: 10px 0 0 10px;
+  position: relative;
+}
+
+.form-img1 {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-img-21 {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-success1 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 80px;
+  color: rgb(44, 44, 44);
+}
+
+.form-content-right1 {
+  float: right;
+
+  margin-top: 20px;
+  border-radius: 0 10px 10px 0;
+}
+
+.form1 h1 {
+  font-size: 1rem;
+  text-align: start;
+  font-size: larger;
+  width: 80%;
+  margin-bottom: 1rem;
+  color: rgb(37, 36, 36);
+}
+.role {
+  float: left;
+}
+.role a {
+  display: inline-block;
+  color: rgb(34, 34, 34);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.role a:hover {
+  background-color: red;
+  color: white;
+}
+.selectrole {
+  list-style-type: none;
+  margin-left: 300px;
+  width: 10%;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(219, 219, 219);
+}
+
+.form-inputs1 {
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
+.form-inputs1 p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #f00e0e;
+}
+
+.form-label1 {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: rgb(36, 36, 36);
+}
+
+.form-input1 {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 70%;
+  border: none;
+}
+
+.form-input1::placeholder {
+  color: #595959;
+  font-size: 12px;
+}
+
+.form-input-btn1 {
+  width: 10%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: rgb(199, 199, 199);
+  outline: none;
+  border: 1px solid gray;
+  color: rgb(39, 39, 39);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.form-input-btn1:hover {
+  cursor: pointer;
+  color: white;
+  background: rgb(102, 4, 4) 0%;
+  transition: all 0.4s ease-out;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.form-input-login1 {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: rgb(51, 50, 50);
+  width: 80%;
+  text-align: center;
+}
+
+.form-input-login1 a {
+  text-decoration: none;
+  color: #27cdff;
+  font-weight: 600;
+}

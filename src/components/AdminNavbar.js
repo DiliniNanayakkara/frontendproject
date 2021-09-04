@@ -17,53 +17,47 @@ function AdminNavbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+      <div className="AllNavItem">
+    <div className="logo">
+    <a className="active" >  <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           De'lart
           <i class="fas fa-palette"></i>
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/dashbord' className='nav-links' onClick={closeMobileMenu}>
-              Dashbord
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
+        </Link></a>
+    </div>
+    <div class="topnav">
+  
+  <a >  <Link to='/dashbord'  onClick={closeMobileMenu}>
+             Dashbord
+            </Link></a>
+            <a> <Link
               to='/users'
-              className='nav-links'
+            
               onClick={closeMobileMenu}
             >
-            Users
-            </Link>
-          </li>
-          
-          <li className='nav-item'>
-            <Link
+              Users
+            </Link></a>
+           
+  <a> <Link
               to='/addmodarator'
-              className='nav-links'
+             
               onClick={closeMobileMenu}
             >
-              Add Modarator
-            </Link>
-          </li>
-        
-          <li>
-            <Link
-              to='/'
-              className='nav-links-mobile'
-              onClick={closeMobileMenu}
-            >
-              Logout
-            </Link>
-          </li>
+                Add Modarator
+            </Link></a>
           
-        </ul>
-        <Logout />
-      </nav>
+
+            <a > <Link
+              to='/'
+            
+              onClick={closeMobileMenu}
+            >
+            LogOut
+            </Link></a>
+
+            
+</div>
+</div>
+     
     </>
   );
 }

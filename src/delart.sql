@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `admin_staff` (
   `admin_username` varchar(100) DEFAULT NULL,
   `admin_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -46,13 +46,14 @@ CREATE TABLE IF NOT EXISTS `admin_staff` (
 DROP TABLE IF EXISTS `artist`;
 CREATE TABLE IF NOT EXISTS `artist` (
   `artist_id` int NOT NULL AUTO_INCREMENT,
+
   `artist_name` varchar(100) NOT NULL,
   `artist_description` varchar(255) NOT NULL,
   `artist_username` varchar(50) NOT NULL,
   `artist_password` varchar(10) NOT NULL,
   `artist_email` varchar(50) NOT NULL,
   PRIMARY KEY (`artist_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8mb4_general_ci
 
 -- --------------------------------------------------------
 
@@ -63,16 +64,16 @@ CREATE TABLE IF NOT EXISTS `artist` (
 DROP TABLE IF EXISTS `artworks`;
 CREATE TABLE IF NOT EXISTS `artworks` (
   `artwork_id` int NOT NULL AUTO_INCREMENT,
-  `artwork_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `artwork_description` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `artwork_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `artwork_description` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `artwork_price` double DEFAULT NULL,
-  `artwork_image` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `artwork_category` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `artwork_image` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `artwork_category` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `artwork_quantity` int DEFAULT NULL,
   `artist_id` int DEFAULT NULL,
   PRIMARY KEY (`artwork_id`),
   KEY `artist_id` (`artist_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8mb4_general_ci;;
 
 --
 -- Dumping data for table `artworks`
@@ -100,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `art_tool` (
   `tool_category` varchar(100) DEFAULT NULL,
   `tool_quantity` int DEFAULT NULL,
   PRIMARY KEY (`tool_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `cart` (
   KEY `artwork_id` (`artwork_id`),
   KEY `tool_id` (`tool_id`,`customer_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -135,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `customer_username` varchar(100) DEFAULT NULL,
   `customer_password` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -153,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `customized_artist` (
   `additional_face_price` float(10,2) DEFAULT NULL,
   PRIMARY KEY (`customized_artist_id`),
   KEY `artist_id` (`artist_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -170,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `customized_artwork` (
   `cus_frame_size` int DEFAULT NULL,
   PRIMARY KEY (`cus_artwork_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -187,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `exhibition` (
   `issued_tickets` int DEFAULT NULL,
   PRIMARY KEY (`exhibition_id`),
   KEY `artist_id` (`artist_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -207,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `exhibition_visitor` (
   PRIMARY KEY (`exh_visitor_id`),
   KEY `exhibition_id` (`exhibition_id`,`customer_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -223,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   `order_status` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`order_id`),
   KEY `cart_id` (`cart_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -238,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_pwd` varchar(100) DEFAULT NULL,
   `user_role` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Constraints for dumped tables

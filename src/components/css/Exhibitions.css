@@ -2,7 +2,7 @@
     margin-top: 20px;
 }
 .exhibition {
-    width: 900px;
+    width: 700px;
     height: 800px;
     
     background-color:rgb(255, 255, 255);
@@ -109,7 +109,7 @@
 .status {
     width: 95%;
     margin-top: 50px;
-   
+    margin-left: 50px;
     box-shadow: 0 4px 8px 0 rgba(3, 80, 143, 0.76), 0 6px 20px 0 rgba(15, 156, 212, 0.164);
     border-radius:5%;
 }
@@ -121,6 +121,7 @@
 }
 .status td p {
     color:rgb(110, 109, 109);
+    width: 400px;
 }
 .status td {
     background-color: white;

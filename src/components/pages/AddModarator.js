@@ -1,168 +1,212 @@
-import React from 'react';
+import React, { useState } from "react";
+import validate from "./validateInfo";
+import useForm3 from "./useForm3";
+import "../css/Form.css";
+import AdminNavbar from "../AdminNavbar";
 
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
+import axios from "axios";
 
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-
-import '../../App.css';
-import AdminNavbar from '../AdminNavbar';
-
-// export default function Login() {
-//   return (
-//     <>
-//     <Navbar/>
-//       <center><h1 className='login'>Login</h1></center>
-//     </>
-//   );
-// }
+const FormSignup = ({ submitForm }) => {
+  const { handleChange, handleSubmit, values, errors } = useForm3(
+    submitForm,
+    validate
+  );
 
 
+  const register = () => {
+    //const { handleChange, handleSubmit, values, errors } = useForm();
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      height: '100vh',
-    },
-    image: {
-      backgroundImage: 'url(https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/Web-design-vs-web-de.jpg?auto=format&q=60&w=1860&h=1860&fit=crop&crop=faces)',
-    
-    
+    axios
+      .post("http://localhost:5000/register3", {
+        values: values,
+        // email: useForm.email,
+        // password: useForm.handleChange.values.password,
+        // password2: useForm.values.password2,
+        // nic: useForm.values.nic,
+        //values: useForm.handleChange.values(),
+        // email: email,
+        // password: password,
+        // password2: password2,
+        // nic: nic,
+        // firstName: firstname,
+        // lastName: lastname,
+        // phone: phone,
+        // photo: photo,
+        // location: location,
+        // description: description,
+      })
+      .then((response) => console.log(response));
+  };
+/*function Signup() {
+
+  const [usernameReg, setUsernameReg ] = useState('')
+  const [passwordReg, setPasswordReg ] = useState('')
+  const [conpasswordReg, setconpasswordReg ] = useState('')
+  const [nicReg, setnicReg ] = useState('')
+  const [firstnameReg, setfirstnameReg ] = useState('')
+  const [lastnameReg, setlastnameReg ] = useState('')
+  const [ contactnumberReg, setcontactnumberReg ] = useState('')
+  const [profilepicReg, setprofilepicReg ] = useState('')
+  const [locationReg, setlocationReg ] = useState('')
+  const [descriptionReg, setdescriptionReg ] = useState('')
+
+  const register = ()=>{
+    Axios.post('http://localhost:5000/register', {username: usernameReg , password: passwordReg, conpassword: conpasswordReg, nic: nicReg , first_name: firstnameReg, last_name: lastnameReg ,
+    contact_no: contactnumberReg, profile:profilepicReg, description: descriptionReg,location: locationReg}).then((response) => {
+      console.log(response);
+    });
+  };
+*/
+ 
+return (
+  <div className="A">
+    <AdminNavbar />
+   
+    <div className="leftside">
+      <div className="circle"></div>
+      <h1>
+        <span>SignUp</span>
+        <br />
+        <span>With</span>
+        <br />
+        <span>Delart</span>
+        <br />
+        <span>Today</span>
+        <br />
+      </h1>
+    </div>
+
+    <div className="form-content-right1">
+      <form onSubmit={handleSubmit} className="form1" noValidate>
+        <h1>
+          Get started with us as a Artist today! Create your account by
+          filling out the information below.
+        </h1>
+
+        <div className="form-inputs1">
+          <label className="form-label1">User Name</label>
+          <input
+            className="form-input1"
+            type="email"
+            name="email"
+            placeholder="Enter your email for the username"
+            value={values.email}
+            onChange={handleChange}
+          />
+          {errors.email && <p>{errors.email}</p>}
+        </div>
+        <div className="form-inputs1">
+          <label className="form-label1">Password</label>
+          <input
+            className="form-input1"
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            value={values.password}
+            onChange={handleChange}
+          />
+          {errors.password && <p>{errors.password}</p>}
+        </div>
+        <div className="form-inputs1">
+          <label className="form-label1">Confirm Password</label>
+          <input
+            className="form-input1"
+            type="password"
+            name="password2"
+            placeholder="Confirm your password"
+            value={values.password2}
+            onChange={handleChange}
+          />
+          {errors.password2 && <p>{errors.password2}</p>}
+        </div>
+
       
-      backgroundRepeat: 'no-repeat',
-      backgroundColor:
-        theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    },
-    paper: {
-      margin: theme.spacing(8, 4),
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    },
-    avatar: {
-      margin: theme.spacing(1),
-      backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-      width: '100%', // Fix IE 11 issue.
-      marginTop: theme.spacing(1),
-    },
-    submit: {
-      margin: theme.spacing(3, 0, 2),
-    },
-  }));
+        <div className="form-inputs1">
+          <label className="form-label1">First Name</label>
+          <input
+            className="form-input1"
+            type="text"
+            name="firstname"
+            placeholder="Enter your First Name"
+            value={values.firstname}
+            onChange={handleChange}
+          />
+          {errors.firstname && <p>{errors.firstname}</p>}
+        </div>
+        <div className="form-inputs1">
+          <label className="form-label1">Last Name</label>
+          <input
+            className="form-input1"
+            type="text"
+            name="lastname"
+            placeholder="Enter your Last Name"
+            value={values.lastname}
+            onChange={handleChange}
+          />
+          {errors.lastname && <p>{errors.lastname}</p>}
+        </div>
 
+        <div className="form-inputs1">
+          <label className="form-label1">Contact Number</label>
+          <input
+            className="form-input1"
+            type="number"
+            name="phone"
+            placeholder="Enter your Contact Number"
+            value={values.phone}
+            onChange={handleChange}
+          />
+          {errors.phone && <p>{errors.phone}</p>}
+        </div>
+         <div className="form-inputs1">
+          <label className="form-label1">Profile picture</label>
 
-export default function Customized_Artist() {
-    const classes = useStyles();
-  
-    return (
+          <input
+            className="form-input1"
+            type="file"
+            name="photo"
+            placeholder="(.png or .jpg or .jpeg)"
+            value={values.profile}
+            onChange={handleChange}
+          />
 
-      <>
-          <AdminNavbar/>
-      
+          {errors.profile && <p>{errors.profile}</p>}
+        </div> 
+        <div className="form-inputs1">
+          <label className="form-label1">NIC</label>
+          <input
+            className="form-input1"
+            type="number"
+            name="nic"
+            placeholder="Enter your NIC"
+            value={values.nic}
+            onChange={handleChange}
+          />
+          {errors.nic && <p>{errors.nic}</p>}
+        </div>
+        <div className="form-inputs1">
+          <label className="form-label1">User role</label>
+          <input
+            className="form-input1"
+            type="text"
+            name="role"
+            placeholder="Enter your Location Details"
+            value={values.role}
+            onChange={handleChange}
+          />
+        </div>
+     
 
-       
-      <Grid container component="main" className={classes.root}>
-        <CssBaseline />
-        <Grid item xs={false} sm={4} md={7} className={classes.image} />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-          <div className={classes.paper}>
-            {/* <Avatar className={classes.avatar}>
-              <LockOutlinedIcon />
-            </Avatar> */}
-            <Typography component="h1" variant="h5">
-              Registeration Form
-            </Typography>
-            <form className={classes.form} noValidate>
-            <h3>Modarator Name:</h3>
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="modaretor name"
-                label="Modarator Name"
-                name="modarator name"
-                autoComplete="modarator_name"
-                autoFocus
-              />
-              <h3>Modarator Id:</h3>
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                name="modarator_id"
-                label="Modarator_Id"
-                type="Modarator_Id"
-                id="modarator_id"
-                // autoComplete="current-password"
-              />
-              <h3>Modaretor Password: </h3>
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="modaretor password"
-                label="Modarator Password"
-                name="modarator_password"
-                autoComplete="modarator password"
-                // autoFocus
-              />
-              <h3>Modarator Email:</h3>
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="modarator email"
-                label="Modarator Email"
-                name="modarator email"
-                autoComplete="modarator email"
-                // autoFocus
-              />
-              {/* <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              /> */}
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-              >
-                Register
-              </Button>
-              <Grid container>
-                {/* <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid> */}
-                {/* <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid> */}
-              </Grid>
-              <Box mt={5}>
-                
-              </Box>
-            </form>
-          </div>
-        </Grid>
-       </Grid>
+        <button className="form-input-btn1" type="submit" onClick={register}>
+          Sign up
+        </button>
+        <span className="form-input-login1">
+          Already have an account? Login <a href="/login">here</a>
+        </span>
+      </form>
+    </div>
+  </div>
+);
+};
 
-       </>
-    );
-  }
+export default FormSignup;
