@@ -75,6 +75,7 @@ import SignUpBuyer from "./components/pages/SignUpBuyer";
 import BuyerSignUp from "./components/pages/BuyerSignUp";
 import Pencilartist_profile from "./components/pages/pencilartist_profile";
 import StaffSignUp from "./components/pages/StaffSignUp";
+import ArtistdashbordOrders from "./components/artistComponents/artistDashboard_orders";
 
 function App() {
   return (
@@ -111,7 +112,10 @@ function App() {
         <Route path="/artistartworks" component={Artistartworks} />
         <Route path="/SignUpBuyer" component={SignUpBuyer} />
         <Route path="/StaffSignUp" component={StaffSignUp} />
+
         {/* <Route path="/StaffSignUp" component={AutherizeRoute} /> */}
+
+        <Route path="/ArtistdashbordOrders" component={ArtistdashbordOrders} />
 
         <Route
           path="/artistartworkshistorical"

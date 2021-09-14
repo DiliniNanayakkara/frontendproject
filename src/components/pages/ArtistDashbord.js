@@ -19,7 +19,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 
-import Orders from "../artistComponents/Orders";
+import Orders from "../artistComponents/artistDashboard_orders";
 import { mainListItems, secondaryListItems } from "./artisthomelistItems";
 import red from "@material-ui/core/colors/red";
 import Welcome from "../artistComponents/Welcome";
