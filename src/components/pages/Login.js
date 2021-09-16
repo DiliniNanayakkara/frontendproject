@@ -2,7 +2,7 @@ import "../../App.css";
 import Navbar from "../Navbar";
 
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 import axios from "axios";
 
@@ -89,19 +89,19 @@ const useStyles = makeStyles((theme) => ({
 // }
 
 export default function Login() {
-  //let history = useHistory();
+  let history = useHistory();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const [loginStatus, setLoginStatus] = useState("");
+  const [loginStatus, setLoginStatus] = useState(false);
 
   axios.defaults.withCredentials = true;
   const classes = useStyles();
 
   const login = () => {
     //const { handleChange, handleSubmit, values, errors } = useForm();
-
+    console.log("Function hitted, values", username, password);
     axios
       .post("http://localhost:5000/login", {
         //values: values,
@@ -109,20 +109,59 @@ export default function Login() {
         password: password,
       })
       .then((response) => {
-        if (response.data.message) {
-          setLoginStatus(response.data.message);
+        console.log("API hitted");
+        if (!response.data.auth) {
+          //setLoginStatus(response.data.message);
+          setLoginStatus(false);
+          // return loginStatus;
         } else {
-          setLoginStatus(response.data[0].username);
-          console.log(response);
+          console.log("API Auth hitted");
+          //setLoginStatus(response.data.result[0].email);
+          //console.log(response);
+          //setLoginStatus(true);
+          localStorage.setItem("token", response.data.token);
+          setLoginStatus(true);
+          if (response.data.role == "artist") {
+            console.log("API role hitted");
+            history.push({
+              pathname: "/artistdashbord",
+              // pathname: "/Artist_profile",
+              userName: response.data.username,
+              role: response.data.role,
+            });
+          }
+          if (response.data.role == "customer") {
+            console.log("API role hitted");
+            history.push({
+              pathname: "/buyerdashbord",
+              // pathname: "/Artist_profile",
+              userName: response.data.username,
+              role: response.data.role,
+            });
+          }
+          if (response.data.role == "admin") {
+            console.log("API role hitted");
+            history.push({
+              pathname: "/dashbord",
+              // pathname: "/Artist_profile",
+              userName: response.data.username,
+              role: response.data.role,
+            });
+          }
+          //return loginStatus;
         }
       });
   };
 
-  useEffect(() => {
-    axios.get("http://localhost:5000/login").then((response) => {
-      console.log(response);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get("http://localhost:5000/login").then((response) => {
+  //     if (response.data.loggedIn == true) {
+  //       //setLoginStatus(response.data.user[0].email);
+  //       //console.log(response);
+  //       setLoginStatus(true);
+  //     }
+  //   });
+  // }, []);
 
   // const login = () => {
   //   axios.post("http://localhost:3001/login", {
@@ -213,18 +252,60 @@ export default function Login() {
                   <Link href="./Signup" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
-                  <h1>{loginStatus}</h1>
+                  {/* <h1>{loginStatus}</h1> */}
+
+                  {/* {loginStatus && <button>Check Authentication</button>} */}
                 </Grid>
               </Grid>
               <Box mt={5}>
                 <Copyright />
               </Box>
-            </form>
+              {/* <div>
+                {loginStatus ? (
+                  <Button fullWidth variant="contained" color="secondary">
+                    hech
+                  </Button>
+                ) : (
+                  "ERROR"
+                )}
+              </div> */}
 
-            {/* <h1>{loginStatus}</h1> */}
+              {/* <div>
+                {loginStatus && (
+                  <Button
+                    fullWidth
+                    variant="contained"
+                    color="secondary"
+                    onClick={authentication}
+                  >
+                    Authentication
+                  </Button>
+                )}
+              </div> */}
+
+              {/* <div>{loginStatus ? "HIIIIIIIIIIIIIIIII" : "ERROR"}</div>
+              <h1>{loginStatus}</h1>
+              <div>{loginStatus && <button>Check Authentication</button>}</div> */}
+            </form>
+            {/* {loginStatus && <h1>HELLO</h1>}
+            <div>{loginStatus && <h1>LOGGED</h1>}</div> */}
           </div>
         </Grid>
       </Grid>
     </>
+    //   <div>
+    //   {loginStatus && (
+    //     <Button
+    //       fullWidth
+    //       variant="contained"
+    //       color="secondary"
+    //       onClick={login}
+    //     >
+    //       hech
+    //     </Button>
+    //   )}
+    // </div>
+
+    // {loginStatus && (<button>Check Authentication</button>)}
   );
 }

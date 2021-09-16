@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Home from "./components/pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Roles from "./components/pages/Roles";
 import Artworks from "./components/pages/Artworks";
 import ArtworksDrawing from "./components/pages/ArtworksDrawing";
 import ArtworkDetail from "./components/pages/ArtworkDetail";
@@ -61,6 +62,7 @@ import RecivedArtworksChart from "./components/pages/moderator/RecivedArtwoksCha
 import ReternItemChart from "./components/pages/moderator/RetrnItemChart";
 import Moderator_Profile from "./components/pages/moderator_profile";
 import Advertisement_upload from "./components/pages/Advertisement_upload";
+import AutherizeRoute from "./common/AutherizeRoute";
 
 import Portofolio from "./components/pages/Portofolio";
 // import Complaints from "./components/pages/moderator/Complaints";
@@ -73,12 +75,14 @@ import SignUpBuyer from "./components/pages/SignUpBuyer";
 import BuyerSignUp from "./components/pages/BuyerSignUp";
 import Pencilartist_profile from "./components/pages/pencilartist_profile";
 import StaffSignUp from "./components/pages/StaffSignUp";
+import ArtistdashbordOrders from "./components/artistComponents/artistDashboard_orders";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/roles" component={Roles} />
         <Route path="/BuyerSignUp" component={BuyerSignUp} />
         <Route path="/products" component={Products} />
         <Route path="/productdetail" component={ProductDetail} />
@@ -108,7 +112,11 @@ function App() {
         <Route path="/artistartworks" component={Artistartworks} />
         <Route path="/SignUpBuyer" component={SignUpBuyer} />
         <Route path="/StaffSignUp" component={StaffSignUp} />
-        
+
+        {/* <Route path="/StaffSignUp" component={AutherizeRoute} /> */}
+
+        <Route path="/ArtistdashbordOrders" component={ArtistdashbordOrders} />
+
         <Route
           path="/artistartworkshistorical"
           component={Artistartworkshistorical}
@@ -139,7 +147,7 @@ function App() {
         <Route path="/customer_artists" component={Customer_Artists} />
         <Route path="/customer_pencilarts" component={Customer_Pencilarts} />
         <Route path="/customer_exhibitions" component={Customer_Exhibitions} />
-        <Route path="/artistdashbord" component={ArtistDashbord} />
+        <AutherizeRoute path="/artistdashbord" component={ArtistDashbord} />
         <Route path="/buyerdashbord" component={BuyerDashbord} />
         <Route path="/moderatorHome" component={ModeratorHome} />
         <Route path="/helpcenter" component={HelpCenter} />
