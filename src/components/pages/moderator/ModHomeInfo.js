@@ -12,6 +12,10 @@ export default function ModHomeInfo() {
     <div>
       
       <div>
+
+      <Link to='/complaints'>
+       <button className='helpcenterbtn'>Manege Art Tools</button>
+     </Link>
     
     <Link to='/helpcenter'>
        <button className='helpcenterbtn'>Help Center</button>
@@ -34,9 +38,7 @@ export default function ModHomeInfo() {
             
              
       
-     <Link to='/complaints'>
-       <button className='helpcenterbtn'>Complaints Handle</button>
-     </Link>
+    
        
              </div>
      
