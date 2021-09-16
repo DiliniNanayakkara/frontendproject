@@ -81,6 +81,7 @@ function App() {
   return (
     <Router>
       <Switch>
+
         <Route path="/" exact component={Home} />
         <Route path="/roles" component={Roles} />
         <Route path="/BuyerSignUp" component={BuyerSignUp} />
@@ -203,6 +204,38 @@ function App() {
         <Route path="/createexhibition" component={Createexhibition} />
         <Route path="/customizeart" component={Customizeart} />
         <Route path="/watchexhibition" component={Watchexhibition} />
+
+        <Route path='/' exact component={Home} />
+        <Route path='/products' component={Products} />
+        <Route path='/artworks' component={Artworks} />
+        <Route path='/signup' component={Signup} />
+        <Route path='/login' component={Login} />
+        <Route path='/pencilarts' component={Pencilarts} />
+        <Route path='/exhibitions' component={Exhibitions} />
+        <Route path='/dashbord' component={Dashbord} />
+        <Route path='/users' component={Users} />
+        <Route path='/addmodarator' component={AddModarator} />
+        <Route path='/artisthome' component={ArtistHome} />
+        <Route path='/orders' component={Orders} />
+        <Route path='/artistartworks' component={Artistartworks} />
+        <Route path='/artistproduct' component={ArtistProduct} />
+        <Route path='/customer_home' component={Customer_Home} />
+        <Route path='/customer_artworks' component={Customer_Artworks} />
+        <Route path='/customer_products' component={Customer_Products} />
+        <Route path='/customer_artists' component={Customer_Artists} />
+        <Route path='/customer_pencilarts' component={Customer_Pencilarts} />
+        <Route path='/customer_exhibitions' component={Customer_Exhibitions} />
+        <Route path='/artistdashbord' component={ArtistDashbord} />
+        <Route path='/buyerdashbord' component={BuyerDashbord} />
+        <Route path='/moderatorHome' component={ModeratorHome} />
+        <Route path='/helpcenter' component={HelpCenter} />
+        <Route path='/advertiesment' component={Advertiesment} />
+        <Route path='/reports' component={Reports} />
+        <Route path='/customized_artist' component={Customized_Artist} />
+        <Route path='/artist_profile' component={Artist_Profile} />
+        <Route path='/customer_profile' component={Customer_Profile} />         
+       
+
       </Switch>
     </Router>
   );
