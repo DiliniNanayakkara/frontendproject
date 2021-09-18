@@ -1,5 +1,8 @@
 import "./DashbordData.css";
 
+import { useState, useEffect } from "react";
+import Axios from "axios";
+
 export default function WidgetLg() {
   const Button = ({ type }) => {
     return <button className={"widgetLgButton " + type}>{type}</button>;
