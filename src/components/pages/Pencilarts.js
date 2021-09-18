@@ -1,9 +1,12 @@
-import React from 'react';
+
+import React, { useEffect, useState } from 'react';
+import Axios from "axios";
 import '../css/Pencilarts.css';
 import Navbar from '../Navbar';
 import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com'
 import Swal from "sweetalert2";
+import { VideoCall } from '@material-ui/icons';
 export default function Pencilarts (){
  function sendEmail(e) {
        e.preventDefault();
@@ -12,7 +15,12 @@ export default function Pencilarts (){
 
        }).catch(err=> console.log(err));
  }
- 
+ const [employeeList, setEmployeeList] = useState([]);
+ useEffect(() => {
+  Axios.get("http://localhost:5000/pencilearts").then((response) => {
+      setEmployeeList(response.data);
+  });
+});
  
  
   
@@ -33,17 +41,17 @@ export default function Pencilarts (){
            
 
           <center>
-          <h3 className="artistnameg">#Artist Name</h3>
-                <p className="gigp">"Sometimes a client or a designer has a space that cries out for a truly unique work of art. They will often already love my work but can’t find the perfect piece within my existing collection. They need a slightly different size or particular palette of colors. I love being able to create a painting that fits their specific needs. I look at it as an opportunity to collaborate and bring a vision to life using my techniques and talents.
-
-​The commission process involves lots of communication to find out what the client's needs are and all the details are written into a commission agreement. When the painting is getting close to completion I send photographs of the painting so the client has a chance to request any changes they might want.
-
-​I ask for a deposit of 50% to begin and the balance is due upon shipping or delivery of the completed painting. 
-​
-It's an exciting process that I truly enjoy. I invite you to reach out to me  to discuss your vision for your space." 
+          {employeeList.map((val, key) => {
+            return(
+              <div>
+          <h3 className="artistnameg">{val.first_name + val.last_name}</h3>
+                <p className="gigp">{val.gig}
 ​
 </p>
-<p>#artistname</p>
+<p>{val.first_name}</p>
+</div>
+            );
+          })}
 </center>
 
         
