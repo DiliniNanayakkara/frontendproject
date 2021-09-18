@@ -32,15 +32,9 @@
   margin: 20px 0px;
 }
 
-.widgetSmButton {
+.widgetSmUser {
   display: flex;
-  align-items: center;
-  border: none;
-  border-radius: 10px;
-  padding: 7px 10px;
-  background-color: #eeeef7;
-  color: #555;
-  cursor: pointer;
+  flex-direction: column;
 }
 
 .widgetSmUsername {
