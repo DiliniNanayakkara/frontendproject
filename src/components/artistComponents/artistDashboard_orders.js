@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
@@ -30,7 +30,7 @@ export default function Orders() {
 
   const getOrder = async (id) => {
     const res = await axios.post("http://localhost:5000/getOrders", {
-      artist_id: id,
+      username: id,
     });
     setOrders(res.data);
   };
@@ -43,7 +43,7 @@ export default function Orders() {
   };
 
   useEffect(() => {
-    getOrder("3");
+    getOrder(localStorage.getItem("userName"));
   }, []);
 
   console.log(orders);
