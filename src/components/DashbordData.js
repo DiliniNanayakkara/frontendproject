@@ -30,22 +30,37 @@ export default function WidgetLg() {
             <Button type="Pending" />
           </td>
         </tr>
-        <tr className="widgetLgTr">
-          <td className="widgetLgUser">
-            <img
-              src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg"
-              alt=""
-              className="widgetLgImg"
-            />
-            <span className="widgetLgName">Lily Carone</span>
-          </td>
-          <td className="widgetLgDate">2 Jun 2021</td>
-          <td className="widgetLgAmount">25</td>
-          <td className="widgetLgStatus">
-            <Button type="Approved" />
-          </td>
-        </tr>
-      </table>
-    </div>
-  );
-}
+     
+    <div className="widgetLg">
+      <center><p className="titlem">Saff Details</p></center>
+<center>
+  
+        <table className="Artist">
+          <thead>
+        <tr>
+    <th>Email</th>
+    <th>First_name</th>
+    <th>Last_name</th>
+    <th>Contact_no</th>
+    <th>User_role</th>
+    <th>NIC</th>
+  </tr>  </thead>
+  {employeeList.map((val, key) => {
+    return (
+  <tbody>
+  <tr>
+    <td>{val.email}</td>
+    <td>{val.first_name}</td>
+    <td>{val.last_name}</td>
+    <td>{val.contact_no}</td>
+    <td>{val.user_role}</td>
+    <td>{val.nic}</td>
+  </tr>
+ 
+  </tbody>
+    );
+  })}
+
+        </table>
+
+        </center>
