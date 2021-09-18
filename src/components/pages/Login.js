@@ -119,10 +119,12 @@ export default function Login() {
           //setLoginStatus(response.data.result[0].email);
           //console.log(response);
           //setLoginStatus(true);
+
           localStorage.setItem("token", response.data.token);
           setLoginStatus(true);
           if (response.data.role == "artist") {
             console.log("API role hitted");
+            localStorage.setItem("userName", response.data.username);
             history.push({
               pathname: "/artistdashbord",
               // pathname: "/Artist_profile",
@@ -130,6 +132,7 @@ export default function Login() {
               role: response.data.role,
             });
           }
+
           if (response.data.role == "customer") {
             console.log("API role hitted");
             history.push({
