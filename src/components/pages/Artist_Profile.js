@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import images from './data';
+import Axios from "axios";
 import { SRLWrapper } from 'simple-react-lightbox';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -122,6 +123,13 @@ export default function Artist_Profile (){
 		},
 		[tag]
 	);
+    const [employeeList, setEmployeeList] = useState([]);
+
+  useEffect(() => {
+    Axios.get("http://localhost:5000/artistprofile").then((response) => {
+      setEmployeeList(response.data);
+    });
+  });
 
 
     return (
@@ -132,26 +140,28 @@ export default function Artist_Profile (){
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" style={{width:'100px', marginTop:'20px', marginBottom:'50px', height:'auto'}}>
 
 </img>
-<h1>Dilini Nanayakkara</h1>
-<p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
-<h3>Hi! 👻 I am a professional artist who comes to show my artwork. You can see my portfolio and I hope you will 
+       <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
+       <h1>Dilini Nanayakkara</h1>
+       <h3>Hi! 👻 I am a professional artist who comes to show my artwork. You can see my portfolio and I hope you will 
                                         enjoy it! If you have any questions do not hesitate to ask, I will answer immediately! 👻</h3>
                 </center>
                 <div className="btn">
                                     <Button variant="contained">
                                         Edit Profile Info
                                     </Button>
-                                </div>
+                                </div>{/*btn */}
                                
                                 <p className="profiletext">Do you Want to register as a customized potrait artist?</p>
                                 <div className="btn">
                                     <Button variant="contained" >
                                         Register As Pencile Artist
                                     </Button>
-                                </div>
+                                </div>{/*btn */}
                                 
 
-               </div>
+               </div>{/*profiledata */}
+               {employeeList.map((val, key) => {
+                   return(
                <div className="profiledetails">
               <center>
                                 <h2>USER PROFILE</h2>
@@ -159,7 +169,7 @@ export default function Artist_Profile (){
                                 className="feild"
                                     id="standard-read-only-input"
                                     label="UserID:"
-                                    defaultValue="12345"
+                                    defaultValue={val.artist_Id}
                                     InputProps={{
                                         readOnly: true,
                                     }}
@@ -168,7 +178,7 @@ export default function Artist_Profile (){
                                   className="feild"
                                     id="standard-read-only-input"
                                     label="Name:"
-                                    defaultValue="Dilini Nanayakkara"
+                                    defaultValue={val.first_name + val.last_name}
                                     InputProps={{
                                         readOnly: true,
                                     }}
@@ -177,7 +187,7 @@ export default function Artist_Profile (){
                                   className="feild"
                                     id="standard-read-only-input"
                                     label="Email address:"
-                                    defaultValue="dilinin@gmail.com"
+                                    defaultValue={val.email}
                                     InputProps={{
                                         readOnly: true,
                                     }}
@@ -186,7 +196,7 @@ export default function Artist_Profile (){
                                   className="feild"
                                     id="standard-read-only-input"
                                     label="Phone:"
-                                    defaultValue="0711111111"
+                                    defaultValue={val.contact_no}
                                     InputProps={{
                                         readOnly: true,
                                     }}
@@ -195,7 +205,7 @@ export default function Artist_Profile (){
                                   className="feild"
                                     id="standard-read-only-input"
                                     label="Location:"
-                                    defaultValue="Kandy, Sri Lanka"
+                                    defaultValue={val.location}
                                     InputProps={{
                                         readOnly: true,
                                     }}
@@ -217,18 +227,20 @@ export default function Artist_Profile (){
                                     <Button variant="contained" >
                                         Edit Profile
                                     </Button>
-                                </div>
+                                </div>{/*btn */}
                                 <div className="btn">
                                     <Button variant="contained">
                                         View Orders
                                     </Button>
-                                </div>
+                                </div>{/*btn */}
 
-               </div>
+               </div>/*profiledetails */
+                   );
+                                })}
                <div className="ArtistPortfolio">
                    
 
-</div>
+</div>{/*ArtistPortfolio */}
 <div className="uploadArts">
     <div className="artpagedata">
         <center>
@@ -239,9 +251,9 @@ export default function Artist_Profile (){
         </center>
        
       
-    </div>
+    </div>{/*artpagedata */}
 
-</div>
+</div>{/*uploadArts */}
 
 <div className="Appw">
           
@@ -250,7 +262,7 @@ export default function Artist_Profile (){
 				<TagButton name="oil" tagActive={tag === 'oil' ? true : false} handleSetTag={setTag} /> /
 				<TagButton name="water" tagActive={tag === 'water' ? true : false} handleSetTag={setTag} /> /
 				<TagButton name="pencile" tagActive={tag === 'pencile' ? true : false} handleSetTag={setTag} />
-			</div>
+			</div>{/*tags */}
 			<SRLWrapper options={options}>
 				<div className="containerx">
 					{filteredImages.map(image => (
@@ -258,13 +270,13 @@ export default function Artist_Profile (){
 							<a href={`/images/${image.imageName}`}>
 								<img className="image" src={ require(`../../assests/${image.imageName}`).default} alt="" />
 							</a>
-						</div>
+						</div> /*image-card*/
 					))}
-				</div>
+				</div>{/*containerx*/}
 			</SRLWrapper>
-		</div>
+		</div>{/*Appw*/}
 
-        </div>
+        </div>/*A */
 
     );
   
