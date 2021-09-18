@@ -120,5 +120,22 @@ export default function WidgetLg() {
         </li>
       </ul>
     </div>
+  </tbody>
+    );
+  })}
+
+        </table>
+
+        </center>
+      
+
+    </div>
+  
+</div>
+);
+
+
+  }
+
   );
 }
