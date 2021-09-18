@@ -3,17 +3,17 @@ import "./DashbordData.css";
 import { useState, useEffect } from "react";
 import Axios from "axios";
 
-export default function WidgetSm() {
-  return (
-    <div className="widgetSm">
-      <span className="widgetSmTitle">New Join Users</span>
-      <ul className="widgetSmList">
-        <li className="widgetSmListItem">
-          <img
-            src="https://wallpaperaccess.com/full/2213424.jpg"
-            alt=""
-            className="widgetSmImg"
-          />
+  
+export default function WidgetLg() {
+
+  const [email, setemail] = useState("");
+  const [first_name, setfirst] = useState("");
+  const [last_name, setlast] = useState("");
+  const [contact_no, setcontact] = useState("");
+  const [nic, setnic] = useState("");
+
+  const [employeeList, setEmployeeList] = useState([]);
+
           <div className="widgetSmUser">
             <span className="widgetSmUsername">Cristo Nish</span>
             <span className="widgetSmUserTitle">Artist</span>
