@@ -2,52 +2,20 @@ import "./DashbordData.css";
 
 import { useState, useEffect } from "react";
 import Axios from "axios";
-
 export default function WidgetLg() {
+
+  const [email, setemail] = useState("");
+  const [first_name, setfirst] = useState("");
+  const [last_name, setlast] = useState("");
+  const [contact_no, setcontact] = useState("");
+  const [nic, setnic] = useState("");
+
+  const [employeeList, setEmployeeList] = useState([]);
   const Button = ({ type }) => {
     return <button className={"widgetLgButton " + type}>{type}</button>;
   };
-  return (
-    <div className="widgetLg">
-      <h3 className="widgetLgTitle">Most Popular Artists</h3>
-      <table className="widgetLgTable">
-        <tr className="widgetLgTr">
-          <th className="widgetLgTh">Artist</th>
-          <th className="widgetLgTh">Joined Date</th>
-          <th className="widgetLgTh">Rating</th>
-          <th className="widgetLgTh">Status</th>
-        </tr>
-        <tr className="widgetLgTr">
-          <td className="widgetLgUser">
-            <img
-              src="https://www.facetuneapp.com/wp-content/uploads/2020/12/best-selfie-poses-photo.jpg"
-              alt=""
-              className="widgetLgImg"
-            />
-            <span className="widgetLgName">Shamen Andro</span>
-          </td>
-          <td className="widgetLgDate">2 Jun 2021</td>
-          <td className="widgetLgAmount">54</td>
-          <td className="widgetLgStatus">
-            <Button type="Approved" />
-          </td>
-        </tr>
-        <tr className="widgetLgTr">
-          <td className="widgetLgUser">
-            <img
-              src="https://images.pexels.com/photos/1310522/pexels-photo-1310522.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt=""
-              className="widgetLgImg"
-            />
-            <span className="widgetLgName">Susan Carol</span>
-          </td>
-          <td className="widgetLgDate">2 Jun 2021</td>
-          <td className="widgetLgAmount">43</td>
-          <td className="widgetLgStatus">
-            <Button type="Declined" />
-          </td>
-        </tr>
-        <tr className="widgetLgTr">
+  useEffect(() => {
+    Axios.get("http://local
           <td className="widgetLgUser">
             <img
               src="https://ssc98hsc00.com/uploads/user/340558.jpeg"
