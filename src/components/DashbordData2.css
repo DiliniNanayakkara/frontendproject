@@ -32,19 +32,6 @@
   margin: 20px 0px;
 }
 
-.widgetSmUser {
-  display: flex;
-  flex-direction: column;
-}
-
-.widgetSmUsername {
-  font-weight: 600;
-}
-
-.widgetSmUserTitle {
-  font-weight: 300;
-}
-
 .widgetSmButton {
   display: flex;
   align-items: center;
