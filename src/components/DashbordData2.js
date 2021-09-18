@@ -1,5 +1,7 @@
-import "./DashbordData2.css";
-import { Visibility } from "@material-ui/icons";
+import "./DashbordData.css";
+
+import { useState, useEffect } from "react";
+import Axios from "axios";
 
 export default function WidgetSm() {
   return (
