@@ -15,7 +15,87 @@
   position: absolute;
   top: 70%;
   left: 10%;
+  right: 10%;
   text-shadow: 4px 4px 8px #2b2b2b;
   transform: translate(-50%, -50%);
   color: white;
+}
+.Artistgig {
+  width: 50%;
+  float: left;
+}
+.tabletd {
+  border: 1px solid black;
+  width: 300px;
+  margin-right: 100px;
+}
+.tableth {
+  border: 1px solid black;
+  width: 300px;
+  background-color: rgb(184, 184, 184);
+  margin-right: 100px;
+}
+.tablexx {
+  width: 100%;
+  border-collapse: collapse;
+}
+.gigp {
+  margin-top: 100px;
+  margin-left: 100px;
+  line-height: 2.1;
+}
+.gigall {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.gigpx {
+  line-height: 2.1;
+}
+.inputflz {
+  border-radius: 0px;
+  border: 1px solid black;
+}
+.Artistgig p {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.artistnameg {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.Artistsizes {
+  width: 50%;
+  float: right;
+}
+.commiform {
+  width: 40%;
+  float: right;
+  margin-top: 154px;
+  margin-right: 50px;
+}
+.formti {
+  margin-left: 100px;
+}
+.samplework {
+  width: 40%;
+  margin-left: 100px;
+  margin-top: 100px;
+  float: left;
+}
+.inputfl {
+  margin-top: 10px;
+  width: 90%;
+  height: 40px;
+}
+.inputflar {
+  width: 90%;
+}
+.formlab {
+  margin-top: 10px;
+  width: 100%;
+  float: left;
+}
+.Reqtext {
+  color: gray;
+  margin-top: 20px;
 }
