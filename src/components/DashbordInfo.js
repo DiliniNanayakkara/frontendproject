@@ -13,6 +13,27 @@ export default function FeaturedInfo() {
 
     );
   })
+
+  
+  return (
+    <div className="featured">
+      <div className="featuredItem">
+        <span className="featuredTitle">System Users</span>
+        <div className="featuredMoneyContainer">
+        {employeeList.map((val, key) => {
+          return(
+          <span className="featuredMoney">{val.count}</span>
+        
+          );})}
+          {/*Status eka eka wena ewagen panding orders ganna puluwn wei*/}
+          <span className="featuredMoneyRate">
+            +3 New Users<ArrowUpward className="featuredIcon"/>
+          </span>
+        </div>
+        <span className="featuredSub">3min ago joined last user</span>
+      </div>
+      {/*order table eken count ekath me wageema ganna*/}
+
         </div>
         <span className="featuredSub">3min ago joined last user</span>
       </div>
