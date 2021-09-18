@@ -3,18 +3,16 @@ import { useState, useEffect } from "react";
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import Axios from "axios";
-
 export default function FeaturedInfo() {
-  return (
-    <div className="featured">
-      <div className="featuredItem">
-        <span className="featuredTitle">System Users</span>
-        <div className="featuredMoneyContainer">
-          <span className="featuredMoney">238</span>
-          <span className="featuredMoneyRate">
-            +31 New Users
-            <ArrowUpward className="featuredIcon" />
-          </span>
+  const [employeeList, setEmployeeList] = useState([]);
+
+  useEffect(() => {
+    Axios.get("http://localhost:5000/ArtistList").then((response) => {
+      setEmployeeList(response.data);
+    }
+
+    );
+  })
         </div>
         <span className="featuredSub">3min ago joined last user</span>
       </div>
