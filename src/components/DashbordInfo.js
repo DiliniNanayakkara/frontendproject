@@ -78,6 +78,7 @@ export default function FeaturedInfo() {
           Include progress compared to last month
         </span>
       </div>
+      
     </div>
   );
 }
