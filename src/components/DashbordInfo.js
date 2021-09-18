@@ -47,6 +47,21 @@ export default function FeaturedInfo() {
         </div>
         <span className="featuredSub">Compared to last month</span>
       </div>
+         <div className="featuredItem1">
+        <span className="featuredTitle">Orders</span>
+        <div className="featuredMoneyContainer">
+          <span className="featuredMoney">34</span>
+          <span className="featuredMoneyRate">
+          -2 <ArrowDownward className="featuredIcon negative"/>
+          </span> 
+        </div>
+        <span className="featuredSub">Compared to last month</span>
+      </div>
+      <div className="featuredItem2">
+        <span className="featuredTitle"></span>
+        <div className="featuredMoneyContainer">
+          <span className="featuredMoney">Reports</span>
+        
       <div className="featuredItem2">
         <span className="featuredTitle"></span>
         <div className="featuredMoneyContainer">
