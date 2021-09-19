@@ -13,6 +13,11 @@ export default function ArtworkUpload() {
     const [artworkPrice, setArtworkPrice] = useState(0);
     const [artworkArtist, setArtworkArtist] = useState("");
     const [artworkCategory, setArtworkCategory] = useState("");
+    const [artistdistrict, setArtistDistrict] = useState("");
+    const [artworkDimension, setArtworkDimension] = useState("");
+    const [perkmcharge, setPerKmCharge] = useState(0);
+    const [artworkArtistEmail, setArtworkArtistEmail] = useState("");
+    
     const addArtwork = () => {
         axios
           .post("http://localhost:3001/up", {
@@ -22,6 +27,9 @@ export default function ArtworkUpload() {
             artworkPrice: artworkPrice,
             artworkArtist: artworkArtist,
             artworkCategory: artworkCategory,
+            artworkDimension: artworkDimension,
+            artistdistrict: artistdistrict,
+            artworkArtistEmail: artworkArtistEmail,
 
           })
           .then(() => {
@@ -38,6 +46,11 @@ export default function ArtworkUpload() {
         formData.append('artworkPrice', artworkPrice);
         formData.append('artworkArtist', artworkArtist);
         formData.append('artworkCategory', artworkCategory);
+        formData.append('artworkDimension', artworkDimension);
+        formData.append('artistdistrict', artistdistrict);
+        formData.append('perkmcharge', perkmcharge);
+        formData.append('artworkArtistEmail', artworkArtistEmail);
+       
         const config = {
             headers: {
                 'content-type': 'multipart/form-data',
@@ -57,6 +70,8 @@ export default function ArtworkUpload() {
         setfile(e.target.files[0]);
         setArtworkUpload(e.target.value);
     }
+    let date = new Date();
+    console.log(date);
     return(
         <div className="A">
         <ArtistNavbar />
@@ -93,12 +108,28 @@ export default function ArtworkUpload() {
                 setArtworkArtist(event.target.value);
               }}
             /> </label><br></br>
+            <label> Email of Artist : 
+            <input
+              type="text"
+              name="artworkArtistEmail"
+              onChange={(event) => {
+                setArtworkArtistEmail(event.target.value);
+              }}
+            /> </label><br></br>
             <label>Artwork Price : 
             <input
               type="text"
               name="artworkPrice"
               onChange={(event) => {
                 setArtworkPrice(event.target.value);
+              }}
+            /> </label><br></br>
+            <label>Artwork Dimensions <br></br>(width*height in cm): 
+            <input
+              type="text"
+              name="artworkDimension"
+              onChange={(event) => {
+                setArtworkDimension(event.target.value);
               }}
             /> </label><br></br>
             {/* <label>Artwork Category : </label>
@@ -109,6 +140,66 @@ export default function ArtworkUpload() {
                 setArtworkCategory(event.target.value);
               }}
             /> */}
+            <label> Enter your district : 
+            <select
+                       className="district"
+                       onChange={(event) => {
+                        setArtistDistrict(event.target.value);
+                       }}
+                        name="artistdistrict"
+                       
+                      >
+                        <option value="">- Choose your district -</option>
+                        <option value="Ampara">Ampara</option>
+                        <option value="Anuradhapura">Anuradhapura</option>
+                        <option value="Badulla">Badulla</option>
+                        <option value="Batticaloa">Batticaloa</option>
+                        <option value="Colombo">Colombo</option>
+                        <option value="Galle">Galle</option>
+                        <option value="Gampaha">Gampaha</option>
+                        <option value="Hambantota">Hambanthota</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="Kalutara">Kalutara</option>
+                        <option value="Kandy">kandy</option>
+                        <option value="Kegalle">kegalle</option>
+                        <option value="Kilinochchi">Kilinochchi</option>
+                        <option value="Kurunegala">Kurunegala</option>
+                        <option value="Mannar">Mannar</option>
+                        <option value="Matale">Matale</option>
+                        <option value="Matara">Matara</option>
+                        <option value="Moneragala">Moneragala</option>
+                        <option value="Mullaitivu">Mullaitivu</option>
+                        <option value="Nuwara Eliya">Nuwara Eliya</option>
+                        <option value="Polonnaruwa">Polonnaruwa</option>
+                        <option value="Puttalam">Puttalam</option>
+                        <option value="Rathnapura">Ratnapura</option>
+                        <option value="Trincomalee">Trincomalee</option>
+                        <option value="Vavuniya">Vavuniya</option>
+                        
+                      </select>
+            {/* <input
+              type="text"
+              name="artistProvince"
+              onChange={(event) => {
+                setArtistProvince(event.target.value);
+              }}
+            />  */}
+            </label> <br></br>
+            <label> Enter per km delivery charge : 
+            <select
+                       className="district"
+                       onChange={(event) => {
+                        setPerKmCharge(event.target.value);
+                       }}
+                        name="perkmcharge"
+                       
+                      >
+                        <option value="1"> Rs. 1.00</option>
+                        <option value="2">Rs. 2.00</option>
+                        <option value="3">Rs. 3.00</option>
+                        <option value="3">Rs. 4.00</option>
+                        </select>
+            </label><br></br>
             <label className="cate">Select Artwork Category : 
             <label for="html" className="category">Historical
             <input type="radio" name="artworkCategory" value="Historical" onChange={(event) => {
