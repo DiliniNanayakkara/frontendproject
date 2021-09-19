@@ -9,27 +9,29 @@ export default function ModHomeInfo() {
     <div className= "container">
       
    
-    <div>
+    
       
       <div>
 
-      <Link to='/complaints'>
-       <button className='helpcenterbtn'>Manege Art Tools</button>
-     </Link>
-    
-    <Link to='/helpcenter'>
-       <button className='helpcenterbtn'>Help Center</button>
-     </Link>
+              <Link to='/complaints'>
+              <button className='helpcenterbtn'>Manege Art Tools</button>
+            </Link>
+            
+            <Link to='/helpcenter'>
+              <button className='helpcenterbtn'>Help Center</button>
+            </Link>
 
     
-             
-      <Link to='reports'>
-       <button className='helpcenterbtn'>Reports</button>
-     </Link>
+          
      </div>
-    </div>          
+            
     
       <div >
+
+           
+      <Link to='reports'>
+              <button className='helpcenterbtn'>Reports</button>
+      </Link>
              
       <Link to='advertiesment' >
        <button className='helpcenterbtn'>Manege Advertiesment</button>
