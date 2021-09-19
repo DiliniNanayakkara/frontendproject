@@ -29,6 +29,12 @@ export default function ProductsBrushes() {
   return (
      <div className="A"> 
       <Navbar/>
+      <Link
+              to='/cart'
+              onClick={closeMobileMenu}
+            >
+      <button class="cartbutton"><i class="fa fa-shopping-cart"></i> &nbsp; Products Cart </button>
+     </Link>
       <center>
       <nav className='nav'>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
