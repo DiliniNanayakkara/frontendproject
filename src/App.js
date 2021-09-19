@@ -29,6 +29,8 @@ import Cart from "./components/pages/Cart";
 import Checkout from "./components/pages/Checkout";
 import ViewArtist from "./components/pages/ViewArtist";
 import Artistartworks from "./components/pages/Artistartworks";
+import ArtistArtworkDetail from "./components/pages/ArtistArtworkDetail";
+import ArtistArtworkRequest from "./components/pages/ArtistArtworkRequest";
 import Artistartworkshistorical from "./components/pages/Artistartworkshistorical";
 import Artistartworksfineart from "./components/pages/Artistartworksfineart";
 import Artistartworksdrawing from "./components/pages/Artistartworksdrawing";
@@ -121,7 +123,14 @@ function App() {
         {/* <Route path="/StaffSignUp" component={AutherizeRoute} /> */}
 
         <Route path="/ArtistdashbordOrders" component={ArtistdashbordOrders} />
-
+        <Route
+          path="/artistartworkdetail"
+          component={ArtistArtworkDetail}
+        />
+        <Route
+          path="/artistartworkrequest"
+          component={ArtistArtworkRequest}
+        />
         <Route
           path="/artistartworkshistorical"
           component={Artistartworkshistorical}
