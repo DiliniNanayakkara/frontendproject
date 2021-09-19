@@ -112,282 +112,358 @@ export default function ArtworkCart() {
                             
                         </tr>
                         </table>
-//                     }else if(location=="Kalutara"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                    }else if(location=="Kalutara"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Kalutara}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Kandy"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Kalutara}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Kandy"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Kandy}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Matale"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Kandy}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Matale"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Matale}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="NuwaraEliya"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Matale}.00</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.NuwaraEliya}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Galle"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                        </tr>
+                        </table>
+                    }else if(location=="NuwaraEliya"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Galle}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Hambantota"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.NuwaraEliya}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Galle"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Hambantota}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Matara"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Galle}.00</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Matara}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Badulla"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                        </tr>
+                        </table>
+                    }else if(location=="Hambantota"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Badulla}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Moneragala"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Hambantota}.00</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Moneragala}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Kegalle"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                        </tr>
+                        </table>
+                    }else if(location=="Matara"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Kegalle}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Rathnapura"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Matara}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Badulla"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Rathnapura}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Kurunegala"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Badulla}.00</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Kurunegala}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Puttalam"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                        </tr>
+                        </table>
+                    }else if(location=="Moneragala"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Puttalam}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Anuradhapura"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Moneragala}.00</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Anuradhapura}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Polonnaruwa"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                        </tr>
+                        </table>
+                    }else if(location=="Kegalle"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Polonnaruwa}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Jaffna"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Kegalle}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Rathnapura"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Jaffna}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Kilinochchi"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Rathnapura}.00</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Kilinochchi}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Mannar"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                        </tr>
+                        </table>
+                    }else if(location=="Kurunegala"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Mannar}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Mullaitivu"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Kurunegala}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Puttalam"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Mullaitivu}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Vavuniya"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Puttalam}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Anuradhapura"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Vavuniya}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Ampara"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Anuradhapura}.00</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Ampara}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Batticaloa"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                        </tr>
+                        </table>
+                    }else if(location=="Polonnaruwa"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Batticaloa}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Trincomalee"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                            <td className="td3">Rs. {val.perkm * val.Polonnaruwa}.00</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Trincomalee}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
+                        </tr>
+                        </table>
+                    }else if(location=="Jaffna"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
+                            
+                            <td className="td3">Rs. {val.perkm * val.Jaffna}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Kilinochchi"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
+                            
+                            <td className="td3">Rs. {val.perkm * val.Kilinochchi}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Mannar"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
+                            
+                            <td className="td3">Rs. {val.perkm * val.Mannar}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Mullaitivu"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
+                            
+                            <td className="td3">Rs. {val.perkm * val.Mullaitivu}.00</td>
+                            
+                        </tr>
+                        </table>
+                    }else if(location=="Vavuniya"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
+                            
+                            <td className="td3">Rs. {val.perkm * val.Vavuniya}.00</td>
+                           
+                        </tr>
+                        </table>
+                    }else if(location=="Batticaloa"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
+                            
+                            <td className="td3">Rs. {val.perkm * val.Batticaloa}.00</td>
+                            
+                        </tr>
+                        </table>
+                    }else if(location=="Trincomalee"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
+                            
+                            <td className="td3">Rs. {val.perkm * val.Trincomalee}.00</td>
+                            
+                        </tr>
+                        </table>
                     }
                 }
                 
