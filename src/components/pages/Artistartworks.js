@@ -72,7 +72,7 @@ setArtworkList(response.data);
           </li>
           <li className='item'>
             <Link
-              to='/artistartworks'
+              to='/artistartworkshistorical'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -81,7 +81,7 @@ setArtworkList(response.data);
           </li>
           <li className='item'>
             <Link
-              to='/artistartworks'
+              to='/artistartworksdrawing'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -90,7 +90,7 @@ setArtworkList(response.data);
           </li>
           <li className='item'>
             <Link
-              to='/artistartworks'
+              to='/artistartworksfinearts'
               className='nav-links'
               onClick={closeMobileMenu}
             >
@@ -99,7 +99,7 @@ setArtworkList(response.data);
           </li>
           <li className='item'>
             <Link
-              to='/artistartworks'
+              to='/artistartworkspainting'
               className='nav-links'
               onClick={closeMobileMenu}
             >
