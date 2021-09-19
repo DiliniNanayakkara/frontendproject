@@ -93,22 +93,26 @@ export default function ArtworkCart() {
                             <td className="td5">{location}</td>
                             
                             <td className="td3">Rs. {val.perkm * val.Colombo}.00</td>
-                            <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
+                            
                         </tr>
                         </table>
-                    // }else if(location=="Gampaha"){
-                    //     return <table className="carttable">
-                    //     <tr >
-                    //         <td className="td1">{val.artwork_name}</td>
-                    //         <td className="td2">{val.artwork_artist}</td>
-                    //         <td className="td6">Rs. {val.artwork_price}.00</td>
-                    //         <td className="td5">{location}</td>
+                    }else if(location=="Gampaha"){
+                        setDelivery = location;
+                        setArtName = val.artwork_name;
+                        setPrice = val.artwork_price;
+                        setArtistEmail = val.artist_email;
+                        return <table className="carttable">
+                        <tr >
+                            <td className="td1">{val.artwork_name}</td>
+                            <td className="td2">{val.artwork_artist}</td>
+                            <td className="td6">Rs. {val.artwork_price}.00</td>
+                            <td className="td5">{location}</td>
                             
-                    //         <td className="td3">Rs. {val.perkm * val.Gampaha}.00</td>
-                    //         <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
-                    //     </tr>
-                    //     </table>
-                    // }else if(location=="Kalutara"){
+                            <td className="td3">Rs. {val.perkm * val.Gampaha}.00</td>
+                            
+                        </tr>
+                        </table>
+//                     }else if(location=="Kalutara"){
                     //     return <table className="carttable">
                     //     <tr >
                     //         <td className="td1">{val.artwork_name}</td>
