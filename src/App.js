@@ -32,6 +32,7 @@ import ViewArtist from "./components/pages/ViewArtist";
 import Artistartworks from "./components/pages/Artistartworks";
 import ArtistArtworkDetail from "./components/pages/ArtistArtworkDetail";
 import ArtistArtworkRequest from "./components/pages/ArtistArtworkRequest";
+import ArtistProductDetail from "./components/pages/ArtistProductDetail";
 import Artistartworkshistorical from "./components/pages/Artistartworkshistorical";
 import Artistartworksfineart from "./components/pages/Artistartworksfineart";
 import Artistartworksdrawing from "./components/pages/Artistartworksdrawing";
@@ -131,6 +132,10 @@ function App() {
         <Route
           path="/artistartworkrequest"
           component={ArtistArtworkRequest}
+        />
+        <Route
+          path="/artistproductdetail"
+          component={ArtistProductDetail}
         />
         <Route
           path="/artistartworkshistorical"
