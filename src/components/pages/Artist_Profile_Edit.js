@@ -24,11 +24,13 @@ return (
                   <lable className="formlab" >LAST NAME</lable>
                   <input className = "inputfl" name="name" placeholder="Nanayakkara"></input>
                   <lable className="formlab">CONTACT NO</lable>
-                  <input className = "inputfl" type="number" name="no"></input>
+                  <input className = "inputfl" type="number" name="no" placeholder="0776565656"></input>
                   <lable className="formlab">ADDRESS </lable>
-                  <input className = "inputfl" type="file" name="photo"></input>
+                  <input className = "inputfl" type="file" name="photo" placeholder="Ambalangoda, Sri Lanka"></input>
                   <label className="formlab">DESCRIPTION</label>
-                  <textarea  className = "inputflar"  name="message" rows='4' />
+                  <textarea  className = "inputflar"  name="message" rows='4' placeholder="Hi! ???? I am a professional artist who comes to
+                   show my artwork. You can see my portfolio and I hope you will enjoy it! If you have any questions do 
+                   not hesitate to ask, I will answer immediately! ????"/>
                   <input className = "inputflxx" type="submit" value="send"></input>
 
             </form>
