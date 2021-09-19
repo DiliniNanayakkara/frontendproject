@@ -8,6 +8,7 @@ import ArtworksDrawing from "./components/pages/ArtworksDrawing";
 import ArtworkRequest from "./components/pages/ArtworkRequest";
 import ArtworkDetail from "./components/pages/ArtworkDetail";
 import ArtworksFineart from "./components/pages/ArtworksFineart";
+import Artist_Profile_Edit from "./components/pages/Artist_Profile_Edit";
 import ArtworksHistorical from "./components/pages/ArtworksHistorical";
 import ArtworksPainting from "./components/pages/ArtworksPainting";
 import Products from "./components/pages/Products";
@@ -120,7 +121,7 @@ function App() {
         <Route path="/SignUpBuyer" component={SignUpBuyer} />
         <Route path="/StaffSignUp" component={StaffSignUp} />
 
-        {/* <Route path="/StaffSignUp" component={AutherizeRoute} /> */}
+     <Route path="/Artist_Profile_Edit" component={Artist_Profile_Edit} />
 
         <Route path="/ArtistdashbordOrders" component={ArtistdashbordOrders} />
         <Route
