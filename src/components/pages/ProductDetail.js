@@ -11,7 +11,14 @@ export default function ProductDetail() {
   const [toolList, setToolList] = useState([]);
   const [toolID, setToolID] = useState(window.location.pathname.split("/")[2]);
   const closeMobileMenu = () => setClick(false);
-
+  let [toolname, setToolName] = useState([]);
+  let [price, setPrice] = useState(0);
+  let [category, setCategory] = useState([]);
+  const [quantity, setToolQuantity] = useState([]);
+  let [user, setUser] = useState("");
+    const [artworkName, setArtworkName] = useState("");
+    const [artworkDescription, setArtworkDescription] = useState("");
+    console.log(localStorage.getItem("user"));
   useEffect(() => {
     setToolID(window.location.pathname.split("/")[2]);
   }, [window.location.pathname]);
@@ -23,6 +30,22 @@ export default function ProductDetail() {
            setToolList(response.data);
     });
   });
+  const addToCart = () => {
+    // setUser(localStorage.getItem("user"));
+    setUser = localStorage.getItem("user");
+    axios
+      .post("http://localhost:5000/addtocart", {
+        user : setUser,
+        toolname : setToolName,
+        toolcategory : setCategory,
+        toolprice: setPrice,
+        toolquantity: quantity,
+
+      })
+      .then(() => {
+        console.log("success");
+      });
+  };
   
   return (
     <div className="A"> 
@@ -82,18 +105,29 @@ export default function ProductDetail() {
      <div>
      
           {toolList.map((val) => {
-              
+              setToolName = val.tool_name ;
+              setCategory = val.tool_category;
+              setPrice = val.tool_price*quantity;
               return <div className="imageanddetail">
                   <div class="imagedetailrow">
                   <img className="detailimg" src={'http://localhost:5000/' + val.tool_image}></img>
                   </div>
                   <div class="imagedetailrow" >
                     <h2 class="proname">{val.tool_name}</h2>
-                    
+                    <p class="prodimquan"> Quantity &nbsp; : &nbsp; 
+                    <input type="number" 
+                    id="quantity" 
+                    name="quantity" 
+                    min="1" 
+                    max="10"
+                    onChange={(event) => {
+                      setToolQuantity(event.target.value);
+                    }}>
+                      </input> </p><br></br>
                     <p class="prodim"> Rs. {val.tool_price}.00</p>
                     <Link 
-                         to='/cart'
-                         onClick={closeMobileMenu}
+                         to={`/cart/${setUser}`} 
+                         onClick={addToCart}
                          >
                            <button className="cartbtn">Add To cart</button></Link>
                   </div>
