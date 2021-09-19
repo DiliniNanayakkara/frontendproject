@@ -29,6 +29,12 @@ export default function Products() {
   return (
      <div className="A"> 
       <Navbar/>
+      <Link
+              to='/cart'
+              onClick={closeMobileMenu}
+            >
+      <button class="cartbutton"><i class="fa fa-shopping-cart"></i> &nbsp; Products Cart </button>
+     </Link>
       <center>
       <nav className='nav'>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -98,7 +104,7 @@ export default function Products() {
                           <div className="price">Rs. {val.tool_price}.00</div>
                           
                           <Link
-              to={`/productdetail`} 
+             to={`/productdetail/${val.tool_id}`} 
               onClick={closeMobileMenu}
             ><button >
             View Product  
