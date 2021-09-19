@@ -20,7 +20,7 @@ export default function ArtworkUpload() {
     
     const addArtwork = () => {
         axios
-          .post("http://localhost:3001/up", {
+          .post("http://localhost:5000/up", {
             artworkUpload: artworkUpload,
             artworkName: artworkName,
             artworkDescription: artworkDescription,
@@ -58,7 +58,7 @@ export default function ArtworkUpload() {
         };
    
     axios.
-    post("http://localhost:3001/upload", formData, config)
+    post("http://localhost:5000/upload", formData, config)
     .then((response) => {
         alert('Image Uploaded Successfully');
     })
