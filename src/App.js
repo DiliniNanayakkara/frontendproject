@@ -34,6 +34,7 @@ import Artistartworksfineart from "./components/pages/Artistartworksfineart";
 import Artistartworksdrawing from "./components/pages/Artistartworksdrawing";
 import Artistartworkspainting from "./components/pages/Artistartworkspainting";
 import ArtworkUpload from "./components/pages/ArtworkUpload";
+import ArtworkCart from "./components/pages/ArtworkCart";
 import ArtistProduct from "./components/pages/ArtistProduct";
 import ArtistProductBrushes from "./components/pages/ArtistProductBrushes";
 import ArtistProductCanvas from "./components/pages/ArtistProductCanvas";
@@ -96,6 +97,7 @@ function App() {
         <Route path="/viewartist" component={ViewArtist} />
         <Route path="/checkout" component={Checkout} />
         <Route path="/artworks" component={Artworks} />
+        <Route path="/artworkcart" component={ArtworkCart} />
         <Route path="/artworksdrawing" component={ArtworksDrawing} />
         <Route path="/artworkdetail" component={ArtworkDetail} />
         <Route path="/artworkrequest" component={ArtworkRequest} />
