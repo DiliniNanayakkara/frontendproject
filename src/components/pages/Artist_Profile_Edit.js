@@ -20,9 +20,9 @@ return (
           <p className="Reqtext">*Please save this after the filling</p>
             <form className="emailformz">
                   <lable className="formlab">FIRST NAME</lable>
-                  <input className = "inputfl" name="name" ></input>
-                  <lable className="formlab">LAST NAME</lable>
-                  <input className = "inputfl" name="name"></input>
+                  <input className = "inputfl" name="name" placeholder="Dilini"></input>
+                  <lable className="formlab" >LAST NAME</lable>
+                  <input className = "inputfl" name="name" placeholder="Nanayakkara"></input>
                   <lable className="formlab">CONTACT NO</lable>
                   <input className = "inputfl" type="number" name="no"></input>
                   <lable className="formlab">ADDRESS </lable>
