@@ -2,25 +2,88 @@ import "../css/CartTable.css";
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar";
 import CartTable from "./CartTable";
+import axios from 'axios';
 import { Link } from "react-router-dom";
 
 export default function Cart() {
   const [click, setClick] = useState(false);
-
+  const [toolList, setToolList] = useState([]);
+  const [user, setUser] = useState("");
+  const [toolID, setToolID] = useState(window.location.pathname.split("/")[2]);
   const closeMobileMenu = () => setClick(false);
+  console.log(localStorage.getItem("user"));
+  // 
+  useEffect(() => {
+    setToolID(window.location.pathname.split("/")[2]);
+  }, [window.location.pathname]);
+  
+  useEffect(() => {
+    setUser(localStorage.getItem("user"));
+    axios.get(`http://localhost:5000/cart/${user}`)
+    .then((response) => {
+           console.log(response.data);
+           setToolList(response.data);
+    });
+  });
   return (
     <div className="A">
       <Navbar />
       <br />
       <br />
       <text className="carthead">Your Cart</text>
-      <CartTable />
+      <table className="carttable">
+                  <thead>
+                      <tr className="carttable1">
+                          <th className="th1">Product Name</th>
+                          <th className="th2">Category</th>
+                          <th className="th6">Unit Price</th>
+                          <th className="th5">Quantity</th>
+                          <th className="th3">Sub Total</th>
+                          <th>Actions</th>
+                      </tr>
+                      </thead>
+              </table>
+      {toolList.map((val) => {
+                for(var i=0; i<toolList.length; i++){
+                  // const total = total + val.cart_price ;
+                  return <table className="carttable">
+                    
+                      <tr >
+                          <td className="td1">{val.cart_tool}</td>
+                          <td className="td2">{val.cart_category}</td>
+                          <td className="td6">Rs. {val.cart_price / val.cart_quantity}.00</td>
+                          <td className="td5">{val.cart_quantity}</td>
+                          <td className="td3">Rs. {val.cart_price}.00</td>
+                          <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
+                      </tr>
+                      
+                      
+                      {/* <tr></tr><br/><br/>
+                      <tr  >
+                          <td></td>
+                          <td class="total">Total :</td>
+                          <td class="total">Rs. 2250</td>
+                          <td></td>
+                      </tr> */}
+                      </table>
+                }
+                <table className="carttable">
+                <tr >
+                <td className="td1"></td>
+                <td className="td2"></td>
+                <td className="td6"></td>
+                <td className="td5">Total</td>
+                <td className="td3">{val.cart_price}</td>
+                <td className="td4"></td>
+            </tr>
+            </table>
+                })}
       <br />
       <br />
       <br />
       <br />
-      <br />
-      <Link to="/artworks" onClick={closeMobileMenu}>
+      <br /><br/>
+      <Link to="/products" onClick={closeMobileMenu}>
         <button className="continue">
           <i class="fa fa-arrow-left" aria-hidden="true"></i> Continue Shopping
         </button>
