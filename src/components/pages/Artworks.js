@@ -17,6 +17,7 @@ import Typography from '@material-ui/core/Typography';
 export default function Artworks() {
   const [artworkList, setArtworkList] = useState([]);
   const [click, setClick] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
   
   const closeMobileMenu = () => setClick(false);
   useEffect(() => {
@@ -25,10 +26,40 @@ export default function Artworks() {
            setArtworkList(response.data);
     });
   }, []);
+ 
+   const onFormSubmit = (e) => {
+    e.preventDefault();
 
+    const formData = new FormData();
+    
+    formData.append('search', searchTerm);
+    
+    const config = {
+        headers: {
+            'content-type': 'multipart/form-data',
+        },
+    };
+
+axios.
+get("http://localhost:5000/artworksearch", formData, config)
+.then((response) => {
+  console.log(response.data);
+  setArtworkList(response.data);
+})
+.catch((err) => {
+    console.log('err', err);
+});
+};
+  
   return (
      <div className="A"> 
       <Navbar/>
+     <Link
+              to='/artworkcart'
+              onClick={closeMobileMenu}
+            >
+      <button class="cartbutton"><i class="fa fa-shopping-cart"></i> &nbsp; Artworks Cart </button>
+     </Link>
       <center>
       <nav className='nav'>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -81,6 +112,13 @@ export default function Artworks() {
       </nav>
   
       </center>
+       <div class="searchbar">
+      <form onSubmit={onFormSubmit}>
+      <input type="text" name="search" placeholder="Search artist..." onChange={event => {setSearchTerm(event.target.value)}}></input>
+      <button className="but"> Search </button>
+      </form>
+     
+      </div>
       <div>
               
               {artworkList.map((val) => {
