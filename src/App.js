@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Roles from "./components/pages/Roles";
 import Artworks from "./components/pages/Artworks";
 import ArtworksDrawing from "./components/pages/ArtworksDrawing";
+import ArtworkRequest from "./components/pages/ArtworkRequest";
 import ArtworkDetail from "./components/pages/ArtworkDetail";
 import ArtworksFineart from "./components/pages/ArtworksFineart";
 import ArtworksHistorical from "./components/pages/ArtworksHistorical";
@@ -97,6 +98,7 @@ function App() {
         <Route path="/artworks" component={Artworks} />
         <Route path="/artworksdrawing" component={ArtworksDrawing} />
         <Route path="/artworkdetail" component={ArtworkDetail} />
+        <Route path="/artworkrequest" component={ArtworkRequest} />
         <Route path="/artworksfineart" component={ArtworksFineart} />
         <Route path="/artworkshistorical" component={ArtworksHistorical} />
         <Route path="/artworkspainting" component={ArtworksPainting} />
