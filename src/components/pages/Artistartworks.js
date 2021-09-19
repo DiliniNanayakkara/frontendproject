@@ -17,17 +17,47 @@ import Typography from '@material-ui/core/Typography';
 export default function Artworks() {
   const [artworkList, setArtworkList] = useState([]);
   const [click, setClick] = useState(false);
-  
+  const [searchTerm, setSearchTerm] = useState('');
   const closeMobileMenu = () => setClick(false);
   useEffect(() => {
-    axios.get('http://localhost:3001/artworks').then((response) => {
+    axios.get('http://localhost:5000/artworks').then((response) => {
            setArtworkList(response.data);
     });
 }, []);
+const onFormSubmit = (e) => {
+  e.preventDefault();
 
+  const formData = new FormData();
+  
+  formData.append('search', searchTerm);
+  
+  const config = {
+      headers: {
+          'content-type': 'multipart/form-data',
+      },
+  };
+
+axios.
+get("http://localhost:5000/artworksearch", formData, config)
+.then((response) => {
+console.log(response.data);
+setArtworkList(response.data);
+})
+.catch((err) => {
+  console.log('err', err);
+});
+};
+  
   return (
      <div className="A"> 
       <ArtistNavbar/>
+    <br></br> <br></br> <br></br> <br></br> 
+      <Link
+              to='/artworkcart'
+              onClick={closeMobileMenu}
+            >
+      <button class="cartbutton"><i class="fa fa-shopping-cart"></i> &nbsp; Artworks Cart </button>
+     </Link>
       <center>
       <nav className='nav'>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -79,23 +109,47 @@ export default function Artworks() {
         </ul>
       </nav>
       </center>
-  
+       <div class="searchbar">
+      <form onSubmit={onFormSubmit}>
+      <input type="text" name="search" placeholder="Search artist..." onChange={event => {setSearchTerm(event.target.value)}}></input>
+      <button className="but"> Search </button>
+      </form>
+      </div>
       <div>
               
               {artworkList.map((val) => {
-                    return <div className = "Arts"> 
-                          
-                          <div className="img"> <img src="https://www.creativeboom.com/uploads/articles/a4/a40eeac492a143d5bb34412dfe8f275a8834e41c_810.jpg"></img></div> 
-                          <div className="name"> {val.artwork_name}</div> 
-                          <div className="des"> {val.artwork_category} , {val.artwork_description}</div>
-                          <div className="price">Rs. {val.artwork_price}.00</div>
-                          <Link
-              to='/artworkdetail'
-              onClick={closeMobileMenu}
-            ><button className="but">
-            View Artwork         <i class="fa fa-arrow-right" aria-hidden="true"></i></button> </Link>
-                  </div>;
-              })}
+                    return <div className = "cards"> 
+                    
+                    <div className="image">
+                      <img src={'http://localhost:5000/' + val.artwork_image}></img>
+                    </div>
+                    
+                    <div className="cardbody">
+                    <div className="name"> {val.artwork_name}</div> 
+                    <div className="categ"> ({val.artwork_category}) </div>
+                    <div className="artist"> Artist - {val.artwork_artist}</div>
+                    <div className="price">Rs. {val.artwork_price}.00</div>
+                    
+                    <Link
+        to={`/artistartworkdetail/${val.artwork_id}`} 
+        onClick={closeMobileMenu}
+      ><button >
+      View Artwork   
+      </button> </Link>
+                    {/* <button>View Artwork</button> */}
+                    </div>
+                    
+                    {/* <div className="img"> <img align="center" src={'http://localhost:3001/' + val.image} alt=""></img></div> 
+                    <div className="name"> {val.name}</div> 
+                    <div className="des"> {val.category} , {val.artist}</div>
+                    <div className="price">Rs. {val.artwork_price}.00</div> */}
+                    {/* <Link
+        to='/artworkdetail'
+        onClick={closeMobileMenu}
+      ><button className="but">
+      View Artwork         <i class="fa fa-arrow-right" aria-hidden="true"></i></button> </Link> */}
+            </div>
+        })}
               
         </div>
          <div className="footer">
