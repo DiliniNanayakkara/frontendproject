@@ -30,7 +30,7 @@ export const mainListItems = (
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
-        <ListItemText primary="BACK" />
+        <ListItemText secondary="BACK" />
       </ListItem>
     </NavLink>
     <NavLink
@@ -44,7 +44,7 @@ export const mainListItems = (
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <ListItemText secondary="Orders" />
+      <ListItemText secondary="ORDERS" />
     </ListItem>
     {/*}  <NavLink
       to="./portofolio"
@@ -71,7 +71,7 @@ export const mainListItems = (
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Upload artworks" />
+        <ListItemText secondary="UPLOAD ARTWORKS" />
       </ListItem>
     </NavLink>
     <NavLink
@@ -85,7 +85,7 @@ export const mainListItems = (
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
-        <ListItemText primary="Create Exhibitions" />
+        <ListItemText secondary="CREATE EXHIBITION" />
       </ListItem>
     </NavLink>
   </div>
