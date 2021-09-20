@@ -233,7 +233,7 @@ export default function Artist_Profile() {
             </div>
             {/*btn */}
             <div className="btn">
-              <Button variant="contained">View Orders</Button>
+              <Button variant="contained">Dashbord</Button>
             </div>
             {/*btn */}
           </div> /*profiledetails */
