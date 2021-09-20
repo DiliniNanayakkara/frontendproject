@@ -68,7 +68,7 @@ export default function ArtworkUpload() {
             <h1 className="heading">Artwork Upload</h1>
             <label>Upload Artwork :                       
             <input type='file' name='photo' onChange={onInputChange} /></label><br></br>
-            <label> Artwork Name : 
+            <label> Tool Name : 
             <input
               type="text"
               name="artworkName"
