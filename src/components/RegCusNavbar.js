@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import Customer_Dropdown from './Customer_Dropdown';
-import {useHistory} from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import Customer_Dropdown from "./Customer_Dropdown";
+import { useHistory } from "react";
 
 function RegCusNavbar() {
-  
   const [click, setClick] = useState(false);
   const [customer_dropdown, setCustomerDropdown] = useState(false);
 
@@ -29,78 +28,74 @@ function RegCusNavbar() {
   };
   const logout = () => {
     localStorage.clear();
-    
-  }
+  };
   return (
     <>
-     <div className="AllNavItem">
-    <div className="logo">
-    <a className="active" >  <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          De'lart
-          <i class="fas fa-palette"></i>
-        </Link></a>
-    </div>
-    <div class="topnav">
-  
-  <a >  <Link to='/c_home' className='nav-links' onClick={closeMobileMenu}>
+      <div className="AllNavItem">
+        <div className="logo">
+          <a className="active">
+            {" "}
+            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+              De'lart
+              <i class="fas fa-palette"></i>
+            </Link>
+          </a>
+        </div>
+        <div class="topnav">
+          <a>
+            {" "}
+            <Link to="/c_home" className="nav-links" onClick={closeMobileMenu}>
               Home
-            </Link></a>
-            <a> <Link
-              to='/customer_artists'
-              className='nav-links'
+            </Link>
+          </a>
+          <a>
+            {" "}
+            <Link
+              to="/customer_artists"
+              className="nav-links"
               onClick={closeMobileMenu}
             >
               Artworks
-            </Link></a>
-           
-  <a> <Link
-              to='/customer_products'
-             
-              onClick={closeMobileMenu}
-            >
+            </Link>
+          </a>
+
+          <a>
+            {" "}
+            <Link to="/customer_products" onClick={closeMobileMenu}>
               Products
-            </Link></a>
-            <a > <Link
-              to='/customer_exhibitions'
-           
-              onClick={closeMobileMenu}
-            >
+            </Link>
+          </a>
+          <a>
+            {" "}
+            <Link to="/customer_exhibitions" onClick={closeMobileMenu}>
               Exhibitions
-            </Link></a>
-            <a > <Link
-              to='/customer_pencilarts'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Commissions
-            </Link></a>
-            <a > <Link
-              to='/artists'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
+            </Link>
+          </a>
+
+          <a>
+            {" "}
+            <Link to="/artists" className="nav-links" onClick={closeMobileMenu}>
               Artists
-            </Link></a>
-  <a > <Link
-              to='/customer_home'
-              className='nav-links'
+            </Link>
+          </a>
+          <a>
+            {" "}
+            <Link
+              to="/customer_home"
+              className="nav-links"
               onClick={closeMobileMenu}
             >
               Dashbord
-            </Link></a>
-            <a > <Link
-              to='/'
-            
-              onClick={logout}
-            >
-            LogOut
-            </Link></a>
-
-            
-</div>
-</div>
-    
-          
+            </Link>
+          </a>
+          <a>
+            {" "}
+            <Link to="/" onClick={logout}>
+              LogOut
+            </Link>
+          </a>
+        </div>
+      </div>
     </>
   );
 }
