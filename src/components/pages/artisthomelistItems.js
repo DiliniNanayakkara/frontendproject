@@ -20,7 +20,7 @@ import { NavLink, Route } from "react-router-dom";
 export const mainListItems = (
   <div>
     <NavLink
-      to="./a_home"
+      to="./Artist_profile"
       activeStyle={{
         fontWeight: "normal",
         color: "black",
@@ -30,10 +30,9 @@ export const mainListItems = (
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
-        <ListItemText primary="Home" />
+        <ListItemText primary="BACK" />
       </ListItem>
     </NavLink>
-
     <NavLink
       to="./orders"
       activeStyle={{
@@ -41,29 +40,26 @@ export const mainListItems = (
         color: "black",
       }}
     ></NavLink>
-
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <ListItemText secondary="Orders" />
     </ListItem>
-
-    <NavLink
+    {/*}  <NavLink
       to="./portofolio"
       activeStyle={{
         fontWeight: "normal",
         color: "black",
-      }}
-    >
-      <ListItem button>
+      }}*/}
+
+    {/*  <ListItem button>
         <ListItemIcon>
           <ImageIcon />
         </ListItemIcon>
         <ListItemText primary="portofolio" />
       </ListItem>
-    </NavLink>
-
+   </NavLink>*/}
     <NavLink
       to="./Artworkupload"
       activeStyle={{
@@ -96,19 +92,5 @@ export const mainListItems = (
 );
 
 export const secondaryListItems = (
-  <div>
-    {/*<ListSubheader inset>Saved reports</ListSubheader>*/}
-    <ListItem button>
-      <ListItemIcon>
-        <StarIcon />
-      </ListItemIcon>
-      <ListItemText primary="Help Center" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <SendIcon />
-      </ListItemIcon>
-      <ListItemText primary="Complaint" />
-    </ListItem>
-  </div>
+  <div>{/*<ListSubheader inset>Saved reports</ListSubheader>*/}</div>
 );

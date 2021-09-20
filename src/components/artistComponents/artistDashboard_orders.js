@@ -10,7 +10,6 @@ import TableRow from "@material-ui/core/TableRow";
 import Title from "./Title";
 import axios from "axios";
 
-
 function preventDefault(event) {
   event.preventDefault();
 }
@@ -23,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Orders() {
   let [user, setUser] = useState("");
-const [requestList, setRequestList] = useState([]);
+  const [requestList, setRequestList] = useState([]);
   const classes = useStyles();
 
   const [click, setClick] = useState(false);
@@ -31,13 +30,11 @@ const [requestList, setRequestList] = useState([]);
   console.log(localStorage.getItem("userName"));
   const closeMobileMenu = () => setClick(false);
 
-  
   useEffect(() => {
     setUser(localStorage.getItem("userName"));
-    axios.get(`http://localhost:5000/getOrders/${user}`)
-    .then((response) => {
-           console.log(response.data);
-           setRequestList(response.data);
+    axios.get(`http://localhost:5000/getOrders/${user}`).then((response) => {
+      console.log(response.data);
+      setRequestList(response.data);
     });
   });
   // const getOrder = async (id) => {
