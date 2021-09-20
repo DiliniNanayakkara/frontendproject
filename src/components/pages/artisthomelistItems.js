@@ -65,7 +65,7 @@ export const mainListItems = (
     </NavLink>
 
     <NavLink
-      to="./orders"
+      to="./Artworkupload"
       activeStyle={{
         fontWeight: "normal",
         color: "black",
@@ -93,7 +93,6 @@ export const mainListItems = (
       </ListItem>
     </NavLink>
   </div>
-  
 );
 
 export const secondaryListItems = (

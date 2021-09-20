@@ -233,7 +233,10 @@ export default function Artist_Profile() {
             </div>
             {/*btn */}
             <div className="btn">
-              <Button variant="contained">Dashbord</Button>
+              <Link to="artisthome">
+                {" "}
+                <Button variant="contained">Dashbord</Button>
+              </Link>
             </div>
             {/*btn */}
           </div> /*profiledetails */
