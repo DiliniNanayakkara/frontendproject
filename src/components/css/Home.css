@@ -1,63 +1,81 @@
 .C p {
-    margin-left:100px;
-    margin-right:100px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
-.footercard {
+.homefootercard {
   background-color: black;
-  height:400px;
+  height: 270px;
   width: 24%;
-  float:left;
+  float: left;
   margin: 0.5%;
+}
+.commithome {
+  background-image: url("https://wallpaper.dog/large/20342639.jpg");
+  width: 100%;
+  background-color: #cccccc;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 50px;
+}
 
+.delhome {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  right: 30%;
+  text-shadow: 4px 4px 8px #2b2b2b;
+  transform: translate(-50%, -50%);
+  color: white;
 }
-.footercard h1 {
-  color:white;
-  margin-left:50px;
+
+.homefootercard h1 {
+  color: white;
+  margin-left: 50px;
 }
-.footercard h3 {
-  color:white;
-  margin-left:50px;
+.homefootercard h3 {
+  color: white;
+  margin-left: 50px;
 }
-.footercard p {
-  color:white;
-  margin-left:50px;
+.homefootercard p {
+  color: white;
+  margin-left: 50px;
 }
-.title{
-  margin-top: 100px;
-  margin-left: 650px;
+.title {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-style: italic;
 }
-.footer{
+.homefooter {
   width: 100%;
-  height:500px;
-  background-color:black;
+  margin-top: 50px;
+  height: 300px;
+  background-color: black;
 }
 .Info {
-  margin-left:500px;
   font-style: italic;
-  margin-right:200px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .Infotools {
-  margin-top:50px;
-  margin-left:200px;
+  margin-top: 50px;
+  margin-left: 200px;
   font-style: italic;
-  margin-right:200px;
+  margin-right: 200px;
 }
-.pencile {
 
-    margin-left: 100px;
-    object-fit:cover;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius:50%;
-    margin-top: 150px;
-    float:left;
-}
-.fbutton {
-    background-color: #ec0d0d;
-    
-    margin-top:100px;
+.homefbutton {
+  background-color: #ffffff;
+
+  margin-top: 100px;
   border: none;
-  color: white;
+  color: rgb(36, 36, 36);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -65,14 +83,13 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.822), 0 6px 20px 0 rgba(255, 254, 254, 0.76);
-
+  border: 1px solid grey;
 }
 .button {
- 
-  background-color: #ec0d0d;
+  background-color: #ffffff;
   border: none;
-  color: white;
+  color: rgb(71, 71, 71);
+  border: 1px solid grey;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -81,43 +98,44 @@
   margin: 4px 2px;
   cursor: pointer;
   margin-left: 300px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 50px;
 }
 .text1 {
   font-family: Copperplate, Papyrus, fantasy;
 }
 .all {
-  width:1200px;
-  height:200px;
-  margin-top:150px;
+  width: 1400px;
+  height: 200px;
+  margin-top: 50px;
   margin-bottom: 300px;
+}
+.all:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
 }
 .all h1 {
   font-family: "Brush Script MT", cursive;
   font-size: 70px;
-  
+
   text-shadow: 3px 3px #b3b1b1;
 }
 .pencilart {
-  width:1200px;
-  height:260px;
-  margin-top:20px;
-  background-color:rgb(184, 184, 181);
+  width: 1200px;
+  height: 260px;
+  margin-top: 20px;
+  background-color: rgb(184, 184, 181);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
-}  
+}
 .pencilarts1 {
-  width:1200px;
-  height:300px;
-  margin-top:20px;
-  background-color:rgb(184, 184, 181);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
+  width: 1200px;
+  height: 300px;
+
+  background-color: rgb(184, 184, 181);
 }
 .buy button {
-  background-color: #ec0d0d;
-  border: none;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(39, 38, 38);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -125,68 +143,90 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
+  border: 1px solid grey;
+}
+.buy button:hover {
+  background-color: #000000;
+
+  color: rgb(255, 255, 255);
+}
+.button:hover {
+  background-color: #000000;
+
+  color: rgb(255, 255, 255);
+}
+.rap {
+  border: 1px solid grey;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.rap2 {
+  border: 1px solid grey;
+
+  background-repeat: no-repeat;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.rap1 {
+  border: 1px solid grey;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-image: url("https://wallpapercave.com/wp/wp2112195.jpg");
+}
+.rap1:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+.rap2:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+.rap:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
 }
 .buy {
-  float:right;
-  margin:20px;
-  
+  float: right;
+  margin: 20px;
 }
 .Arts1 p {
   margin: 20px;
-  float:left;
+  float: left;
 }
 .Arts1 {
   width: 20%;
-  height:260px;
+  height: 260px;
   margin: 20px;
-  float:left;
-  background-color:rgb(255, 255, 255);
+  float: left;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .Art {
   width: 20%;
-  height:220px;
+  height: 220px;
   margin: 20px;
-  float:left;
-  background-color:rgb(255, 255, 255);
+  float: left;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .p {
-  margin-top : 20px;
+  margin-top: 20px;
 }
 
+.XX {
+  color: rgb(44, 44, 44);
+  position: relative;
+}
 
+.XY {
+  margin-top: 150px;
 
-
-  .XX {
-   
-   margin-top:100px;
-    box-shadow: 0 4px 8px 0 rgba(226, 11, 11, 0.2), 0 6px 20px 0 rgba(228, 13, 13, 0.19);
-    color:rgb(187, 9, 9);
-    position: relative;
-    animation: mymovels 4s infinite;
-  }
-  
-  @keyframes mymovels {
-    from {left: 800px;}
-    to {left: 100px;}
-  }
-  .XY {
-   
-    margin-top:150px;
-     box-shadow: 0 4px 8px 0 rgba(226, 11, 11, 0.2), 0 6px 20px 0 rgba(228, 13, 13, 0.19);
-     color:rgb(187, 9, 9);
-     position: relative;
-     animation: mymovel 4s infinite;
-   }
-   
-   @keyframes mymovel {
-     from {left: 800px;}
-     to {left: 100px;}
-   }
- 
-
-
+  color: rgb(44, 44, 44);
+  position: relative;
+}
