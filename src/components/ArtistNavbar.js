@@ -61,7 +61,7 @@ function ArtistNavbar() {
           <a>
             {" "}
             <Link to="/Artist_profile" onClick={closeMobileMenu}>
-              Dashbord
+              Profile
             </Link>
           </a>
           <a>
