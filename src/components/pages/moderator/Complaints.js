@@ -101,8 +101,8 @@ export default function ArtworkUpload() {
                 setArtworkCategory(event.target.value);
               }}
             /> */}
-            <label className="cate">Select Artwork Category : 
-            <label for="html" className="category">Historical
+            <label className="cate">Select Category : 
+            <label for="html" className="category">Brushes
             <input type="radio" name="artworkCategory" value="Historical" onChange={(event) => {
                 setArtworkCategory(event.target.value);
               }}/></label> 
