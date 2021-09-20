@@ -117,7 +117,7 @@ export default function ArtworkUpload() {
                 setArtworkCategory(event.target.value);
               }}/>
               </label>
-            <label for="javascript" className="category">Fine Art
+            <label for="javascript" className="category">Easels
               <input type="radio" name="artworkCategory" value="Fine Art" onChange={(event) => {
                 setArtworkCategory(event.target.value);
               }}/>
