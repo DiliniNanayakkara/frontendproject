@@ -8,9 +8,15 @@ import { Link } from "react-router-dom";
 export default function Cart() {
   const [click, setClick] = useState(false);
   const [toolList, setToolList] = useState([]);
-  const [user, setUser] = useState("");
+  
   const [toolID, setToolID] = useState(window.location.pathname.split("/")[2]);
   const closeMobileMenu = () => setClick(false);
+  let [cartid, setCartId] = useState("");
+  let [carttotal, setCartTotal] = useState(0);
+  let [user, setUser] = useState("");
+  let [carttool, setCartTool] = useState([]);
+  let [cartprice, setCartPrice] = useState(0);
+  let [cartquantity, setCartQuantity] = useState([]);
   console.log(localStorage.getItem("user"));
   // 
   useEffect(() => {
@@ -25,6 +31,31 @@ export default function Cart() {
            setToolList(response.data);
     });
   });
+
+  const removeItem = () => {
+    axios
+      .post("http://localhost:5000/cartremove", {
+          cartid : setCartId,
+      })
+      .then(() => {
+        console.log("success");
+      });
+    }
+    const setOrder = () => {
+      // setUser(localStorage.getItem("user"));
+      setUser = localStorage.getItem("user");
+      axios
+        .post("http://localhost:5000/addtoorder", {
+          user : setUser,
+          carttool : setCartTool,
+          cartprice: setCartPrice,
+          cartquantity: setCartQuantity,
+  
+        })
+        .then(() => {
+          console.log("success");
+        });
+    };
   return (
     <div className="A">
       <Navbar />
@@ -44,8 +75,14 @@ export default function Cart() {
                       </thead>
               </table>
       {toolList.map((val) => {
+        
+                setCartId = val.cart_id;
+                setCartTool = val.cart_tool;
+                setCartPrice = val.cart_price;
+                setCartQuantity = val.cart_quantity;
+                
                 for(var i=0; i<toolList.length; i++){
-                  // const total = total + val.cart_price ;
+                  
                   return <table className="carttable">
                     
                       <tr >
@@ -54,20 +91,14 @@ export default function Cart() {
                           <td className="td6">Rs. {val.cart_price / val.cart_quantity}.00</td>
                           <td className="td5">{val.cart_quantity}</td>
                           <td className="td3">Rs. {val.cart_price}.00</td>
-                          <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
+                          <td className="td4"><button onClick={removeItem}><i  class="far fa-trash-alt ml-auto" aria-hidden="true" ></i></button></td>
                       </tr>
+                     
                       
-                      
-                      {/* <tr></tr><br/><br/>
-                      <tr  >
-                          <td></td>
-                          <td class="total">Total :</td>
-                          <td class="total">Rs. 2250</td>
-                          <td></td>
-                      </tr> */}
                       </table>
                 }
-                <table className="carttable">
+                return(
+                   <table className="carttable">
                 <tr >
                 <td className="td1"></td>
                 <td className="td2"></td>
@@ -77,6 +108,7 @@ export default function Cart() {
                 <td className="td4"></td>
             </tr>
             </table>
+                )
                 })}
       <br />
       <br />
@@ -88,7 +120,7 @@ export default function Cart() {
           <i class="fa fa-arrow-left" aria-hidden="true"></i> Continue Shopping
         </button>
       </Link>
-      <Link to="/checkout" onClick={closeMobileMenu}>
+      <Link to="/checkout" onClick={setOrder}>
         <button className="checkout">
           {" "}
           <i class="fa fa-shopping-cart" aria-hidden="true"></i> Checkout

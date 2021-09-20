@@ -6,6 +6,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 export default function ArtworkCart() {
+    let [user, setUser] = useState("");
     const [click, setClick] = useState(false);
   const [deliveryList, setDeliveryList] = useState([]);
   const [artworkID, setArtworkID] = useState(window.location.pathname.split("/")[2]);
@@ -15,6 +16,7 @@ export default function ArtworkCart() {
   let [artname, setArtName] = useState("");
   let [price, setPrice] = useState("");
   let [artistemail, setArtistEmail] = useState("");
+  
   useEffect(() => {
     setArtworkID(window.location.pathname.split("/")[2]);
   }, [window.location.pathname]);
@@ -31,10 +33,13 @@ export default function ArtworkCart() {
            setDeliveryList(response.data);
     });
   });
-  
+  console.log(localStorage.getItem("user"));
+
   const requestArtwork = () => {
+    setUser = localStorage.getItem("user");
     axios
       .post("http://localhost:5000/request", {
+        user: setUser,
         artname: setArtName,
         delivery: setDelivery,
         price: setPrice,
@@ -49,7 +54,7 @@ export default function ArtworkCart() {
   return (
      <div className="A"> 
       <Navbar/><br/><br/>
-      <text className="carthead">Your Cart</text>
+      <text className="carthead">Request artworks</text>
       <table className="carttable">
                   <thead>
                       <tr className="carttable1">
@@ -63,8 +68,10 @@ export default function ArtworkCart() {
                       </thead>
               </table>
       {deliveryList.map((val) => {
+        //   setUser(localStorage.getItem("user"));
                 for(var i=0; i<deliveryList.length; i++){
                     if(location == "Ampara"){
+                        
                         setDelivery = location;
                         setArtName = val.artwork_name;
                         setPrice = val.artwork_price;

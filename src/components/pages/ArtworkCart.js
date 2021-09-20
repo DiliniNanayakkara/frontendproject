@@ -6,48 +6,53 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 export default function ArtworkCart() {
+  let [user, setUser] = useState("");
     const [click, setClick] = useState(false);
-  const [toolList, setToolList] = useState([]);
+  const [orderList, setOrderList] = useState([]);
   const [toolID, setToolID] = useState(window.location.pathname.split("/")[2]);
   const closeMobileMenu = () => setClick(false);
+  console.log(localStorage.getItem("user"));
 
   useEffect(() => {
     setToolID(window.location.pathname.split("/")[2]);
   }, [window.location.pathname]);
 
+  
+
   useEffect(() => {
-    axios.get(`http://localhost:5000/confirmed`)
+    setUser(localStorage.getItem("user"));
+    axios.get(`http://localhost:5000/confirmed/${user}`)
     .then((response) => {
            console.log(response.data);
-           setToolList(response.data);
+           setOrderList(response.data);
     });
   });
     
   return (
      <div className="A"> 
       <Navbar/><br/><br/>
-      <text className="carthead">Your Cart</text>
+      <text className="carthead">Artworks Cart</text>
       <table className="carttable">
                   <thead>
                       <tr className="carttable1">
                           <th className="th1">Artwork Name</th>
-                          <th className="th2">Category</th>
+                          <th className="th2">Delivery Location</th>
                           <th className="th6">Unit Price</th>
-                          <th className="th5">Artist</th>
+                         
                           <th className="th3">Sub Total</th>
                           <th>Actions</th>
                       </tr>
                       </thead>
               </table>
-      {toolList.map((val) => {
-                for(var i=0; i<toolList.length; i++){
+      {orderList.map((val) => {
+                for(var i=0; i<orderList.length; i++){
                   return <table className="carttable">
                       <tr >
-                          <td className="td1">{val.cart_tool}</td>
-                          <td className="td2">{val.cart_category}</td>
-                          <td className="td6">Rs. {val.cart_price / val.cart_quantity}.00</td>
-                          <td className="td5">{val.cart_quantity}</td>
-                          <td className="td3">Rs. {val.cart_price}.00</td>
+                          <td className="td1">{val.artname}</td>
+                          <td className="td2">{val.location}</td>
+                          <td className="td6">Rs. {val.price}.00</td>
+                         
+                          <td className="td3">Rs. {val.price}.00</td>
                           <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
                       </tr>
                       

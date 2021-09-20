@@ -190,7 +190,7 @@ export default function ArtworkDetail() {
                          to={`/artworkrequest/${val.artwork_id}/${location}`} 
                          onClick={closeMobileMenu}
                          >
-                           <button className="cartbtn">Add To cart</button></Link>
+                           <button className="cartbtn">Continue</button></Link>
                   </div>
               </div>
           // <div className="A"> 
