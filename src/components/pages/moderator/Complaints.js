@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../css/moderator/MangeTool.css";
+import "../../css/moderator/ManageTool.css";
 //import ArtistNavbar from "../ArtistNavbar";
 import axios from "axios";
 import { Link } from 'react-router-dom';
