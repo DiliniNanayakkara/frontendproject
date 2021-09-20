@@ -26,7 +26,6 @@ function ArtistNavbar() {
           </a>
         </div>
         <div class="topnav">
-          
           <a>
             {" "}
             <Link to="/artistartworks" onClick={closeMobileMenu}>
@@ -59,12 +58,7 @@ function ArtistNavbar() {
               Profile
             </Link>
           </a>
-          <a>
-            {" "}
-            <Link to="/orders" onClick={closeMobileMenu}>
-              Upload
-            </Link>
-          </a>
+
           <a>
             {" "}
             <Link to="/" onClick={logout}>
