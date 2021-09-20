@@ -65,7 +65,7 @@ export default function ArtworkUpload() {
         <form onSubmit={onFormSubmit}>
             
             <div className="uploadforminfo">
-            <h1 className="heading">Artwork Upload</h1>
+            <h1 className="heading">Tool Upload</h1>
             <label>Tool Image :                       
             <input type='file' name='photo' onChange={onInputChange} /></label><br></br>
             <label> Tool Name : 
@@ -134,7 +134,7 @@ export default function ArtworkUpload() {
               to='/artworks'
               
             >  */}
-            <button className="but"> Submit Artwork </button>
+            <button className="but"> Add </button>
             {/* </Link>      */}
             </div>
             </form>
