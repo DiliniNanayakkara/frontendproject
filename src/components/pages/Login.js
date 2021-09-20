@@ -142,6 +142,15 @@ export default function Login() {
               role: response.data.role,
             });
           }
+          if (response.data.role == "moderator") {
+            console.log("API role hitted");
+            history.push({
+              pathname: "/ModeratorHome",
+              // pathname: "/Artist_profile",
+              userName: response.data.username,
+              role: response.data.role,
+            });
+          }
           if (response.data.role == "admin") {
             console.log("API role hitted");
             history.push({
