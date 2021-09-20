@@ -101,7 +101,7 @@ export default function Pencilarts() {
                   </tr>
                 </center>
               </table>
-              <Link>
+              <Link to="addrow">
                 <button className="button">Add</button>
               </Link>
             </p>

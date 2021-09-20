@@ -84,6 +84,7 @@ import Pencilartist_profile from "./components/pages/pencilartist_profile";
 import StaffSignUp from "./components/pages/StaffSignUp";
 import ArtistdashbordOrders from "./components/artistComponents/artistDashboard_orders";
 import addrow from "./components/pages/addrow";
+import editgig from "./components/pages/editgig";
 
 function App() {
   return (
@@ -92,6 +93,7 @@ function App() {
         <Route path="/addrow" component={addrow} />
         <Route path="/" exact component={Home} />
         <Route path="/roles" component={Roles} />
+        <Route path="/editgig" component={editgig} />
         <Route path="/BuyerSignUp" component={BuyerSignUp} />
         <Route path="/products" component={Products} />
         <Route path="/payment" component={Payment} />
