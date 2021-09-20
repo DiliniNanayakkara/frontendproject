@@ -51,7 +51,7 @@ function RegCusNavbar() {
           <a>
             {" "}
             <Link
-              to="/customer_artists"
+              to="/artworks"
               className="nav-links"
               onClick={closeMobileMenu}
             >
@@ -61,7 +61,7 @@ function RegCusNavbar() {
 
           <a>
             {" "}
-            <Link to="/customer_products" onClick={closeMobileMenu}>
+            <Link to="/products" onClick={closeMobileMenu}>
               Products
             </Link>
           </a>
@@ -81,7 +81,7 @@ function RegCusNavbar() {
           <a>
             {" "}
             <Link
-              to="/customer_home"
+              to="/buyerdashbord"
               className="nav-links"
               onClick={closeMobileMenu}
             >

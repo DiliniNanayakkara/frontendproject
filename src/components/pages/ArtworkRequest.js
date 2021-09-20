@@ -1,5 +1,6 @@
 import '../css/CartTable.css';
 import React, {useState, useEffect }from 'react';
+import RegCusNavbar from '../RegCusNavbar';
 import Navbar from '../Navbar';
 import CartTable from './CartTable';
 import axios from 'axios';
@@ -47,13 +48,13 @@ export default function ArtworkCart() {
         
       })
       .then(() => {
-        console.log("success");
+        alert('Request sent to artist');
       });
     }
 
   return (
      <div className="A"> 
-      <Navbar/><br/><br/>
+      <RegCusNavbar/><br/><br/>
       <text className="carthead">Request artworks</text>
       <table className="carttable">
                   <thead>
@@ -475,6 +476,7 @@ export default function ArtworkCart() {
                 }
                 
                 })}
+                
                       <br/><br/><br/><br/><br/>
                       <Link
                               to='/artworks'
@@ -482,8 +484,9 @@ export default function ArtworkCart() {
                           ><button className="continue"><i class="fa fa-arrow-left" aria-hidden="true"></i>   Continue Shopping       
                           </button> 
                           </Link>
+                
                           <Link
-                              to='/checkout'
+                              to='/artworkcart'
                               onClick={requestArtwork}
                           ><button className="checkout"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>               Request        
                           </button> 

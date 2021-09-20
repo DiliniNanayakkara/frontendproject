@@ -46,7 +46,7 @@ useEffect(() => {
       <ArtistNavbar/>
       <br></br> <br></br> <br></br> <br></br> 
       <Link
-              to='/artworkcart'
+              to='/artistartworkcart'
               onClick={closeMobileMenu}
             >
       <button class="cartbutton"><i class="fa fa-shopping-cart"></i> &nbsp; Artworks Cart </button>

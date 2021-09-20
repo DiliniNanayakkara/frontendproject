@@ -17,6 +17,7 @@ import ProductDetail from "./components/pages/ProductDetail";
 import ProductsCanvas from "./components/pages/ProductsCanvas";
 import ProductsEasels from "./components/pages/ProductsEasels";
 import ProductsSupplies from "./components/pages/ProductsSupplies";
+import Payment from "./components/pages/Payment";
 import Signup from "./components/pages/Signup";
 import Login from "./components/pages/Login";
 import Pencilarts from "./components/pages/Pencilarts";
@@ -92,6 +93,7 @@ function App() {
         <Route path="/roles" component={Roles} />
         <Route path="/BuyerSignUp" component={BuyerSignUp} />
         <Route path="/products" component={Products} />
+        <Route path="/payment" component={Payment} />
         <Route path="/productdetail" component={ProductDetail} />
         <Route path="/productsbrushes" component={ProductsBrushes} />
         <Route path="/productscanvas" component={ProductsCanvas} />

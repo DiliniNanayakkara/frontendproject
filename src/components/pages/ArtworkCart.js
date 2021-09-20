@@ -1,6 +1,7 @@
 import '../css/CartTable.css';
 import React, {useState, useEffect }from 'react';
 import Navbar from '../Navbar';
+import RegCusNavbar from '../RegCusNavbar';
 import CartTable from './CartTable';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -30,7 +31,7 @@ export default function ArtworkCart() {
     
   return (
      <div className="A"> 
-      <Navbar/><br/><br/>
+      <RegCusNavbar/><br/><br/>
       <text className="carthead">Artworks Cart</text>
       <table className="carttable">
                   <thead>
@@ -38,7 +39,6 @@ export default function ArtworkCart() {
                           <th className="th1">Artwork Name</th>
                           <th className="th2">Delivery Location</th>
                           <th className="th6">Unit Price</th>
-                         
                           <th className="th3">Sub Total</th>
                           <th>Actions</th>
                       </tr>

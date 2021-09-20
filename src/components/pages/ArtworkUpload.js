@@ -60,7 +60,7 @@ export default function ArtworkUpload() {
     axios.
     post("http://localhost:5000/upload", formData, config)
     .then((response) => {
-        alert('Image Uploaded Successfully');
+        alert('Artwork Uploaded Successfully');
     })
     .catch((err) => {
         console.log('err', err);
@@ -228,9 +228,9 @@ export default function ArtworkUpload() {
               </label>
             </label>
             
-            
-            {/* <Link
-              to='/artworks'
+{/*             
+            <Link
+              to='/artistartworks'
               
             >  */}
             <button className="but"> Submit Artwork </button>
