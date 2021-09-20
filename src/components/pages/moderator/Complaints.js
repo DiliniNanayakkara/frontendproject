@@ -93,7 +93,7 @@ export default function ArtworkUpload() {
                 setArtworkArtist(event.target.value);
               }}
             /> </label><br></br>
-            <label>Artwork Price : 
+            <label>Tool Price : 
             <input
               type="text"
               name="artworkPrice"
