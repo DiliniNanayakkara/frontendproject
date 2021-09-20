@@ -102,7 +102,7 @@ export default function ArtworkUpload() {
               }}
             /> */}
             <label className="cate">Select Category : 
-            <label for="html" className="category">Brushes
+            <label for="html" className="category">Brushes  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
             <input type="radio" name="artworkCategory" value="Historical" onChange={(event) => {
                 setArtworkCategory(event.target.value);
               }}/></label> 
@@ -112,17 +112,17 @@ export default function ArtworkUpload() {
                 setArtworkCategory(event.target.value);
               }}/>
               </label>
-            <label for="javascript" className="category">Painting
+            <label for="javascript" className="category">Painting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               <input type="radio" name="artworkCategory" value="Drawing" onChange={(event) => {
                 setArtworkCategory(event.target.value);
               }}/>
               </label>
-            <label for="javascript" className="category">Easels
+            <label for="javascript" className="category">Easels &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
               <input type="radio" name="artworkCategory" value="Fine Art" onChange={(event) => {
                 setArtworkCategory(event.target.value);
               }}/>
               </label>
-            <label for="javascript" className="category">Other
+            <label for="javascript" className="category">Other &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
               <input type="radio" name="artworkCategory" value="Portrait" onChange={(event) => {
                 setArtworkCategory(event.target.value);
               }}/>
