@@ -126,7 +126,7 @@ export default function Login() {
             console.log("API role hitted");
             localStorage.setItem("userName", response.data.username);
             history.push({
-              pathname: "/artistdashbord",
+              pathname: "/a_home",
               // pathname: "/Artist_profile",
               userName: response.data.username,
               role: response.data.role,
