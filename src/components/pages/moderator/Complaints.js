@@ -85,7 +85,7 @@ export default function ArtworkUpload() {
                 setArtworkDescription(event.target.value);
               }}
             /> </label><br></br>
-            <label> Name of Artist : 
+            <label> Total Quantity : 
             <input
               type="text"
               name="artworkArtist"
