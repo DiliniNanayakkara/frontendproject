@@ -13,7 +13,7 @@ export default function Dashbord (){
       return (
             <div className="home">
             <ModeratorNavbar />
-            <SlideMenu/>
+            {/* <SlideMenu/> */}
             <ModHomeInfo />
            
            
