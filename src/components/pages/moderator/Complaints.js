@@ -66,7 +66,7 @@ export default function ArtworkUpload() {
             
             <div className="uploadforminfo">
             <h1 className="heading">Artwork Upload</h1>
-            <label>Upload Artwork :                       
+            <label>Tool Image :                       
             <input type='file' name='photo' onChange={onInputChange} /></label><br></br>
             <label> Tool Name : 
             <input
@@ -76,15 +76,7 @@ export default function ArtworkUpload() {
                 setArtworkName(event.target.value);
               }}
             /> </label> <br></br>
-            <label>Artwork Description : 
-            <input
-              type="textarea"
-              height="100px"
-              name="artworkDescription"
-              onChange={(event) => {
-                setArtworkDescription(event.target.value);
-              }}
-            /> </label><br></br>
+       
             <label> Total Quantity : 
             <input
               type="text"
