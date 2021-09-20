@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Logout } from './Logout';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Customer_Dropdown from './Customer_Dropdown';
+import {useHistory} from 'react';
 
 function RegCusNavbar() {
+  
   const [click, setClick] = useState(false);
   const [customer_dropdown, setCustomerDropdown] = useState(false);
 
@@ -26,7 +27,10 @@ function RegCusNavbar() {
       setCustomerDropdown(false);
     }
   };
-
+  const logout = () => {
+    localStorage.clear();
+    
+  }
   return (
     <>
      <div className="AllNavItem">
@@ -87,7 +91,7 @@ function RegCusNavbar() {
             <a > <Link
               to='/'
             
-              onClick={closeMobileMenu}
+              onClick={logout}
             >
             LogOut
             </Link></a>

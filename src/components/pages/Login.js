@@ -136,7 +136,7 @@ export default function Login() {
           if (response.data.role == "customer") {
             console.log("API role hitted");
             history.push({
-              pathname: "/buyerdashbord",
+              pathname: "/c_home",
               // pathname: "/Artist_profile",
               userName: response.data.username,
               role: response.data.role,
