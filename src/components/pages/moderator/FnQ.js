@@ -58,7 +58,7 @@ export default function FnQ() {
 
         {/* ****** 3rd DIV tag********** */}
 
-        <div className="oneline">
+        <div className="oneline div3">
        
        
 
