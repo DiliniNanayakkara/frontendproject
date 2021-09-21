@@ -141,7 +141,7 @@ export default function Artist_Profile() {
   return (
     <div className="A">
       <div className="backbtn">
-        <Link to="/viewartists">
+        <Link to="/buyerartists">
           {" "}
           <button className="button">BACK</button>
         </Link>
