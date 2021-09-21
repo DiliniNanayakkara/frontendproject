@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import Dropdown from './Dropdown';
+import React, { useState } from "react";
+import { Button } from "./Button";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import Dropdown from "./Dropdown";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -29,63 +29,62 @@ function Navbar() {
 
   return (
     <>
-    <div className="AllNavItem">
-    <div className="logo">
-    <a className="active" >  <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          De'lart
-          <i class="fas fa-palette"></i>
-        </Link></a>
-    </div>
-    <div class="topnav">
-  
-  <a >  <Link to='/'  onClick={closeMobileMenu}>
+      <div className="AllNavItem">
+        <div className="logo">
+          <a className="active">
+            {" "}
+            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+              De'lart
+              <i class="fas fa-palette"></i>
+            </Link>
+          </a>
+        </div>
+        <div class="topnav">
+          <a>
+            {" "}
+            <Link to="/" onClick={closeMobileMenu}>
               Home
-            </Link></a>
-  <a > <Link
-              to='/artworks'
-           
-              onClick={closeMobileMenu}
-            >
+            </Link>
+          </a>
+          <a>
+            {" "}
+            <Link to="/artworks" onClick={closeMobileMenu}>
               Artworks
-            </Link></a>
-           
-  <a> <Link
-              to='/products'
-             
-              onClick={closeMobileMenu}
-            >
+            </Link>
+          </a>
+
+          <a>
+            {" "}
+            <Link to="/products" onClick={closeMobileMenu}>
               Products
-            </Link></a>
-            <a> <Link
-              to='/artists'
-             
-              onClick={closeMobileMenu}
-            >
+            </Link>
+          </a>
+          <a>
+            {" "}
+            <Link to="/viewartists" onClick={closeMobileMenu}>
               Artists
-            </Link></a>
-            <a > <Link
-              to='/artworks'
-           
-              onClick={closeMobileMenu}
-            >
+            </Link>
+          </a>
+          <a>
+            {" "}
+            <Link to="/viewehibition" onClick={closeMobileMenu}>
               Exhibitions
-            </Link></a>
-  <a> <Link
-              to='/login'
-             
-              onClick={closeMobileMenu}
-            >
+            </Link>
+          </a>
+          <a>
+            {" "}
+            <Link to="/login" onClick={closeMobileMenu}>
               Login
-            </Link></a>
-  <a > <Link
-              to='/signup'
-            
-              onClick={closeMobileMenu}
-            >
+            </Link>
+          </a>
+          <a>
+            {" "}
+            <Link to="/signup" onClick={closeMobileMenu}>
               Sign Up
-            </Link></a>
-</div>
-</div>
+            </Link>
+          </a>
+        </div>
+      </div>
     </>
   );
 }

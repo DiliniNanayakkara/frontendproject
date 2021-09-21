@@ -3,6 +3,7 @@ import '../css/Checkout.css';
 import { Link } from 'react-router-dom';
 import '../css/CartTable.css';
 import axios from 'axios';
+import PaymentModal from "./PaymentModal";
 
 
 function CheckoutComponent(props) {
@@ -11,23 +12,26 @@ function CheckoutComponent(props) {
     const [orderList, setOrderList] = useState([]);
     const closeMobileMenu = () => setClick(false);
     let [user, setUser] = useState("");
-    console.log(localStorage.getItem("user"));
+    // console.log(localStorage.getItem("user"));
     useEffect(() => {
       setOrderPrice(window.location.pathname.split("/")[2]);
     }, [window.location.pathname]);
     
     useEffect(() => {
       setUser(localStorage.getItem("user"));
-      axios.get(`http://localhost:5000/cart/${user}`)
+      axios.get(`http://localhost:5000/order/${user}`)
       .then((response) => {
              console.log(response.data);
              setOrderList(response.data);
-             
+             setOrderPrice(response.data.map((ele)=>{return parseFloat(ele.price)}).reduce((a, b) => a + b, 0).toFixed(2).toString());
       });
     });
     
   return (
     <main>
+      <div className="App">
+      
+    </div>
       <text className="carthead">Delivery Details</text>
       <table className="carttable">
              <tr>Your Order Details</tr>
@@ -40,9 +44,9 @@ function CheckoutComponent(props) {
           return <table className="carttable">
               
               <tr >
-                  <td className="td1">Product : {val.cart_tool}</td>
-                  <td className="td5">Quantity : {val.cart_quantity}</td>
-                  <td className="td3">Price : Rs. {val.cart_price}.00</td>
+                  <td className="td1">Product : {val.tool}</td>
+                  <td className="td5">Quantity : {val.quantity}</td>
+                  <td className="td3">Price : Rs. {val.price}.00</td>
                   
               </tr>
              
@@ -112,15 +116,28 @@ function CheckoutComponent(props) {
         </select>
         <br />
         <br />
-        <Link
-                              to='/payment'
-                              onClick={closeMobileMenu}
-                          ><button className="submit"> Continue    <i class="fa fa-chevron-right" aria-hidden="true"></i>        
-                          </button> 
-                          </Link>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         
+       
       </form>
+      
+      <PaymentModal
+      
+	// Use a unique value for the orderId
+	orderId={45896588}
+	name="Artwork Tools"
+	amount={orderprice}
+      />
+      
       </div>
+      
       <div className="footer">
         <div className="footercard">
           <h1>De'lart</h1>

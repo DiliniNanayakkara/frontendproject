@@ -50,6 +50,7 @@ import Customer_Artworks from "./components/pages/Customer_Artworks";
 import Customer_Artists from "./components/pages/Customer_Artists";
 import Customer_Products from "./components/pages/Customer_Products";
 import Customer_Pencilarts from "./components/pages/Customer_Pencilarts";
+import ArtworkCheckout from "./components/pages/ArtworkCheckout";
 import Customer_Exhibitions from "./components/pages/Customer_Exhibitions";
 import ArtistDashbord from "./components/pages/ArtistDashbord";
 import BuyerDashbord from "./components/pages/BuyerDashbord";
@@ -87,6 +88,10 @@ import addrow from "./components/pages/addrow";
 import editgig from "./components/pages/editgig";
 import artists from "./components/pages/artists";
 import buyerexhibition from "./components/pages/buyerexhibition";
+import buyerartists from "./components/pages/buyerartists";
+import viewartists from "./components/pages/viewartists";
+import viewexhibition from "./components/pages/viewexhibition";
+import viewerArtistprof from "./components/pages/viewerArtistprof";
 
 function App() {
   return (
@@ -96,6 +101,10 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/roles" component={Roles} />
         <Route path="/buyerexhibition" component={buyerexhibition} />
+        <Route path="/viewerArtistprof" component={viewerArtistprof} />
+        <Route path="/viewehibition" component={viewexhibition} />
+        <Route path="/viewartists" component={viewartists} />
+        <Route path="/buyerartists" component={buyerartists} />
         <Route path="/editgig" component={editgig} />
         <Route path="/BuyerSignUp" component={BuyerSignUp} />
         <Route path="/products" component={Products} />
@@ -160,6 +169,7 @@ function App() {
           path="/artistproductsupplies"
           component={ArtistProductSupplies}
         />
+        <Route path="/artworkcheckout" component={ArtworkCheckout} />
         <Route path="/artistproducteasels" component={ArtistProductEasels} />
         <Route path="/customer_home" component={Customer_Home} />
         <Route path="/customer_artworks" component={Customer_Artworks} />
