@@ -56,6 +56,13 @@ function Navbar() {
             >
               Products
             </Link></a>
+            <a> <Link
+              to='/artists'
+             
+              onClick={closeMobileMenu}
+            >
+              Artists
+            </Link></a>
             <a > <Link
               to='/artworks'
            

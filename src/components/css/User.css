@@ -1,21 +1,17 @@
- 
-.Artist td, th {
-    border: 2px solid rgb(255, 255, 255);
-    padding: 12px;
-  }
-  
-.Artist tr:nth-child(even){background-color: hsl(0, 59%, 88%);}
-  
-.Artist tr:hover {background-color: rgb(245, 189, 189);}
-  
-  .Artist th {
-    padding: 20px;
-    text-align: left;
-    background-color: #c43a3a;
-    color: white;
-  }
-  .AB h1 {
-      margin-top: 30px;;
-      color: rgb(155, 7, 7);
-      text-shadow: 3px 3px #c2b4b4;
-  }
+.Artist td,
+th {
+  border: 1px solid rgb(187, 184, 184);
+  padding: 10px;
+}
+
+.Artist th {
+  padding: 10px;
+  text-align: left;
+
+  color: rgb(138, 121, 121);
+}
+.AB h1 {
+  margin-top: 30px;
+
+  text-shadow: 3px 3px #c2b4b4;
+}

@@ -119,21 +119,34 @@ export default function Login() {
           //setLoginStatus(response.data.result[0].email);
           //console.log(response);
           //setLoginStatus(true);
+
           localStorage.setItem("token", response.data.token);
           setLoginStatus(true);
           if (response.data.role == "artist") {
             console.log("API role hitted");
+            localStorage.setItem("userName", response.data.username);
             history.push({
-              pathname: "/artistdashbord",
+              pathname: "/a_home",
               // pathname: "/Artist_profile",
               userName: response.data.username,
               role: response.data.role,
             });
           }
+
           if (response.data.role == "customer") {
             console.log("API role hitted");
+            localStorage.setItem("user", response.data.username);
             history.push({
-              pathname: "/buyerdashbord",
+              pathname: "/c_home",
+              // pathname: "/Artist_profile",
+              userName: response.data.username,
+              role: response.data.role,
+            });
+          }
+          if (response.data.role == "moderator") {
+            console.log("API role hitted");
+            history.push({
+              pathname: "/ModeratorHome",
               // pathname: "/Artist_profile",
               userName: response.data.username,
               role: response.data.role,

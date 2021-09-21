@@ -32,7 +32,91 @@
   margin-top: 8px;
   vertical-align: middle;
 }  */
+.wrapper {
+  display: inline-flex;
+  margin-left: 1150px;
+}
+.wrapper .carticon{
+  font-size: 25px;
+}
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  margin-left: 500px;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 70px;
+  height: 70px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #b345697e;
+  color: #ffffff;
+}
+
+.searchbar{
+  margin-left: 900px;
+  width: 800px;
+}
+.searchbar input{
+  align-items: center;
+  margin-top: 20px;
+  width: 300px;
+  font-size: 17px;
+  border: 2px;
+  
+}
 .cards{
   width: 30%;
   display: inline-block;
@@ -148,6 +232,23 @@
     border-radius: 4px;
     transition: all 0.2s ease-out;
   } */
+
+  .cartbutton {
+    background-color: white; /* Blue background */
+    border: 2px solid #555555;
+    color: black; /* White text */
+    border-radius: 8px;
+    margin-left: 1100px;
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  .cartbutton:hover {
+    background-color: rosybrown;
+  }
+
   .footer{
     width: 100%;
     height:425px;

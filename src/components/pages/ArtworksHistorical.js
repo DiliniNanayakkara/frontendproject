@@ -28,6 +28,12 @@ export default function Artworks() {
   return (
      <div className="A"> 
       <Navbar/>
+      <Link
+              to='/artworkcart'
+              onClick={closeMobileMenu}
+            >
+      <button class="cartbutton"><i class="fa fa-shopping-cart"></i> &nbsp; Artworks Cart </button>
+     </Link>
       <center>
       <nav className='nav'>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
@@ -21,30 +21,39 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Orders() {
+  let [user, setUser] = useState("");
+  const [requestList, setRequestList] = useState([]);
   const classes = useStyles();
 
   const [click, setClick] = useState(false);
   const [orders, setOrders] = useState([]);
-
+  console.log(localStorage.getItem("userName"));
   const closeMobileMenu = () => setClick(false);
 
-  const getOrder = async (id) => {
-    const res = await axios.post("http://localhost:5000/getOrders", {
-      artist_id: id,
+  useEffect(() => {
+    setUser(localStorage.getItem("userName"));
+    axios.get(`http://localhost:5000/getOrders/${user}`).then((response) => {
+      console.log(response.data);
+      setRequestList(response.data);
     });
-    setOrders(res.data);
-  };
+  });
+  // const getOrder = async (id) => {
+  //   const res = await axios.post("http://localhost:5000/getOrders", {
+  //     username: id,
+  //   });
+  //   setOrders(res.data);
+  // };
 
   const statusUpdate = async (id) => {
     console.log(id);
     const res = await axios.post("http://localhost:5000/statusUpdate", {
-      order_id: id,
+      request_id: id,
     });
   };
 
-  useEffect(() => {
-    getOrder("3");
-  }, []);
+  // useEffect(() => {
+  //   getOrder(localStorage.getItem("userName"));
+  // }, []);
 
   console.log(orders);
   return (
@@ -61,17 +70,17 @@ export default function Orders() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {orders.map((order) => (
-            <TableRow key={order.order_id}>
-              <TableCell>{order.date}</TableCell>
-              <TableCell>{order.name}</TableCell>
-              <TableCell>{order.shipTo}</TableCell>
-              <TableCell>{order.artist_approve_status}</TableCell>
-              <TableCell align="right">{order.total_price}</TableCell>
+          {requestList.map((val) => (
+            <TableRow key={val.request_id}>
+              <TableCell>{val.date}</TableCell>
+              <TableCell>{val.artname}</TableCell>
+              <TableCell>{val.location}</TableCell>
+              <TableCell>{val.status}</TableCell>
+              <TableCell align="right">{val.price}</TableCell>
               <TableCell align="right">
                 <button
                   onClick={() => {
-                    statusUpdate(order.order_id);
+                    statusUpdate(val.request_id);
                   }}
                 >
                   Accept

@@ -73,6 +73,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Artist_Profile() {
   const classes = useStyles();
+
+  
   return (
     // <div className="A">
     //     <ArtistNavbar/>
