@@ -10,4 +10,7 @@ import React from 'react';
 
 <p1>Your privacy is of utmost importance to us. 
     You can read our Privacy Policy here, as it is part of our Terms of Service, for further information</p1>
+
+
+    <h3>Do I pay my seller directly?</h3>
 </>
