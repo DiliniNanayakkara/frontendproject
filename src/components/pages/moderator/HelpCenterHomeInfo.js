@@ -5,29 +5,32 @@ import { Button } from "../../Button";
 
 export default function HelpCenterHomeInfo() {
   return (
-    <div className="helpcontainer">
-      <div>
-        <h1 className="helpwelcom">Welcome to De 'lart help center</h1>
-      </div>
+    <center>
+      <div className="upperdiv"> </div>
+      <div></div>
+      <h1 className="helpwelcom">Welcome to De 'lart Help Center</h1>
+      <div className="helpcontainer">
+        <div></div>
 
-      <div className="">
-        <div>
-          <Link to="questionsubmitform">
-            <button className="helpbtnsubmit">How Can we help you ?</button>
-          </Link>
+        <div className="">
+          <div>
+            <Link to="questionsubmitform">
+              <button className="helpbtnsubmit">How Can we help you ?</button>
+            </Link>
+          </div>
+          <div>
+            <Link>
+              <button className="helpbtnsubmit">View QnA</button>
+            </Link>
+          </div>
         </div>
+
         <div>
           <Link>
-            <button className="helpbtnsubmit">View QnA</button>
+            <button className="helpbtnsubmit">FAQs</button>
           </Link>
         </div>
       </div>
-
-      <div>
-        <Link>
-          <button className="helpbtnsubmit">FAQs</button>
-        </Link>
-      </div>
-    </div>
+    </center>
   );
 }
