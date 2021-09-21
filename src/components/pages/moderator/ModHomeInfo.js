@@ -12,13 +12,9 @@ export default function ModHomeInfo() {
           <Link to="/complaints">
             <button className="helpcenterbtn">Manage Art Tools</button>
           </Link>
-
         </div>
 
         <div>
-
-
-
           <Link to="/helpcenter">
             <button className="helpcenterbtn">Help Center</button>
           </Link>
@@ -28,13 +24,9 @@ export default function ModHomeInfo() {
           <Link to="reports">
             <button className="helpcenterbtn">Reports</button>
           </Link>
-
         </div>
 
         <div>
-
-
-
           <Link to="advertiesment">
             <button className="helpcenterbtn">Manage Advertiesment</button>
           </Link>
