@@ -19,8 +19,12 @@ export default function FnQ() {
         </div>
 
         {/* *************2nd DIV tag************ */}
+       
 
         <div className="div2 oneline">
+            <div className="imageDiv">
+
+            </div>
         <h3 className="h1-content-before"> What are the benefits of being part of the DelArt?</h3>
 
         <h3>What is the difference between exhibitin and art gallery?</h3>
