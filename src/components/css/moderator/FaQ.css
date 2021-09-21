@@ -1,0 +1,41 @@
+.topnav {
+    background-color: black;
+}
+
+.div1 {
+    background-color: white(242, 247, 247);
+    margin-left: 20px;
+    width: 200px;
+  
+}
+
+.div2 {
+    background-color: rgb(236, 235, 236);
+    width: 1000;
+    
+   
+}
+
+.div3 {
+    background-color: white;
+    margin-left: 20px;
+    width: 200px;
+    
+}
+
+
+.oneline{
+    display: table-cell;
+    
+    height: 600px;
+    padding-left: 20px;
+    justify-content: space-between;    
+    margin-left: 5px;
+    border: 20px;
+   
+   
+}
+
+.h1-content-before {
+    
+}
