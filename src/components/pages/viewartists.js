@@ -25,8 +25,12 @@ export default function Artists() {
               ></img>
               <div className="profdata">
                 <h3>{val.first_name + val.last_name}</h3>
+
                 <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
                 <p>{val.email}</p>
+                <p>{val.description}</p>
+
+                <p>{val.contact_no}</p>
 
                 <div className="buttonz">
                   <Link to={`/viewerArtistprof/${val.artist_Id}`}>
