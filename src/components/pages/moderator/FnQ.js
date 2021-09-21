@@ -22,4 +22,6 @@ import React from 'react';
 </p1>
 
 <h3>How do I buy Artwor using the DelArt?</h3>
+
+<h3>How do I cancel my order?</h3>
 </>
