@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../css/moderator/ManageTool.css";
-//import ArtistNavbar from "../ArtistNavbar";
+import ModeratorNavbar from "./ModeratorNavbar";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import { Alert } from "@material-ui/lab";
@@ -57,7 +57,7 @@ export default function ArtworkUpload() {
     }
     return(
         <div className="A">
-        {/* <ArtistNavbar /> */}
+       <ModeratorNavbar />
 
         <div className="uploadform">
         <form onSubmit={onFormSubmit}>

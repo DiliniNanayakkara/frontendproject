@@ -1,6 +1,6 @@
 .navbar_mod {
     overflow: hidden;
-    background-color: rgb(250, 248, 250);
+    background-color: #faf8fa;
   }
 
   .navbar-logo_mod {
@@ -11,3 +11,12 @@
     text-decoration: none;
     font-size: 2rem;
   }
+
+  .log-out-mod {
+
+color: black;
+  }
+
+ 
+
+  

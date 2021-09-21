@@ -42,7 +42,7 @@ function Navbar() {
        
             <Link
               to='/'
-              className='nav-links-mobile'
+              className='nav-links-mobile '
               onClick={closeMobileMenu}
             >
               Logout
