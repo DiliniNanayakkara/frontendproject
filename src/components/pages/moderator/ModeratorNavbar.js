@@ -31,13 +31,11 @@ function Navbar() {
   return (
     <>
       <nav className='navbar_mod'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+        <Link to='/' className='navbar-logo_mod' onClick={closeMobileMenu}>
           De'lart
           <i class="fas fa-palette"></i>
         </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
+       
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         
         <li>

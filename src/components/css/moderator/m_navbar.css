@@ -2,3 +2,12 @@
     overflow: hidden;
     background-color: rgb(250, 248, 250);
   }
+
+  .navbar-logo_mod {
+    color: rgb(14, 13, 13);
+    margin-left: 100px;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+  }
