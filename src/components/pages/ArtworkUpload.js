@@ -5,6 +5,25 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { Alert } from "@material-ui/lab";
 export default function ArtworkUpload() {
+
+    
+    const [file, setfile] = useState(null);
+    const [artworkUpload, setArtworkUpload] = useState([]);
+    const [artworkName, setArtworkName] = useState("");
+    const [artworkDescription, setArtworkDescription] = useState("");
+    const [artworkPrice, setArtworkPrice] = useState(0);
+    const [artworkArtist, setArtworkArtist] = useState("");
+    const [artworkCategory, setArtworkCategory] = useState("");
+    const addArtwork = () => {
+        axios
+          .post("http://localhost:3000/up", {
+            artworkUpload: artworkUpload,
+            artworkName: artworkName,
+            artworkDescription: artworkDescription,
+            artworkPrice: artworkPrice,
+            artworkArtist: artworkArtist,
+            artworkCategory: artworkCategory,
+
   const [file, setfile] = useState(null);
   const [artworkUpload, setArtworkUpload] = useState([]);
   const [artworkName, setArtworkName] = useState("");
@@ -16,6 +35,7 @@ export default function ArtworkUpload() {
   const [artworkDimension, setArtworkDimension] = useState("");
   const [perkmcharge, setPerKmCharge] = useState(0);
   const [artworkArtistEmail, setArtworkArtistEmail] = useState("");
+
 
   const addArtwork = () => {
     axios

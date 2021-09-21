@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../../Navbar.css';
+import "../../css/moderator/M_navbar.css";
 import {Logout} from '../../Logout';
 import { colors } from '@material-ui/core';
 
@@ -30,21 +30,19 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+      <nav className='navbar_mod'>
+        <Link to='/' className='navbar-logo_mod' onClick={closeMobileMenu}>
           De'lart
           <i class="fas fa-palette"></i>
         </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
+       
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         
         <li>
        
             <Link
               to='/'
-              className='nav-links-mobile'
+              className='nav-links-mobile '
               onClick={closeMobileMenu}
             >
               Logout
