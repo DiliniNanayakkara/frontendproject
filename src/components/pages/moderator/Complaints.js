@@ -7,21 +7,20 @@ import { Alert } from "@material-ui/lab";
 export default function ArtworkUpload() {
     
     const [file, setfile] = useState(null);
-    const [artworkUpload, setArtworkUpload] = useState([]);
-    const [artworkName, setArtworkName] = useState("");
-    const [artworkDescription, setArtworkDescription] = useState("");
-    const [artworkPrice, setArtworkPrice] = useState(0);
-    const [artworkArtist, setArtworkArtist] = useState("");
-    const [artworkCategory, setArtworkCategory] = useState("");
+    const [toolUpload, setToolUpload] = useState([]);
+    const [toolrkName, setToolName] = useState("");
+    const [quantity, setQyantity] = useState("");
+    const [ToolPrice, setToolPrice] = useState(0);
+    const [toolCategory, setToolCategory] = useState("");
     const addArtwork = () => {
         axios
-          .post("http://localhost:3001/up", {
-            artworkUpload: artworkUpload,
-            artworkName: artworkName,
-            artworkDescription: artworkDescription,
-            artworkPrice: artworkPrice,
-            artworkArtist: artworkArtist,
-            artworkCategory: artworkCategory,
+          .post("http://localhost:5000/upload", {
+            toolUpload: setToolUpload,
+            toolrkName: setToolName,
+            quantity: setQyantity,
+            ToolPrice: setToolPrice,
+            toolCategory: setToolCategory,
+           
 
           })
           .then(() => {
@@ -33,11 +32,10 @@ export default function ArtworkUpload() {
 
         const formData = new FormData();
         formData.append('photo', file);
-        formData.append('artworkName', artworkName);
-        formData.append('artworkDescription', artworkDescription);
-        formData.append('artworkPrice', artworkPrice);
-        formData.append('artworkArtist', artworkArtist);
-        formData.append('artworkCategory', artworkCategory);
+        formData.append('toolrkName', toolrkName);
+        formData.append('quantity', quantity);
+        formData.append('ToolPrice', ToolPrice);
+        formData.append('toolCategory', toolCategory);
         const config = {
             headers: {
                 'content-type': 'multipart/form-data',
@@ -45,7 +43,7 @@ export default function ArtworkUpload() {
         };
    
     axios.
-    post("http://localhost:3001/upload", formData, config)
+    post("http://localhost:5000/upload", formData, config)
     .then((response) => {
         alert('Image Uploaded Successfully');
     })
@@ -55,7 +53,7 @@ export default function ArtworkUpload() {
 };
     const onInputChange = (e) => {
         setfile(e.target.files[0]);
-        setArtworkUpload(e.target.value);
+        setToolUpload(e.target.value);
     }
     return(
         <div className="A">
@@ -73,7 +71,7 @@ export default function ArtworkUpload() {
               type="text"
               name="artworkName"
               onChange={(event) => {
-                setArtworkName(event.target.value);
+                  setToolName(event.target.value);
               }}
             /> </label> <br></br>
        
@@ -82,7 +80,7 @@ export default function ArtworkUpload() {
               type="text"
               name="artworkArtist"
               onChange={(event) => {
-                setArtworkArtist(event.target.value);
+                  setQyantity(event.target.value);
               }}
             /> </label><br></br>
             <label>Tool Price : 
@@ -90,7 +88,7 @@ export default function ArtworkUpload() {
               type="text"
               name="artworkPrice"
               onChange={(event) => {
-                setArtworkPrice(event.target.value);
+                  setToolPrice(event.target.value);
               }}
             /> </label><br></br>
             {/* <label>Artwork Category : </label>
@@ -104,27 +102,27 @@ export default function ArtworkUpload() {
             <label className="cate">Select Category : 
             <label for="html" className="category">Brushes  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
             <input type="radio" name="artworkCategory" value="Historical" onChange={(event) => {
-                setArtworkCategory(event.target.value);
+                setToolCategory(event.target.value);
               }}/></label> 
 {/*                 <label for="html">Historical</label> */}
             <label for="css" className="category">Bords/Canvas
             <input type="radio" name="artworkCategory" value="Painting" onChange={(event) => {
-                setArtworkCategory(event.target.value);
+                setToolCategory(event.target.value);
               }}/>
               </label>
             <label for="javascript" className="category">Painting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
               <input type="radio" name="artworkCategory" value="Drawing" onChange={(event) => {
-                setArtworkCategory(event.target.value);
+                setToolCategory(event.target.value);
               }}/>
               </label>
             <label for="javascript" className="category">Easels &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
               <input type="radio" name="artworkCategory" value="Fine Art" onChange={(event) => {
-                setArtworkCategory(event.target.value);
+                setToolCategory(event.target.value);
               }}/>
               </label>
             <label for="javascript" className="category">Other &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
               <input type="radio" name="artworkCategory" value="Portrait" onChange={(event) => {
-                setArtworkCategory(event.target.value);
+                setToolCategory(event.target.value);
               }}/>
               </label>
             </label>

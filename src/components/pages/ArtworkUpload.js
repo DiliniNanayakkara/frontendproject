@@ -15,7 +15,7 @@ export default function ArtworkUpload() {
     const [artworkCategory, setArtworkCategory] = useState("");
     const addArtwork = () => {
         axios
-          .post("http://localhost:3001/up", {
+          .post("http://localhost:3000/up", {
             artworkUpload: artworkUpload,
             artworkName: artworkName,
             artworkDescription: artworkDescription,
