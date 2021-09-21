@@ -7,6 +7,8 @@ export default function FnQ() {
       {/* <nav className="topnav">Hello world</nav> */}
       {/* <ModeratorNavbar />
         <HelpCenterHomeInfo /> */}
+
+        <h1>Freaquently Ask Questions</h1>
 {/* //************1st DIV tag********** */ }
 
         <div className="oneline div1">
@@ -20,7 +22,9 @@ export default function FnQ() {
 
         <div className="div2 oneline">
         <h3 className="h1-content-before"> What are the benefits of being part of the DelArt?</h3>
+
         <h3>What is the difference between exhibitin and art gallery?</h3>
+
         <h3>Is my personal information safe?</h3>
 
         <p1>
