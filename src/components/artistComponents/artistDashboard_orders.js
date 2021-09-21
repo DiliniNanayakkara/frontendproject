@@ -23,6 +23,13 @@ const useStyles = makeStyles((theme) => ({
 export default function Orders() {
   let [user, setUser] = useState("");
   const [requestList, setRequestList] = useState([]);
+  let [requestid, setRequestId] = useState([]);
+  let [artname, setArtname] = useState(0);
+  let [location, setLocation] = useState([]);
+  let [price, setPrice] = useState([]);
+  let [requser, setreqUser] = useState(0);
+  let [artist, setArtist] = useState([]);
+  const [list, setList] = useState([]);
   const classes = useStyles();
 
   const [click, setClick] = useState(false);
@@ -37,6 +44,7 @@ export default function Orders() {
       setRequestList(response.data);
     });
   });
+  
   // const getOrder = async (id) => {
   //   const res = await axios.post("http://localhost:5000/getOrders", {
   //     username: id,
@@ -44,10 +52,22 @@ export default function Orders() {
   //   setOrders(res.data);
   // };
 
-  const statusUpdate = async (id) => {
+  const approvestatusUpdate = async (id) => {
     console.log(id);
-    const res = await axios.post("http://localhost:5000/statusUpdate", {
+    
+    const res = await axios.post("http://localhost:5000/approvestatusUpdate", {
       request_id: id,
+     
+      
+    })
+  };
+
+  const rejectstatusUpdate = async (id ) => {
+    console.log(id);
+    
+    const res = await axios.post("http://localhost:5000/rejectstatusUpdate", {
+      request_id: id,
+      
     });
   };
 
@@ -56,9 +76,18 @@ export default function Orders() {
   // }, []);
 
   console.log(orders);
+  {list.map((list) => {
+      setRequestId = list.request_id;
+      setArtname = list.artname;
+      setLocation = list.location;
+      setPrice = list.price;
+      setreqUser = list.user;
+      setArtist = list.artist;
+  })}
   return (
+   
     <React.Fragment>
-      <Title>Recent Orders</Title>
+      <Title>Order Requests</Title>
       <Table size="small">
         <TableHead>
           <TableRow>
@@ -80,14 +109,25 @@ export default function Orders() {
               <TableCell align="right">
                 <button
                   onClick={() => {
-                    statusUpdate(val.request_id);
+                    approvestatusUpdate (val.request_id);
                   }}
                 >
                   Accept
                 </button>
               </TableCell>
+              <TableCell align="right">
+                <button
+                  onClick={() => {
+                    rejectstatusUpdate(val.request_id);
+                  }}
+                >
+                  Reject
+                </button>
+              </TableCell>
             </TableRow>
           ))}
+          
+          
         </TableBody>
       </Table>
 

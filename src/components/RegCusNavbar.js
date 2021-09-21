@@ -85,7 +85,7 @@ function RegCusNavbar() {
           <a>
             {" "}
             <Link
-              to="/buyerdashbord"
+              to="/customer_home"
               className="nav-links"
               onClick={closeMobileMenu}
             >

@@ -1,0 +1,40 @@
+.artistcard {
+  width: 80%;
+  height: 160px;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.75);
+  margin-left: 10%;
+  margin-top: 50px;
+}
+.profileInfo {
+  height: 150px;
+
+  margin-left: 2%;
+  background-color: rgb(255, 255, 255);
+}
+.profphoto {
+  width: 100px;
+  background-color: crimson;
+
+  height: 100px;
+  margin-left: 20px;
+  top: 70%;
+  float: left;
+  border-radius: 1000px;
+}
+.buttonz button {
+  padding: 10px;
+  float: right;
+}
+.profdata {
+  width: 70%;
+
+  margin-left: 200px;
+
+  margin-top: 100px;
+}
+.buttonz button:hover {
+  color: white;
+  background-color: black;
+}

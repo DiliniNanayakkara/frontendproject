@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import "../../css/moderator/M_navbar.css";
-import {Logout} from '../../Logout';
-import { colors } from '@material-ui/core';
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../../css/moderator/m_navbar.css";
+import { Logout } from "../../Logout";
+import { colors } from "@material-ui/core";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -30,19 +29,17 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar_mod'>
-        <Link to='/' className='navbar-logo_mod' onClick={closeMobileMenu}>
+      <nav className="navbar_mod">
+        <Link to="/" className="navbar-logo_mod" onClick={closeMobileMenu}>
           De'lart
           <i class="fas fa-palette"></i>
         </Link>
-       
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-        
-        <li>
-       
+
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li>
             <Link
-              to='/'
-              className='nav-links-mobile '
+              to="/"
+              className="nav-links-mobile "
               onClick={closeMobileMenu}
             >
               Logout
@@ -50,7 +47,6 @@ function Navbar() {
           </li>
         </ul>
         <Logout />
-       
       </nav>
     </>
   );

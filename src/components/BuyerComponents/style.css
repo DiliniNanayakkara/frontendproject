@@ -1,0 +1,13 @@
+.btnc {
+  border: 1px solid grey;
+  padding: 10px;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  margin-left: 20px;
+  margin-bottom: 20px;
+  float: right;
+}
+.btnc:hover {
+  background-color: black;
+  color: rgb(255, 255, 255);
+}

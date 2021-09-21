@@ -13,6 +13,11 @@ export default function ArtworkCart() {
   const [toolID, setToolID] = useState(window.location.pathname.split("/")[2]);
   const closeMobileMenu = () => setClick(false);
   console.log(localStorage.getItem("user"));
+  let [cartid, setCartId] = useState("");
+ 
+  let [carttool, setCartTool] = useState([]);
+  let [cartprice, setCartPrice] = useState(0);
+  let [cartquantity, setCartQuantity] = useState([]);
 
   useEffect(() => {
     setToolID(window.location.pathname.split("/")[2]);
@@ -28,6 +33,16 @@ export default function ArtworkCart() {
            setOrderList(response.data);
     });
   });
+
+  const removeItem = () => {
+    axios
+      .post("http://localhost:5000/cartremove", {
+          cartid : setCartId,
+      })
+      .then(() => {
+        console.log("success");
+      });
+    }
     
   return (
      <div className="A"> 
@@ -53,7 +68,7 @@ export default function ArtworkCart() {
                           <td className="td6">Rs. {val.price}.00</td>
                          
                           <td className="td3">Rs. {val.price}.00</td>
-                          <td className="td4"><i class="fa fa-trash" aria-hidden="true"></i></td>
+                          <td className="td4"><button onClick={removeItem}><i  class="far fa-trash-alt ml-auto" aria-hidden="true" ></i></button></td>
                       </tr>
                       
                       {/* <tr></tr><br/><br/>
@@ -75,7 +90,7 @@ export default function ArtworkCart() {
                           </button> 
                           </Link>
                           <Link
-                              to='/checkout'
+                              to='/artworkcheckout'
                               onClick={closeMobileMenu}
                           ><button className="checkout"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>               Checkout         
                           </button> 

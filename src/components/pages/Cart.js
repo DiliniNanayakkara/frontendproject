@@ -56,6 +56,12 @@ export default function Cart() {
         .then(() => {
           console.log("success");
         });
+        setUser = localStorage.getItem("user");
+        axios
+        .post(`http://localhost:5000/removefromcart/${user}`) 
+        .then(() => {
+          console.log("success");
+        });
     };
 
   if (localStorage.getItem("user") !== null) {

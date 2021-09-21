@@ -15,7 +15,7 @@ import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 
 // import '../css/Profile.css';
-import ArtistNavbar from "../ArtistNavbar";
+
 import { HorizontalSplit } from "@material-ui/icons";
 import { yellow } from "@material-ui/core/colors";
 
@@ -112,28 +112,34 @@ export default function Artist_Profile() {
   const [tag, setTag] = useState("all");
   const [filteredImages, setFilteredImages] = useState([]);
 
+  const [artistID, setArtworkID] = useState(
+    window.location.pathname.split("/")[2]
+  );
+
   useEffect(() => {
-    tag === "all"
-      ? setFilteredImages(images)
-      : setFilteredImages(images.filter((image) => image.tag === tag));
-  }, [tag]);
+    setArtworkID(window.location.pathname.split("/")[2]);
+  }, [window.location.pathname]);
+
   const [employeeList, setEmployeeList] = useState([]);
   const [employeedis, setEmployeedis] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/artistprofile").then((response) => {
-      setEmployeeList(response.data);
-    });
+    Axios.get(`http://localhost:5000/Artistlistby/${artistID}`).then(
+      (response) => {
+        setEmployeeList(response.data);
+      }
+    );
   });
   useEffect(() => {
-    Axios.get("http://localhost:5000/artistdis").then((response) => {
-      setEmployeedis(response.data);
-    });
+    Axios.get(`http://localhost:5000/Artistlistbydis/${artistID}`).then(
+      (response) => {
+        setEmployeedis(response.data);
+      }
+    );
   });
 
   return (
     <div className="A">
-      <ArtistNavbar />
       <div className="profiledata">
         {employeedis.map((val, key) => {
           return (
@@ -248,9 +254,7 @@ export default function Artist_Profile() {
         <div className="artpagedata">
           <center>
             <h1>Art Work Gallery</h1>
-            <Link to="/artworkupload">
-            <Button variant="contained">Upload Artwork</Button>
-          </Link>
+            <Button variant="contained">Upload Works</Button>
           </center>
         </div>
         {/*artpagedata */}
