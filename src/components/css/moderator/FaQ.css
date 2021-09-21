@@ -1,3 +1,18 @@
 .topnav {
     background-color: black;
 }
+
+.div1 {
+    background-color: aqua;
+    display: inline-block;
+}
+
+.div2 {
+    background-color: aliceblue;
+    display: inline-block;
+}
+
+.div3 {
+    background-color: bisque;
+    display: inline-block;
+}
