@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState, useEffect }from "react";
 import clsx from "clsx";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -19,12 +19,16 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-
+import axios from 'axios';
 import { mainListItems, secondaryListItems } from "../BuyerDashbord/listItem";
 import Chart from "../BuyerDashbord/Chart";
 import Deposits from "../BuyerDashbord/Deposits";
 import Orders from "../BuyerDashbord/Orders";
+
+
 function Copyright() {
+  
+ 
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
@@ -121,6 +125,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+  
   const handleDrawerOpen = () => {
     setOpen(true);
   };

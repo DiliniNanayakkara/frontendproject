@@ -126,6 +126,7 @@ export default function ProductDetail() {
                     <input type="number" 
                     id="quantity" 
                     name="quantity" 
+                    set ="1"
                     min="1" 
                     max = {val.tool_quantity}
                     onChange={(event) => {

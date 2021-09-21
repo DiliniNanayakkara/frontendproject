@@ -248,7 +248,9 @@ export default function Artist_Profile() {
         <div className="artpagedata">
           <center>
             <h1>Art Work Gallery</h1>
-            <Button variant="contained">Upload Works</Button>
+            <Link to="/artworkupload">
+            <Button variant="contained">Upload Artwork</Button>
+          </Link>
           </center>
         </div>
         {/*artpagedata */}

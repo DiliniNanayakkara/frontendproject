@@ -50,6 +50,7 @@ import Customer_Artworks from "./components/pages/Customer_Artworks";
 import Customer_Artists from "./components/pages/Customer_Artists";
 import Customer_Products from "./components/pages/Customer_Products";
 import Customer_Pencilarts from "./components/pages/Customer_Pencilarts";
+import ArtworkCheckout from "./components/pages/ArtworkCheckout";
 import Customer_Exhibitions from "./components/pages/Customer_Exhibitions";
 import ArtistDashbord from "./components/pages/ArtistDashbord";
 import BuyerDashbord from "./components/pages/BuyerDashbord";
@@ -168,6 +169,7 @@ function App() {
           path="/artistproductsupplies"
           component={ArtistProductSupplies}
         />
+        <Route path="/artworkcheckout" component={ArtworkCheckout} />
         <Route path="/artistproducteasels" component={ArtistProductEasels} />
         <Route path="/customer_home" component={Customer_Home} />
         <Route path="/customer_artworks" component={Customer_Artworks} />

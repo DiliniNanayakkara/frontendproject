@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CheckoutComponent from "./CheckoutComponent";
+
 import '../css/Checkout.css';
 
 class App extends Component {
