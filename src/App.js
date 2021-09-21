@@ -86,6 +86,7 @@ import ArtistdashbordOrders from "./components/artistComponents/artistDashboard_
 import addrow from "./components/pages/addrow";
 import editgig from "./components/pages/editgig";
 import artists from "./components/pages/artists";
+import buyerexhibition from "./components/pages/buyerexhibition";
 
 function App() {
   return (
@@ -94,6 +95,7 @@ function App() {
         <Route path="/addrow" component={addrow} />
         <Route path="/" exact component={Home} />
         <Route path="/roles" component={Roles} />
+        <Route path="/buyerexhibition" component={buyerexhibition} />
         <Route path="/editgig" component={editgig} />
         <Route path="/BuyerSignUp" component={BuyerSignUp} />
         <Route path="/products" component={Products} />

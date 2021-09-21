@@ -67,14 +67,18 @@ function RegCusNavbar() {
           </a>
           <a>
             {" "}
-            <Link to="/customer_exhibitions" onClick={closeMobileMenu}>
+            <Link to="/buyerexhibition" onClick={closeMobileMenu}>
               Exhibitions
             </Link>
           </a>
 
           <a>
             {" "}
-            <Link to="/artists" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/buyerartists"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
               Artists
             </Link>
           </a>
