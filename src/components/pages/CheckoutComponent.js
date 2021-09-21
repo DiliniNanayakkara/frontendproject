@@ -1,14 +1,65 @@
 import React ,{useState, useEffect }from "react";
 import '../css/Checkout.css';
 import { Link } from 'react-router-dom';
+import '../css/CartTable.css';
+import axios from 'axios';
 
 
 function CheckoutComponent(props) {
     const [click, setClick] = useState(false);
-  
+    const [orderprice, setOrderPrice] = useState(0);
+    const [orderList, setOrderList] = useState([]);
     const closeMobileMenu = () => setClick(false);
+    let [user, setUser] = useState("");
+    console.log(localStorage.getItem("user"));
+    useEffect(() => {
+      setOrderPrice(window.location.pathname.split("/")[2]);
+    }, [window.location.pathname]);
+    
+    useEffect(() => {
+      setUser(localStorage.getItem("user"));
+      axios.get(`http://localhost:5000/cart/${user}`)
+      .then((response) => {
+             console.log(response.data);
+             setOrderList(response.data);
+             
+      });
+    });
+    
   return (
     <main>
+      <text className="carthead">Delivery Details</text>
+      <table className="carttable">
+             <tr>Your Order Details</tr>
+             
+             </table>
+      {orderList.map((val) => {
+       
+        for(var i=0; i<orderList.length; i++){
+          
+          return <table className="carttable">
+              
+              <tr >
+                  <td className="td1">Product : {val.cart_tool}</td>
+                  <td className="td5">Quantity : {val.cart_quantity}</td>
+                  <td className="td3">Price : Rs. {val.cart_price}.00</td>
+                  
+              </tr>
+             
+              
+              </table>
+             
+        }
+      })}
+      <table className="carttable">
+                <tr >
+               
+                <td className="td1"></td>
+                <td className="td5">Total</td>
+                <td className="td3">Rs.{orderprice}</td>
+                
+            </tr>
+            </table>
       <text className="del">Delivery Information :</text>
       <div className="pencil">
             <img className="pencile" src= { require('../../assests/artworks.png').default} alt="" width="300" height="300"></img>
@@ -62,7 +113,7 @@ function CheckoutComponent(props) {
         <br />
         <br />
         <Link
-                              to='/artworks'
+                              to='/payment'
                               onClick={closeMobileMenu}
                           ><button className="submit"> Continue    <i class="fa fa-chevron-right" aria-hidden="true"></i>        
                           </button> 

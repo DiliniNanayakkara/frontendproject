@@ -95,7 +95,7 @@ const FormSignup = ({ submitForm }) => {
             <label className="form-label1">NIC</label>
             <input
               className="form-input1"
-              type="number"
+              type="text"
               name="nic"
               placeholder="Enter your NIC"
               value={values.nic}

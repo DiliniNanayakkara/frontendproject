@@ -1,6 +1,6 @@
 import ArtistNavbar from '../ArtistNavbar';
 import React, {useState, useEffect }from 'react';
-import '../css/Products.css';
+import '../css/Artworks.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
@@ -15,19 +15,26 @@ import Typography from '@material-ui/core/Typography';
 
 
 export default function Artworks() {
-  const [artworkList, setArtworkList] = useState([]);
+  const [toolList, setToolList] = useState([]);
   const [click, setClick] = useState(false);
   
   const closeMobileMenu = () => setClick(false);
   useEffect(() => {
-    axios.get('http://localhost:3001/products').then((response) => {
-           setArtworkList(response.data);
+    axios.get('http://localhost:5000/products').then((response) => {
+           setToolList(response.data);
     });
 }, []);
 
   return (
      <div className="A"> 
       <ArtistNavbar/>
+      <br></br> <br></br> <br></br> <br></br> 
+      <Link
+              to='/cart'
+              onClick={closeMobileMenu}
+            >
+      <button class="cartbutton"><i class="fa fa-shopping-cart"></i> &nbsp; Products Cart </button>
+     </Link>
       <center>
       <nav className='nav'>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -82,14 +89,40 @@ export default function Artworks() {
       </center>
       <div>
               
-              {artworkList.map((val) => {
-                    return <div className = "Arts"> 
-                          <div className="img"><img src="https://media.istockphoto.com/photos/paint-brushes-picture-id510006691?s=612x612"></img></div> 
-                          <div className="name"> {val.tool_name}</div> 
-                          <div className="price">Rs. {val.tool_price}.00</div>
-                          <button className="but">View Product <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                  </div>;
-              })}
+             {toolList.map((val) => {
+                
+                return <div className = "cards"> 
+                
+                      <div className="image">
+                        <img src={'http://localhost:5000/' + val.tool_image}></img>
+                      </div>
+                      
+                      <div className="cardbody">
+                      <div className="name"> {val.tool_name}</div> 
+                      <div className="categ"> ({val.tool_category}) </div>
+        
+                      <div className="price">Rs. {val.tool_price}.00</div>
+                      
+                      <Link
+         to={`/artistproductdetail/${val.tool_id}`} 
+          onClick={closeMobileMenu}
+        ><button >
+        View Product  
+        </button> </Link>
+                      {/* <button>View Artwork</button> */}
+                      </div>
+                      
+                      {/* <div className="img"> <img align="center" src={'http://localhost:3001/' + val.image} alt=""></img></div> 
+                      <div className="name"> {val.name}</div> 
+                      <div className="des"> {val.category} , {val.artist}</div>
+                      <div className="price">Rs. {val.artwork_price}.00</div> */}
+                      {/* <Link
+          to='/artworkdetail'
+          onClick={closeMobileMenu}
+        ><button className="but">
+        View Artwork         <i class="fa fa-arrow-right" aria-hidden="true"></i></button> </Link> */}
+              </div>
+          })}
               
         </div>
          <div className="footer">

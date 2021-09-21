@@ -5,8 +5,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Roles from "./components/pages/Roles";
 import Artworks from "./components/pages/Artworks";
 import ArtworksDrawing from "./components/pages/ArtworksDrawing";
+import ArtworkRequest from "./components/pages/ArtworkRequest";
 import ArtworkDetail from "./components/pages/ArtworkDetail";
 import ArtworksFineart from "./components/pages/ArtworksFineart";
+import Artist_Profile_Edit from "./components/pages/Artist_Profile_Edit";
 import ArtworksHistorical from "./components/pages/ArtworksHistorical";
 import ArtworksPainting from "./components/pages/ArtworksPainting";
 import Products from "./components/pages/Products";
@@ -15,6 +17,7 @@ import ProductDetail from "./components/pages/ProductDetail";
 import ProductsCanvas from "./components/pages/ProductsCanvas";
 import ProductsEasels from "./components/pages/ProductsEasels";
 import ProductsSupplies from "./components/pages/ProductsSupplies";
+import Payment from "./components/pages/Payment";
 import Signup from "./components/pages/Signup";
 import Login from "./components/pages/Login";
 import Pencilarts from "./components/pages/Pencilarts";
@@ -28,11 +31,15 @@ import Cart from "./components/pages/Cart";
 import Checkout from "./components/pages/Checkout";
 import ViewArtist from "./components/pages/ViewArtist";
 import Artistartworks from "./components/pages/Artistartworks";
+import ArtistArtworkDetail from "./components/pages/ArtistArtworkDetail";
+import ArtistArtworkRequest from "./components/pages/ArtistArtworkRequest";
+import ArtistProductDetail from "./components/pages/ArtistProductDetail";
 import Artistartworkshistorical from "./components/pages/Artistartworkshistorical";
 import Artistartworksfineart from "./components/pages/Artistartworksfineart";
 import Artistartworksdrawing from "./components/pages/Artistartworksdrawing";
 import Artistartworkspainting from "./components/pages/Artistartworkspainting";
 import ArtworkUpload from "./components/pages/ArtworkUpload";
+import ArtworkCart from "./components/pages/ArtworkCart";
 import ArtistProduct from "./components/pages/ArtistProduct";
 import ArtistProductBrushes from "./components/pages/ArtistProductBrushes";
 import ArtistProductCanvas from "./components/pages/ArtistProductCanvas";
@@ -76,16 +83,24 @@ import BuyerSignUp from "./components/pages/BuyerSignUp";
 import Pencilartist_profile from "./components/pages/pencilartist_profile";
 import StaffSignUp from "./components/pages/StaffSignUp";
 import ArtistdashbordOrders from "./components/artistComponents/artistDashboard_orders";
+import addrow from "./components/pages/addrow";
+import editgig from "./components/pages/editgig";
+import artists from "./components/pages/artists";
+import buyerexhibition from "./components/pages/buyerexhibition";
 
 function App() {
   return (
     <Router>
       <Switch>
-
+        <Route path="/addrow" component={addrow} />
         <Route path="/" exact component={Home} />
         <Route path="/roles" component={Roles} />
+        <Route path="/buyerexhibition" component={buyerexhibition} />
+        <Route path="/editgig" component={editgig} />
         <Route path="/BuyerSignUp" component={BuyerSignUp} />
         <Route path="/products" component={Products} />
+        <Route path="/artists" component={artists} />
+        <Route path="/payment" component={Payment} />
         <Route path="/productdetail" component={ProductDetail} />
         <Route path="/productsbrushes" component={ProductsBrushes} />
         <Route path="/productscanvas" component={ProductsCanvas} />
@@ -95,8 +110,10 @@ function App() {
         <Route path="/viewartist" component={ViewArtist} />
         <Route path="/checkout" component={Checkout} />
         <Route path="/artworks" component={Artworks} />
+        <Route path="/artworkcart" component={ArtworkCart} />
         <Route path="/artworksdrawing" component={ArtworksDrawing} />
         <Route path="/artworkdetail" component={ArtworkDetail} />
+        <Route path="/artworkrequest" component={ArtworkRequest} />
         <Route path="/artworksfineart" component={ArtworksFineart} />
         <Route path="/artworkshistorical" component={ArtworksHistorical} />
         <Route path="/artworkspainting" component={ArtworksPainting} />
@@ -114,10 +131,12 @@ function App() {
         <Route path="/SignUpBuyer" component={SignUpBuyer} />
         <Route path="/StaffSignUp" component={StaffSignUp} />
 
-        {/* <Route path="/StaffSignUp" component={AutherizeRoute} /> */}
+        <Route path="/Artist_Profile_Edit" component={Artist_Profile_Edit} />
 
         <Route path="/ArtistdashbordOrders" component={ArtistdashbordOrders} />
-
+        <Route path="/artistartworkdetail" component={ArtistArtworkDetail} />
+        <Route path="/artistartworkrequest" component={ArtistArtworkRequest} />
+        <Route path="/artistproductdetail" component={ArtistProductDetail} />
         <Route
           path="/artistartworkshistorical"
           component={Artistartworkshistorical}
@@ -205,37 +224,35 @@ function App() {
         <Route path="/customizeart" component={Customizeart} />
         <Route path="/watchexhibition" component={Watchexhibition} />
 
-        <Route path='/' exact component={Home} />
-        <Route path='/products' component={Products} />
-        <Route path='/artworks' component={Artworks} />
-        <Route path='/signup' component={Signup} />
-        <Route path='/login' component={Login} />
-        <Route path='/pencilarts' component={Pencilarts} />
-        <Route path='/exhibitions' component={Exhibitions} />
-        <Route path='/dashbord' component={Dashbord} />
-        <Route path='/users' component={Users} />
-        <Route path='/addmodarator' component={AddModarator} />
-        <Route path='/artisthome' component={ArtistHome} />
-        <Route path='/orders' component={Orders} />
-        <Route path='/artistartworks' component={Artistartworks} />
-        <Route path='/artistproduct' component={ArtistProduct} />
-        <Route path='/customer_home' component={Customer_Home} />
-        <Route path='/customer_artworks' component={Customer_Artworks} />
-        <Route path='/customer_products' component={Customer_Products} />
-        <Route path='/customer_artists' component={Customer_Artists} />
-        <Route path='/customer_pencilarts' component={Customer_Pencilarts} />
-        <Route path='/customer_exhibitions' component={Customer_Exhibitions} />
-        <Route path='/artistdashbord' component={ArtistDashbord} />
-        <Route path='/buyerdashbord' component={BuyerDashbord} />
-        <Route path='/moderatorHome' component={ModeratorHome} />
-        <Route path='/helpcenter' component={HelpCenter} />
-        <Route path='/advertiesment' component={Advertiesment} />
-        <Route path='/reports' component={Reports} />
-        <Route path='/customized_artist' component={Customized_Artist} />
-        <Route path='/artist_profile' component={Artist_Profile} />
-        <Route path='/customer_profile' component={Customer_Profile} />         
-       
-
+        <Route path="/" exact component={Home} />
+        <Route path="/products" component={Products} />
+        <Route path="/artworks" component={Artworks} />
+        <Route path="/signup" component={Signup} />
+        <Route path="/login" component={Login} />
+        <Route path="/pencilarts" component={Pencilarts} />
+        <Route path="/exhibitions" component={Exhibitions} />
+        <Route path="/dashbord" component={Dashbord} />
+        <Route path="/users" component={Users} />
+        <Route path="/addmodarator" component={AddModarator} />
+        <Route path="/artisthome" component={ArtistHome} />
+        <Route path="/orders" component={Orders} />
+        <Route path="/artistartworks" component={Artistartworks} />
+        <Route path="/artistproduct" component={ArtistProduct} />
+        <Route path="/customer_home" component={Customer_Home} />
+        <Route path="/customer_artworks" component={Customer_Artworks} />
+        <Route path="/customer_products" component={Customer_Products} />
+        <Route path="/customer_artists" component={Customer_Artists} />
+        <Route path="/customer_pencilarts" component={Customer_Pencilarts} />
+        <Route path="/customer_exhibitions" component={Customer_Exhibitions} />
+        <Route path="/artistdashbord" component={ArtistDashbord} />
+        <Route path="/buyerdashbord" component={BuyerDashbord} />
+        <Route path="/moderatorHome" component={ModeratorHome} />
+        <Route path="/helpcenter" component={HelpCenter} />
+        <Route path="/advertiesment" component={Advertiesment} />
+        <Route path="/reports" component={Reports} />
+        <Route path="/customized_artist" component={Customized_Artist} />
+        <Route path="/artist_profile" component={Artist_Profile} />
+        <Route path="/customer_profile" component={Customer_Profile} />
       </Switch>
     </Router>
   );

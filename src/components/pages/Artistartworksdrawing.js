@@ -20,7 +20,7 @@ export default function Artworks() {
   
   const closeMobileMenu = () => setClick(false);
   useEffect(() => {
-    axios.get('http://localhost:3001/drawings').then((response) => {
+    axios.get('http://localhost:5000/drawings').then((response) => {
            setArtworkList(response.data);
     });
 }, []);
@@ -28,6 +28,13 @@ export default function Artworks() {
   return (
      <div className="A"> 
       <ArtistNavbar/>
+    <br></br> <br></br> <br></br> <br></br> 
+      <Link
+              to='/artworkcart'
+              onClick={closeMobileMenu}
+            >
+      <button class="cartbutton"><i class="fa fa-shopping-cart"></i> &nbsp; Artworks Cart </button>
+     </Link>
       <center>
       <nav className='nav'>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -83,17 +90,25 @@ export default function Artworks() {
       <div>
               
               {artworkList.map((val) => {
-                    return <div className = "Arts"> 
-                          
-                          <div className="img"> <img src="https://www.creativeboom.com/uploads/articles/a4/a40eeac492a143d5bb34412dfe8f275a8834e41c_810.jpg"></img></div> 
-                          <div className="name"> {val.artwork_name}</div> 
-                          <div className="des"> {val.artwork_category} , {val.artwork_description}</div>
-                          <div className="price">Rs. {val.artwork_price}.00</div>
-                          <Link
-              to='/artworkdetail'
-              onClick={closeMobileMenu}
-            ><button className="but">
-            View Artwork         <i class="fa fa-arrow-right" aria-hidden="true"></i></button> </Link>
+                    return <div className = "cards"> 
+                    
+                   <div className="image">
+                     <img src={'http://localhost:5000/' + val.artwork_image}></img>
+                   </div>
+                   
+                   <div className="cardbody">
+                   <div className="name"> {val.artwork_name}</div> 
+                   <div className="categ"> ({val.artwork_category}) </div>
+                   <div className="artist"> Artist - {val.artwork_artist}</div>
+                   <div className="price">Rs. {val.artwork_price}.00</div>
+                   
+                   <Link
+       to={`/artistartworkdetail/${val.artwork_id}`} 
+       onClick={closeMobileMenu}
+     ><button >
+     View Artwork   
+     </button> </Link>
+     </div>
                   </div>;
               })}
               

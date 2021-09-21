@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -124,6 +124,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+  const [artist, setArtist] = React.useState(null);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -132,6 +133,12 @@ export default function Dashboard() {
     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
+  useEffect(() => {
+    setArtist(localStorage.getItem("userName"));
+  });
+
+  console.log(artist);
 
   return (
     <div className={classes.root}>
