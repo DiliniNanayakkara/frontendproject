@@ -75,7 +75,7 @@ export const mainListItems = (
       </ListItem>
     </NavLink>
     <NavLink
-      to="./exhibitions"
+      to="./createexhibition"
       activeStyle={{
         fontWeight: "normal",
         color: "black",
