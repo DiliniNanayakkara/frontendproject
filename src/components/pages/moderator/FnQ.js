@@ -13,4 +13,11 @@ import React from 'react';
 
 
     <h3>Do I pay my seller directly?</h3>
+
+    <p1>All payments are made through the Fiverr site via the Order page, 
+        and all buyers pay Fiverr for orders in advance. 
+        This is for your own safety as  Fiverr will not be able to assist you if you pay your seller outside of the platform. 
+        In the case where you are been asked to use an alternative payment method, 
+        please report it to Customer Service immediately.
+</p1>
 </>
