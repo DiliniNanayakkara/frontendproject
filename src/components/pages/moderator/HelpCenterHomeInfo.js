@@ -19,7 +19,7 @@ export default function HelpCenterHomeInfo() {
             </Link>
           </div>
           <div>
-            <Link>
+            <Link to="/fnq">
               <button className="helpbtnsubmit">View QnA</button>
             </Link>
           </div>
