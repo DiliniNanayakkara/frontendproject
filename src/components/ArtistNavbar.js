@@ -28,6 +28,12 @@ function ArtistNavbar() {
         <div class="topnav">
           <a>
             {" "}
+            <Link to="/a_home" onClick={closeMobileMenu}>
+              Home
+            </Link>
+          </a>
+          <a>
+            {" "}
             <Link to="/artistartworks" onClick={closeMobileMenu}>
               Artworks
             </Link>
