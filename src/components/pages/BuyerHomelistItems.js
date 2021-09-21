@@ -65,19 +65,5 @@ export const mainListItems = (
 );
 
 export const secondaryListItems = (
-  <div>
-    {/*<ListSubheader inset>Saved reports</ListSubheader>*/}
-    <ListItem button>
-      <ListItemIcon>
-        <StarIcon />
-      </ListItemIcon>
-      <ListItemText primary="Help Center" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <SendIcon />
-      </ListItemIcon>
-      <ListItemText primary="Complaint" />
-    </ListItem>
-  </div>
+  <div>{/*<ListSubheader inset>Saved reports</ListSubheader>*/}</div>
 );

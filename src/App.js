@@ -87,7 +87,9 @@ import addrow from "./components/pages/addrow";
 import editgig from "./components/pages/editgig";
 import artists from "./components/pages/artists";
 import buyerexhibition from "./components/pages/buyerexhibition";
-
+import buyerartists from "./components/pages/buyerartists";
+import viewartists from "./components/pages/viewartists";
+import viewexhibition from "./components/pages/viewexhibition";
 function App() {
   return (
     <Router>
@@ -96,6 +98,9 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/roles" component={Roles} />
         <Route path="/buyerexhibition" component={buyerexhibition} />
+        <Route path="/viewehibition" component={viewexhibition} />
+        <Route path="/viewartists" component={viewartists} />
+        <Route path="/buyerartists" component={buyerartists} />
         <Route path="/editgig" component={editgig} />
         <Route path="/BuyerSignUp" component={BuyerSignUp} />
         <Route path="/products" component={Products} />
