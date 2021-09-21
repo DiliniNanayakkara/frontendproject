@@ -20,4 +20,6 @@ import React from 'react';
         In the case where you are been asked to use an alternative payment method, 
         please report it to Customer Service immediately.
 </p1>
+
+<h3>How do I buy Artwor using the DelArt?</h3>
 </>
