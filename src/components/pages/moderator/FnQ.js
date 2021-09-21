@@ -18,7 +18,7 @@ export default function FnQ() {
 
         {/* *************2nd DIV tag************ */}
 
-        <div>
+        <div className="div2">
 
         <p1>
           Your privacy is of utmost importance to us. You can read our Privacy
