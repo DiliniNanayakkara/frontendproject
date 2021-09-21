@@ -90,6 +90,8 @@ import buyerexhibition from "./components/pages/buyerexhibition";
 import buyerartists from "./components/pages/buyerartists";
 import viewartists from "./components/pages/viewartists";
 import viewexhibition from "./components/pages/viewexhibition";
+import viewerArtistprof from "./components/pages/viewerArtistprof";
+
 function App() {
   return (
     <Router>
@@ -98,6 +100,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/roles" component={Roles} />
         <Route path="/buyerexhibition" component={buyerexhibition} />
+        <Route path="/viewerArtistprof" component={viewerArtistprof} />
         <Route path="/viewehibition" component={viewexhibition} />
         <Route path="/viewartists" component={viewartists} />
         <Route path="/buyerartists" component={buyerartists} />
