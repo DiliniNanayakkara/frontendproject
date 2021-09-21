@@ -3,13 +3,13 @@ import "../../css/moderator/FaQ.css";
 
 export default function FnQ() {
   return (
-    <div>
+    <div >
       {/* <nav className="topnav">Hello world</nav> */}
       {/* <ModeratorNavbar />
         <HelpCenterHomeInfo /> */}
 {/* //************1st DIV tag********** */ }
-<span>
-        <div className="div1">
+
+        <div className="oneline div1">
         <h3>What are the benefits of being part of the DelArt?</h3>
         <h3>What is the difference between exhibitin and art gallery?</h3>
         <h3>Is my personal information safe?</h3>
@@ -18,7 +18,7 @@ export default function FnQ() {
 
         {/* *************2nd DIV tag************ */}
 
-        <div className="div2">
+        <div className="div2 oneline">
 
         <p1>
           Your privacy is of utmost importance to us. You can read our Privacy
@@ -33,7 +33,7 @@ export default function FnQ() {
 
         {/* ****** 3rd DIV tag********** */}
 
-        <div className="div3">
+        <div className="oneline">
         <p1>
           All payments are made through the Fiverr site via the Order page, and
           all buyers pay Fiverr for orders in advance. This is for your own
@@ -51,7 +51,7 @@ export default function FnQ() {
 
       
         
-        </span> 
+     
       
      
     </div>
