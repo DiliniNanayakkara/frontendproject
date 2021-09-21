@@ -93,6 +93,9 @@ import viewartists from "./components/pages/viewartists";
 import viewexhibition from "./components/pages/viewexhibition";
 import viewerArtistprof from "./components/pages/viewerArtistprof";
 
+//*******************************Moderator */
+import FnQ from "./components/pages/moderator/FnQ";
+
 function App() {
   return (
     <Router>
@@ -263,6 +266,10 @@ function App() {
         <Route path="/customized_artist" component={Customized_Artist} />
         <Route path="/artist_profile" component={Artist_Profile} />
         <Route path="/customer_profile" component={Customer_Profile} />
+
+
+        {/* //***********MODERATOR************/ }
+        <Route path="/fnq" component={FnQ} />
       </Switch>
     </Router>
   );
