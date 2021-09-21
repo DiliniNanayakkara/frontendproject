@@ -63,8 +63,8 @@ export default function ArtworkUpload() {
         <form onSubmit={onFormSubmit}>
             
             <div className="uploadforminfo">
-            <h1 className="heading">Tool Upload</h1>
-            <label>Tool Image :                       
+            <h1 className="heading">Add New Item</h1>
+            <label>Item Image :                       
             <input type='file' name='photo' onChange={onInputChange} /></label><br></br>
             <label> Tool Name : 
             <input
@@ -83,7 +83,7 @@ export default function ArtworkUpload() {
                   setQyantity(event.target.value);
               }}
             /> </label><br></br>
-            <label>Tool Price : 
+            <label>Item Price : 
             <input
               type="text"
               name="artworkPrice"
@@ -99,7 +99,7 @@ export default function ArtworkUpload() {
                 setArtworkCategory(event.target.value);
               }}
             /> */}
-            <label className="cate">Select Category : 
+            <label className="cate">Select Type : 
             <label for="html" className="category">Brushes  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
             <input type="radio" name="artworkCategory" value="Historical" onChange={(event) => {
                 setToolCategory(event.target.value);
