@@ -85,6 +85,7 @@ import StaffSignUp from "./components/pages/StaffSignUp";
 import ArtistdashbordOrders from "./components/artistComponents/artistDashboard_orders";
 import addrow from "./components/pages/addrow";
 import editgig from "./components/pages/editgig";
+import artists from "./components/pages/artists";
 
 function App() {
   return (
@@ -96,6 +97,7 @@ function App() {
         <Route path="/editgig" component={editgig} />
         <Route path="/BuyerSignUp" component={BuyerSignUp} />
         <Route path="/products" component={Products} />
+        <Route path="/artists" component={artists} />
         <Route path="/payment" component={Payment} />
         <Route path="/productdetail" component={ProductDetail} />
         <Route path="/productsbrushes" component={ProductsBrushes} />
