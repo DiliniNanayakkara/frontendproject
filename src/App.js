@@ -93,6 +93,8 @@ import viewartists from "./components/pages/viewartists";
 import viewexhibition from "./components/pages/viewexhibition";
 import viewerArtistprof from "./components/pages/viewerArtistprof";
 import MessageWindow from "./components/messageComponent/MessageWindow";
+import MessageWindow2 from "./components/messageComponent/MessageWindow2";
+
 //*******************************Moderator */
 import FnQ from "./components/pages/moderator/FnQ";
 
@@ -202,6 +204,7 @@ function App() {
         <Route path="/moderator_profile" component={Moderator_Profile} />
         <Route path="/advertisement_upload" component={Advertisement_upload} />
         <Route path="/artistsmessage" component={MessageWindow} />
+        <Route path="/artistsmessage2" component={MessageWindow2} />
 
         {/* <Route path="/" exact component={Home} />
         <Route path="/products" component={Products} />
