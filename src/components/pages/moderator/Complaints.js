@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import "../../css/moderator/FaQ.css";
 import ModeratorNavbar from "./ModeratorNavbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -7,7 +6,7 @@ import axios from "axios";
 
 export default function AddItem() {
       let [user, setUser] = useState("");
-        const [click, setClick] = useState(false);
+      const [click, setClick] = useState(false);
       const [orderList, setOrderList] = useState([]);
       const [toolID, setToolID] = useState(window.location.pathname.split("/")[2]);
       const closeMobileMenu = () => setClick(false);
@@ -26,7 +25,7 @@ export default function AddItem() {
     
       useEffect(() => {
         setUser(localStorage.getItem("user"));
-        axios.get(`http://localhost:5000/confirmed/${user}`)
+        axios.get(`http://localhost:5000/toolDetails/${user}`)
         .then((response) => {
                console.log(response.data);
                setOrderList(response.data);
@@ -48,13 +47,13 @@ export default function AddItem() {
       {/* <nav className="topnav">Hello world</nav> */}
      <ModeratorNavbar />
      <text>Tools Details</text>
-      <table className="carttable">
+      <table >
                   <thead>
-                      <tr className="carttable1">
-                          <th className="th1">Artwork Name</th>
-                          <th className="th2">Delivery Location</th>
-                          <th className="th6">Unit Price</th>
-                          <th className="th3">Sub Total</th>
+                      <tr >
+                          <th >Item ID</th>
+                          <th >Item Name</th>
+                          <th >Unit Price</th>
+                          <th >Total Amount</th>
                           <th>Actions</th>
                       </tr>
                       </thead>
@@ -65,9 +64,9 @@ export default function AddItem() {
                       <tr >
                           <td className="td1">{val.artname}</td>
                           <td className="td2">{val.location}</td>
-                          <td className="td6">Rs. {val.price}.00</td>
+                          <td className="td6"> {val.price}</td>
                          
-                          <td className="td3">Rs. {val.price}.00</td>
+                          <td className="td3">{val.price}</td>
                           <td className="td4"><button onClick={removeItem}><i  class="far fa-trash-alt ml-auto" aria-hidden="true" ></i></button></td>
                       </tr>
                       
@@ -84,9 +83,9 @@ export default function AddItem() {
                 })}
                       <br/><br/><br/><br/><br/>
                       <Link
-                              to='/artworks'
+                              to='/modeHome'
                               onClick={closeMobileMenu}
-                          ><button className="continue"><i class="fa fa-arrow-left" aria-hidden="true"></i>   Continue Shopping       
+                          ><button ><i class="fa fa-arrow-left" aria-hidden="true"></i>   Back
                           </button> 
                           </Link>
                           <Link

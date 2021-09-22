@@ -61,7 +61,7 @@ import Reports from "./components/pages/moderator/Reports";
 import Customized_Artist from "./components/pages/Customized_Artist";
 import Artist_Profile from "./components/pages/Artist_Profile";
 import Customer_Profile from "./components/pages/Customer_Profile";
-import Complaints from "./components/pages/moderator/Complaints";
+
 import NewUsersChart from "./components/pages/moderator/NewUsersChart";
 import ProductChart from "./components/pages/moderator/ProductsChart";
 import SoldArtworks from "./components/pages/moderator/SoldArtworks";
@@ -73,7 +73,6 @@ import Advertisement_upload from "./components/pages/Advertisement_upload";
 import AutherizeRoute from "./common/AutherizeRoute";
 
 import Portofolio from "./components/pages/Portofolio";
-// import Complaints from "./components/pages/moderator/Complaints";
 import Customizeart from "./components/pages/Customizeart";
 import Createexhibition from "./components/pages/Createexhibition";
 import Watchexhibition from "./components/pages/Watchexhibition";
@@ -95,6 +94,9 @@ import viewerArtistprof from "./components/pages/viewerArtistprof";
 
 //*******************************Moderator */
 import FnQ from "./components/pages/moderator/FnQ";
+//import Complaints from "./components/pages/moderator/Complaints";
+import Complaints from "./components/pages/moderator/Complaints";
+
 
 function App() {
   return (
@@ -270,6 +272,7 @@ function App() {
 
         {/* //***********MODERATOR************/ }
         <Route path="/fnq" component={FnQ} />
+        <Route path="/modeHome" component={ModeratorHome} />
       </Switch>
     </Router>
   );
