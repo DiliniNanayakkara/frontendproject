@@ -92,6 +92,12 @@ border-color: black;
     width: 1300px;
 }
 
+.back-btn {
+    background-color: rgb(120, 230, 120);
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+} 
 
 
 
