@@ -99,7 +99,7 @@ export default function Artist_Profile_Edit() {
       <div className="sideim">
         <img
           className="sideimm"
-          src="https://img.freepik.com/free-vector/blogging-illustration-concept-with-characters-writing-article-smartphone_269730-121.jpg?size=338&ext=jpg"
+          src="https://media.istockphoto.com/illustrations/painting-illustration-id165738115?k=6&m=165738115&s=170667a&w=0&h=1-uTmRXMn1rJiO0Ow8_ljqVNsrJTJdcv-eXhhSa7EJw="
         ></img>
       </div>
     </div>

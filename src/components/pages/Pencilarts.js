@@ -58,10 +58,6 @@ export default function Pencilarts() {
                 </h3>
                 <p className="gigp">{val.description}​</p>
                 <p>{val.first_name}</p>
-                <Link to="editgig">
-                  {" "}
-                  <button className="button">Edit Info</button>
-                </Link>
               </div>
             );
           })}

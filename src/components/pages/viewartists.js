@@ -26,7 +26,6 @@ export default function Artists() {
               <div className="profdata">
                 <h3>{val.first_name + val.last_name}</h3>
 
-                <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
                 <p>{val.email}</p>
                 <p>{val.description}</p>
 
