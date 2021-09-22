@@ -54,7 +54,7 @@ export default function AddItem() {
                   <thead>
                       <tr >
                           <th className="th1">Item ID</th>
-                          <th >Item Type</th>
+                          <th className="th2">Item Type</th>
                           <th >Unit Price</th>
                           <th >Total Amount</th>
                           <th>Actions</th>
