@@ -7,6 +7,8 @@ export default function FnQ() {
       {/* <nav className="topnav">Hello world</nav> */}
       {/* <ModeratorNavbar />
         <HelpCenterHomeInfo /> */}
+
+        <h1 className="header">Freaquently Ask Questions</h1>
 {/* //************1st DIV tag********** */ }
 
         <div className="oneline div1">
@@ -17,11 +19,17 @@ export default function FnQ() {
         </div>
 
         {/* *************2nd DIV tag************ */}
+       
 
         <div className="div2 oneline">
-        <h3 className="h1-content-before"> What are the benefits of being part of the DelArt?</h3>
-        <h3>What is the difference between exhibitin and art gallery?</h3>
-        <h3>Is my personal information safe?</h3>
+            <div className="imageDiv">
+
+            </div>
+        <h3 className="question"> What are the benefits of being part of the DelArt?</h3>
+
+        <h3 className="question">What is the difference between exhibitin and art gallery?</h3>
+
+        <h3 className="question">Is my personal information safe?</h3>
 
         <p1>
           Your privacy is of utmost importance to us. You can read our Privacy
@@ -29,7 +37,7 @@ export default function FnQ() {
           information
         </p1>
 
-        <h3>Do I pay my seller directly?</h3>
+        <h3 className="question">Do I pay my seller directly?</h3>
         <p1>
           All payments are made through the Fiverr site via the Order page, and
           all buyers pay Fiverr for orders in advance. This is for your own
@@ -38,9 +46,11 @@ export default function FnQ() {
           an alternative payment method, please report it to Customer Service
           immediately.
         </p1>
-        <h3>How do I buy Artwor using the DelArt?</h3>
 
-        <h3>How do I cancel my order?</h3>
+
+        <h3 className="question">How do I buy Artwor using the DelArt?</h3>
+
+        <h3 className="question">How do I cancel my order?</h3>
 
         <p1>
           All payments are made through the Fiverr site via the Order page, and
