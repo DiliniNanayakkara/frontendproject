@@ -100,7 +100,7 @@ export default function AddItem() {
           </div>
           <div className="addNewItem-btn-div oneline-btn">
             <Link to="/addNewItem" onClick={closeMobileMenu}>
-              <button> Add New Item</button>
+              <button className="addNewItem-btn"> Add New Item</button>
             </Link>
           </div>
         </div>
