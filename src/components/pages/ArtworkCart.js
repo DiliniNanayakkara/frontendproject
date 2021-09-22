@@ -14,8 +14,8 @@ export default function ArtworkCart() {
   const closeMobileMenu = () => setClick(false);
   console.log(localStorage.getItem("user"));
   let [cartid, setCartId] = useState("");
- 
   let [carttool, setCartTool] = useState([]);
+  let [carttotal, setCartTotal] = useState([]);
   let [cartprice, setCartPrice] = useState(0);
   let [cartquantity, setCartQuantity] = useState([]);
 
@@ -31,12 +31,13 @@ export default function ArtworkCart() {
     .then((response) => {
            console.log(response.data);
            setOrderList(response.data);
+           setCartTotal(response.data.map((ele)=>{return parseFloat(ele.price)}).reduce((a, b) => a + b, 0).toFixed(2).toString());
     });
   });
 
   const removeItem = () => {
     axios
-      .post("http://localhost:5000/cartremove", {
+      .post("http://localhost:5000/artworkcartremove", {
           cartid : setCartId,
       })
       .then(() => {
@@ -60,6 +61,7 @@ export default function ArtworkCart() {
                       </thead>
               </table>
       {orderList.map((val) => {
+        setCartId = val.request_id;
                 for(var i=0; i<orderList.length; i++){
                   return <table className="carttable">
                       <tr >
@@ -82,6 +84,16 @@ export default function ArtworkCart() {
                 }
                 
                 })}
+                 <table className="carttable">
+                <tr >
+                <td className="td1"></td>
+                <td className="td2"></td>
+                <td className="td6"></td>
+                <td className="td5">Total</td>
+                <td className="td3">Rs.{carttotal}</td>
+                <td className="td4"></td>
+            </tr>
+            </table>
                       <br/><br/><br/><br/><br/>
                       <Link
                               to='/artworks'
@@ -90,7 +102,7 @@ export default function ArtworkCart() {
                           </button> 
                           </Link>
                           <Link
-                              to='/artworkcheckout'
+                              to={`/artworkcheckout/${carttotal}`} 
                               onClick={closeMobileMenu}
                           ><button className="checkout"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>               Checkout         
                           </button> 

@@ -121,142 +121,136 @@ export default function Artist_Profile() {
   const [employeedis, setEmployeedis] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/artistprofile").then((response) => {
-      setEmployeeList(response.data);
-    });
-  });
-  useEffect(() => {
-    Axios.get("http://localhost:5000/artistdis").then((response) => {
-      setEmployeedis(response.data);
-    });
+    let email = localStorage.getItem("userName");
+    Axios.get("http://localhost:5000/artistprofile/" + email).then(
+      (response) => {
+        setEmployeeList(response.data);
+      }
+    );
   });
 
   return (
     <div className="A">
       <ArtistNavbar />
-      <div className="profiledata">
-        {employeedis.map((val, key) => {
-          return (
-            <center>
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
-                style={{
-                  width: "100px",
-                  marginTop: "20px",
-                  marginBottom: "50px",
-                  height: "auto",
-                }}
-              ></img>
-              <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
-
-              <h1>{val.first_name + val.last_name}</h1>
-              <h3>{val.description}</h3>
-            </center>
-          );
-        })}
-
-        {/*btn */}
-
-        <div className="btn">
-          <Link to="/pencilarts">
-            <Button variant="contained">Commisions</Button>
-          </Link>
-        </div>
-        {/*btn */}
-      </div>
-      {/*profiledata */}
       {employeeList.map((val, key) => {
         return (
-          <div className="profiledetails">
-            <center>
-              <h2>USER PROFILE</h2>
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="UserID:"
-                defaultValue={val.artist_Id}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Name:"
-                defaultValue={val.first_name + val.last_name}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Email address:"
-                defaultValue={val.email}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Phone:"
-                defaultValue={val.contact_no}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Location:"
-                defaultValue={val.location}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Customized Artist (Yes / No):"
-                defaultValue="No"
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-            </center>
-            <div className="btn">
-              <Link to="Artist_Profile_Edit">
-                {" "}
-                <Button variant="contained">Edit Profile</Button>
-              </Link>
+          <div>
+            <div className="profiledata">
+              <center>
+                <img
+                  src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+                  style={{
+                    width: "100px",
+                    marginTop: "20px",
+                    marginBottom: "50px",
+                    height: "auto",
+                  }}
+                ></img>
+
+                <h1>{val.first_name + val.last_name}</h1>
+                <h3>{val.description}</h3>
+              </center>
+
+              {/*btn */}
+
+              <div className="btn">
+                <Link to="/pencilarts">
+                  <Button variant="contained">Commisions</Button>
+                </Link>
+              </div>
+              {/*btn */}
             </div>
-            {/*btn */}
-            <div className="btn">
-              <Link to="artisthome">
-                {" "}
-                <Button variant="contained">Dashbord</Button>
-              </Link>
+            {/*profiledata */}
+
+            <div key={key} className="profiledetails">
+              <center>
+                <h2>USER PROFILE</h2>
+                <TextField
+                  className="feild"
+                  id="standard-read-only-input"
+                  label="UserID:"
+                  defaultValue={val.artist_id}
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                />
+                <TextField
+                  className="feild"
+                  id="standard-read-only-input"
+                  label="Name:"
+                  defaultValue={val.first_name + val.last_name}
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                />
+                <TextField
+                  className="feild"
+                  id="standard-read-only-input"
+                  label="Email address:"
+                  defaultValue={val.email}
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                />
+                <TextField
+                  className="feild"
+                  id="standard-read-only-input"
+                  label="Phone:"
+                  defaultValue={val.contact_no}
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                />
+                <TextField
+                  className="feild"
+                  id="standard-read-only-input"
+                  label="Location:"
+                  defaultValue={val.location}
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                />
+                <TextField
+                  className="feild"
+                  id="standard-read-only-input"
+                  label="Customized Artist (Yes / No):"
+                  defaultValue="No"
+                  InputProps={{
+                    readOnly: true,
+                  }}
+                />
+              </center>
+              <div className="btn">
+                <Link to="Artist_Profile_Edit">
+                  {" "}
+                  <Button variant="contained">Edit Profile</Button>
+                </Link>
+              </div>
+              {/*btn */}
+              <div className="btn">
+                <Link to="artisthome">
+                  {" "}
+                  <Button variant="contained">Dashbord</Button>
+                </Link>
+              </div>
+              {/*btn */}
             </div>
-            {/*btn */}
-          </div> /*profiledetails */
+          </div>
         );
       })}
+
       <div className="ArtistPortfolio"></div>
       {/*ArtistPortfolio */}
       <div className="uploadArts">
         <div className="artpagedata">
           <center>
             <h1>Art Work Gallery</h1>
-            <Link to="/artworkupload">
-            <Button variant="contained">Upload Artwork</Button>
-          </Link>
+            <Button variant="contained">Upload Works</Button>
           </center>
         </div>
         {/*artpagedata */}
       </div>
       {/*uploadArts */}
-
       <div className="Appw">
         <div className="tags">
           <TagButton

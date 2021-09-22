@@ -127,7 +127,7 @@ export default function Cart() {
         </button>
       </Link>
       <Link to={`/checkout/${total}`} 
-      onClick={setOrder}>
+      onClick={closeMobileMenu}>
         <button className="checkout">
           {" "}
           <i class="fa fa-shopping-cart" aria-hidden="true"></i> Checkout

@@ -115,33 +115,82 @@ export default function ProductDetail() {
               setToolName = val.tool_name ;
               setCategory = val.tool_category;
               setPrice = val.tool_price*quantity;
-              return <div className="imageanddetail">
-                  <div class="imagedetailrow">
-                  <img className="detailimg" src={'http://localhost:5000/' + val.tool_image}></img>
-                  </div>
-                  <div class="imagedetailrow" >
-                    <h2 class="proname">{val.tool_name}</h2>
-                    <p class="proquantity"> Available Quantity : {val.tool_quantity}</p><br />
-                    <p class="prodimquan"> Quantity &nbsp; : &nbsp; 
-                    <input type="number" 
-                    id="quantity" 
-                    name="quantity" 
-                    set ="1"
-                    min="1" 
-                    max = {val.tool_quantity}
-                    onChange={(event) => {
-                      setToolQuantity(event.target.value);
-                    }}>
-                      </input> </p><br></br>
+              if(val.tool_quantity > 5){
+
+              
+                      return <div className="imageanddetail">
+                          <div class="imagedetailrow">
+                          <img className="detailimg" src={'http://localhost:5000/' + val.tool_image}></img>
+                          </div>
+                          <div class="imagedetailrow" >
+                            <h2 class="proname">{val.tool_name}</h2>
+                            
+                            <p class="proquantity"> Available Quantity : {val.tool_quantity}</p><br />
+                            <p class="prodimquan"> Quantity &nbsp; : &nbsp; 
+                            <input type="number" 
+                            id="quantity" 
+                            name="quantity" 
+                            set ="1"
+                            min="1" 
+                            max = {val.tool_quantity}
+                            onChange={(event) => {
+                              setToolQuantity(event.target.value);
+                            }}>
+                              </input> </p><br></br>
+                              
+                            <p class="prodim"> Rs. {val.tool_price}.00</p>
+                            <Link 
+                                to={`/cart/${setUser}`} 
+                                onClick={addToCart}
+                                >
+                                  <button className="cartbtn">Add To cart</button></Link>
+                          </div>
+                      </div>
+                  }else if(val.tool_quantity <=5, val.tool_quantity > 0){
+                    return <div className="imageanddetail">
+                    <div class="imagedetailrow">
+                    <img className="detailimg" src={'http://localhost:5000/' + val.tool_image}></img>
+                    </div>
+                    <div class="imagedetailrow" >
+                      <h2 class="proname">{val.tool_name}</h2>
                       
-                    <p class="prodim"> Rs. {val.tool_price}.00</p>
-                    <Link 
-                         to={`/cart/${setUser}`} 
-                         onClick={addToCart}
-                         >
-                           <button className="cartbtn">Add To cart</button></Link>
-                  </div>
-              </div>
+                      <p class="proquantityred">Only {val.tool_quantity} products remaining</p><br />
+                      <p class="prodimquan"> Quantity &nbsp; : &nbsp; 
+                      <input type="number" 
+                      id="quantity" 
+                      name="quantity" 
+                      set ="1"
+                      min="1" 
+                      max = {val.tool_quantity}
+                      onChange={(event) => {
+                        setToolQuantity(event.target.value);
+                      }}>
+                        </input> </p><br></br>
+                        
+                      <p class="prodim"> Rs. {val.tool_price}.00</p>
+                      <Link 
+                          to={`/cart/${setUser}`} 
+                          onClick={addToCart}
+                          >
+                            <button className="cartbtn">Add To cart</button></Link>
+                    </div>
+                </div>
+                  }else if(val.tool_quantity == 0){
+                    return <div className="imageanddetail">
+                    <div class="imagedetailrow">
+                    <img className="detailimg" src={'http://localhost:5000/' + val.tool_image}></img>
+                    </div>
+                    <div class="imagedetailrow" >
+                      <h2 class="proname">{val.tool_name}</h2>
+                      
+                      <p class="proquantityred">Product Out of Stock</p><br />
+                      
+                        
+                      <p class="prodim"> Rs. {val.tool_price}.00</p>
+                      
+                    </div>
+                </div>
+                  }
           // <div className="A"> 
               
           //     <div className="carddetail">

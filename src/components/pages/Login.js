@@ -110,6 +110,7 @@ export default function Login() {
       })
       .then((response) => {
         console.log("API hitted");
+        console.log(response.data);
         if (!response.data.auth) {
           //setLoginStatus(response.data.message);
           setLoginStatus(false);

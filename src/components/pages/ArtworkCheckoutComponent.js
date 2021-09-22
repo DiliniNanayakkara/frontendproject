@@ -19,13 +19,22 @@ function ArtworkCheckoutComponent(props) {
     
     useEffect(() => {
       setUser(localStorage.getItem("user"));
-      axios.get(`http://localhost:5000/artworkorder/${user}`)
+      axios.get(`http://localhost:5000/confirmed/${user}`)
       .then((response) => {
              console.log(response.data);
              setOrderList(response.data);
-             setOrderPrice(response.data.map((ele)=>{return parseFloat(ele.art_price)}).reduce((a, b) => a + b, 0).toFixed(2).toString());
+             setOrderPrice(response.data.map((ele)=>{return parseFloat(ele.price)}).reduce((a, b) => a + b, 0).toFixed(2).toString());
       });
     });
+    // useEffect(() => {
+    //   setUser(localStorage.getItem("user"));
+    //   axios.get(`http://localhost:5000/artworkorder/${user}`)
+    //   .then((response) => {
+    //          console.log(response.data);
+    //          setOrderList(response.data);
+    //          setOrderPrice(response.data.map((ele)=>{return parseFloat(ele.art_price)}).reduce((a, b) => a + b, 0).toFixed(2).toString());
+    //   });
+    // });
     
   return (
     <main>
@@ -44,9 +53,9 @@ function ArtworkCheckoutComponent(props) {
           return <table className="carttable">
               
               <tr >
-                  <td className="td1">Product : {val.art_name}</td>
-                  <td className="td5">Location : {val.art_location}</td>
-                  <td className="td3">Price : Rs. {val.art_price}.00</td>
+                  <td className="td1">Product : {val.artname}</td>
+                  <td className="td5">Location : {val.location}</td>
+                  <td className="td3">Price : Rs. {val.price}.00</td>
                   
               </tr>
              
@@ -64,12 +73,17 @@ function ArtworkCheckoutComponent(props) {
                 
             </tr>
             </table>
-      <text className="del">Delivery Information :</text>
+            <Link 
+                                 to={`/artworkdeliverydetails/${orderprice}`} 
+                                onClick={closeMobileMenu}
+                                >
+                                  <button className="cartbtn">Proceed To Payment</button></Link>
+      {/* <text className="del">Delivery Information :</text>
       <div className="pencil">
             <img className="pencile" src= { require('../../assests/artworks.png').default} alt="" width="300" height="300"></img>
         
-            </div>
-      <div className="inputForm">
+            </div> */}
+      {/* <div className="inputForm">
       <form className="Form">
           <text className="rec">Recipient's Name  : </text>
         <input
@@ -79,8 +93,8 @@ function ArtworkCheckoutComponent(props) {
           placeholder="Your Name"
           value={props.Name}
         />
-        <br />
-        <text className="rec">Recipient's Phone : </text>
+        <br /> */}
+        {/* <text className="rec">Recipient's Phone : </text>
         <input
           className="text"
           onChange={props.handleChange}
@@ -89,8 +103,8 @@ function ArtworkCheckoutComponent(props) {
           value={props.phone}
         />
         <br />
-        <text className="rec">Delivery Address  : </text>
-        <input type="textarea"
+        <text className="rec">Delivery Address  : </text> */}
+        {/* <input type="textarea"
           className="text"
           onChange={props.handleChange}
           name="age"
@@ -103,8 +117,8 @@ function ArtworkCheckoutComponent(props) {
         <text className="rec">Delivery City :  </text>
         <select
           className="destination-input"
-          onChange={props.handleChange}
-          name="destination"
+          onChange={props.handleChange} */}
+          {/* name="destination"
           value={props.destination}
         >
           <option value="">-- Choose the Delivery City --</option>
@@ -113,8 +127,8 @@ function ArtworkCheckoutComponent(props) {
           <option value="Brazil">Horana</option>
           <option value="Brazil">Panadura</option>
           <option value="Brazil">Nugegoda</option>
-        </select>
-        <br />
+        </select> */}
+        {/* <br />
         <br />
         <br />
         <br />
@@ -127,8 +141,8 @@ function ArtworkCheckoutComponent(props) {
         
        
       </form>
-      
-      <PaymentModal
+       */}
+      {/* <PaymentModal
       
 	// Use a unique value for the orderId
 	orderId={45896588}
@@ -136,7 +150,7 @@ function ArtworkCheckoutComponent(props) {
 	amount={orderprice}
       />
       
-      </div>
+      </div> */}
       
       <div className="footer">
         <div className="footercard">

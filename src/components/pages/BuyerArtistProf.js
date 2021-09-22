@@ -151,7 +151,7 @@ export default function Artist_Profile() {
           return (
             <center>
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+                src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
                 style={{
                   width: "100px",
                   marginTop: "20px",
@@ -159,7 +159,6 @@ export default function Artist_Profile() {
                   height: "auto",
                 }}
               ></img>
-              <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
 
               <h1>{val.first_name + val.last_name}</h1>
               <h3>{val.description}</h3>
@@ -169,11 +168,6 @@ export default function Artist_Profile() {
 
         {/*btn */}
 
-        <div className="btn">
-          <Link to="/pencilarts">
-            <Button variant="contained">Commisions</Button>
-          </Link>
-        </div>
         {/*btn */}
       </div>
       {/*profiledata */}
@@ -239,7 +233,11 @@ export default function Artist_Profile() {
             </center>
 
             {/*btn */}
-
+            <div className="btn">
+              <Link to={`/Customer_Artworks/${val.artist_id}`}>
+                <Button variant="contained">Commisions</Button>
+              </Link>
+            </div>
             {/*btn */}
           </div> /*profiledetails */
         );

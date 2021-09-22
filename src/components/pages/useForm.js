@@ -13,6 +13,7 @@ const useForm = (callback, validate) => {
     photo: "",
     location: "",
     description: "",
+    commmissions: "",
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);

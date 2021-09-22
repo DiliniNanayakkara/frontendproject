@@ -21,17 +21,32 @@ export default function Pencilarts() {
       })
       .catch((err) => console.log(err));
   }
-  const [employeeList, setEmployeeList] = useState([]);
-  useEffect(() => {
-    Axios.get("http://localhost:5000/pencilearts").then((response) => {
-      setEmployeeList(response.data);
-    });
-  });
+  const [artistID, setArtworkID] = useState(
+    window.location.pathname.split("/")[2]
+  );
 
+  useEffect(() => {
+    setArtworkID(window.location.pathname.split("/")[2]);
+  }, [window.location.pathname]);
+
+  const [employeeList, setEmployeeList] = useState([]);
+  const [employeeListy, setEmployeeListy] = useState([]);
+  useEffect(() => {
+    Axios.get(`http://localhost:5000/Cuspencilearts/${artistID}`).then(
+      (response) => {
+        setEmployeeList(response.data);
+      }
+    );
+  });
+  useEffect(() => {
+    Axios.get(`http://localhost:5000/getsizeArt/${artistID}`).then(
+      (response) => {
+        setEmployeeListy(response.data);
+      }
+    );
+  });
   return (
     <div className="A">
-      <Navbar />
-
       <div className=" commitionbac">
         <div className="del">
           <center>
@@ -48,7 +63,7 @@ export default function Pencilarts() {
                 <h3 className="artistnameg">
                   {val.first_name + val.last_name}
                 </h3>
-                <p className="gigp">{val.gig}​</p>
+                <p className="gigp">{val.description}​</p>
                 <p>{val.first_name}</p>
               </div>
             );
@@ -71,30 +86,18 @@ export default function Pencilarts() {
               information, using the form below. ​
               <table className="tablexx">
                 <center>
-                  <tr>
+                  <thead>
                     <th className="tableth">Size</th>
                     <th className="tableth">Price</th>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
+                  </thead>
+                  {employeeListy.map((val, key) => {
+                    return (
+                      <tbody>
+                        <td className="tabletd">{val.size}</td>
+                        <td className="tabletd">{val.price}</td>
+                      </tbody>
+                    );
+                  })}
                 </center>
               </table>
             </p>

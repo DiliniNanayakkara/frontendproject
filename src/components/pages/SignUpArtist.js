@@ -176,6 +176,17 @@ const FormSignup = ({ submitForm }) => {
               onChange={handleChange}
             />
           </div>
+          <div className="form-inputs1">
+            <label className="form-label1">Anyone can hire you</label>
+            <input
+              className="form-input1"
+              type="text"
+              name="commissions"
+              placeholder="Yes/No"
+              value={values.commissions}
+              onChange={handleChange}
+            />
+          </div>
 
           <button className="form-input-btn1" type="submit" onClick={register}>
             Sign up

@@ -151,7 +151,7 @@ export default function Artist_Profile() {
           return (
             <center>
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+                src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
                 style={{
                   width: "100px",
                   marginTop: "20px",
@@ -159,7 +159,6 @@ export default function Artist_Profile() {
                   height: "auto",
                 }}
               ></img>
-              <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
 
               <h1>{val.first_name + val.last_name}</h1>
               <h3>{val.description}</h3>
@@ -170,7 +169,7 @@ export default function Artist_Profile() {
         {/*btn */}
 
         <div className="btn">
-          <Link to="/pencilarts">
+          <Link to="/login">
             <Button variant="contained">Commisions</Button>
           </Link>
         </div>
@@ -186,7 +185,7 @@ export default function Artist_Profile() {
                 className="feild"
                 id="standard-read-only-input"
                 label="UserID:"
-                defaultValue={val.artist_Id}
+                defaultValue={val.artist_id}
                 InputProps={{
                   readOnly: true,
                 }}
@@ -223,15 +222,6 @@ export default function Artist_Profile() {
                 id="standard-read-only-input"
                 label="Location:"
                 defaultValue={val.location}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Customized Artist (Yes / No):"
-                defaultValue="No"
                 InputProps={{
                   readOnly: true,
                 }}

@@ -48,6 +48,15 @@
     font-size: 20px;
    
 }
+.proquantityred{
+    float: left;
+    color: red;
+    margin-left: 90px;
+     margin-right: 100px;
+    margin-top: 40px;
+    font-size: 20px;
+   
+}
 .prodim{
     float: left;
     margin-left: 90px;
