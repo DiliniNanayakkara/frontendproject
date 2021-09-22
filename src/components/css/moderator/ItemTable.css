@@ -110,6 +110,11 @@ border-color: black;
     width: 100px;
     height: 40px;
 } 
+.addNewItem-btn:hover {
+    background-color: black;
+    font-weight: 800;
+    color: white; 
+}
 
 
 
