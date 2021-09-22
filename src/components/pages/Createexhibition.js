@@ -89,32 +89,6 @@ export default function Customized_Artist() {
     });
   };
 
-  // const [selectedFiles, setSelectedFiles] = useState([]);
-
-  // const imageHandler = (e) => {
-  //   setSelectedFiles([]);
-  //   if (e.target.images) {
-  //     const filesArray = Array.from(e.target.image).map((image) =>
-  //       URL.createObjectURL(image)
-  //     );
-  //     setSelectedFiles((prevImages) => prevImages.concat(filesArray));
-  //     Array.from(e.target.images).map((image) => URL.revokeObjectURL(image));
-  //   }
-  // };
-
-  // const renderPhotos = (source) => {
-  //   return source.map((photo) => {
-  //     return (
-  //       <img
-  //         src={photo}
-  //         alt=""
-  //         key={photo}
-  //         style={{ width: "20%", height: "180px" }}
-  //       ></img>
-  //     );
-  //   });
-  // };
-
   return (
     <>
       <Grid container component="main" className={classes.root}>
