@@ -65,6 +65,17 @@ export default function Customized_Artist() {
 
   const [selectedFiles, setSelectedFiles] = useState([]);
 
+  const handleImageChange = (e) => {
+    setSelectedFiles([]);
+    if (e.target.files) {
+      const filesArray = Array.from(e.target.files).map((file) =>
+        URL.createObjectURL(file)
+      );
+      setSelectedFiles((prevImages) => prevImages.concat(filesArray));
+      Array.from(e.target.files).map((file) => URL.revokeObjectURL(file));
+    }
+  };
+
   // const [selectedFiles, setSelectedFiles] = useState([]);
 
   // const imageHandler = (e) => {
