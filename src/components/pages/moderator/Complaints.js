@@ -69,7 +69,7 @@ export default function AddItem() {
                           <td className="td2"> {val.tool_price}</td>
                          
                           <td className="td2">{val.tool_quantity}</td>
-                          <td className="td2"><button onClick={removeItem}>Update</button></td>
+                          <td className="td2 "><button className="update-btn" onClick={removeItem}>Update</button></td>
                       </tr>
                       
                       {/* <tr></tr><br/><br/>
@@ -95,7 +95,7 @@ export default function AddItem() {
                           <Link
                               to='/addNewItem'
                               onClick={closeMobileMenu}
-                          ><button > <i class="fa fa-shopping-cart" aria-hidden="true"></i>           Add New Itwm       
+                          ><button >            Add New Itwm       
                           </button> 
                           </Link>
 
