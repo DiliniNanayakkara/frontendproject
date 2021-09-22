@@ -124,7 +124,6 @@ export default function Artist_Profile() {
     let email = localStorage.getItem("userName");
     Axios.get("http://localhost:5000/artistprofile/" + email).then(
       (response) => {
-        console.log(response.data);
         setEmployeeList(response.data);
       }
     );
