@@ -120,7 +120,7 @@ export default function Advertisement_upload() {
           <div>
             <label>Exhibition Date: </label>
             <input
-              type="date"
+              type="text"
               name="exhi_date"
               onChange={(event) => {
                 setExhiDate(event.target.value);
@@ -131,7 +131,7 @@ export default function Advertisement_upload() {
           <div>
             <label>Advertisement Broadcasting Start Date: </label>
             <input
-              type="date"
+              type="text"
               name="start_date"
               onChange={(event) => {
                 setStartDate(event.target.value);
@@ -142,7 +142,7 @@ export default function Advertisement_upload() {
           <div>
             <label>Advertisement Expiry Date: </label>
             <input
-              type="date"
+              type="text"
               name="expiry_date"
               onChange={(event) => {
                 setExpiryDate(event.target.value);
