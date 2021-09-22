@@ -76,6 +76,19 @@ export default function Customized_Artist() {
     }
   };
 
+  const renderPhotos = (source) => {
+    return source.map((photo) => {
+      return (
+        <img
+          src={photo}
+          alt=""
+          key={photo}
+          style={{ width: "20%", height: "180px" }}
+        />
+      );
+    });
+  };
+
   // const [selectedFiles, setSelectedFiles] = useState([]);
 
   // const imageHandler = (e) => {
