@@ -18,11 +18,6 @@ export default function HelpCenterHomeInfo() {
               <button className="helpbtnsubmit">How Can we help you ?</button>
             </Link>
           </div>
-          <div>
-            <Link >
-              <button className="helpbtnsubmit">View QnA</button>
-            </Link>
-          </div>
         </div>
 
         <div>

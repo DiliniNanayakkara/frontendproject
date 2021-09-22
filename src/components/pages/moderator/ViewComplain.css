@@ -1,0 +1,48 @@
+.header_1 {
+  flex: 1;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  align-content: center;
+  padding-left: 700px;
+}
+
+.th1 {
+  color: darkred;
+  font-size: larger;
+  font-weight: bold;
+  padding-left: 20px;
+  width: 500px;
+}
+
+.td2 {
+  color: darkred;
+  font-size: larger;
+  font-weight: bold;
+  padding-left: 20px;
+  width: 400px;
+  background-color: rgb(255, 212, 20);
+}
+
+.table_div {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.outer_div {
+  width: 100%;
+  height: 100%;
+  background-color: #850909;
+  padding: 20px;
+}
+
+.table_row {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  height: 100px;
+  width: 200px;
+}

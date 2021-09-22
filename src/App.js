@@ -93,14 +93,13 @@ import viewexhibition from "./components/pages/viewexhibition";
 import viewerArtistprof from "./components/pages/viewerArtistprof";
 import MessageWindow from "./components/messageComponent/MessageWindow";
 import MessageWindow2 from "./components/messageComponent/MessageWindow2";
+import ComplainViewMod from "./components/pages/moderator/ComplainViewMod";
 
 //*******************************Moderator */
 import FnQ from "./components/pages/moderator/FnQ";
 //import Complaints from "./components/pages/moderator/Complaints";
 import Complaints from "./components/pages/moderator/Complaints";
 import AddNewItem from "./components/pages/moderator/AddNewItem";
-
-
 
 function App() {
   return (
@@ -209,6 +208,7 @@ function App() {
         <Route path="/advertisement_upload" component={Advertisement_upload} />
         <Route path="/artistsmessage" component={MessageWindow} />
         <Route path="/artistsmessage2" component={MessageWindow2} />
+        <Route path="/complainviewmod" component={ComplainViewMod} />
 
         {/* <Route path="/" exact component={Home} />
         <Route path="/products" component={Products} />
