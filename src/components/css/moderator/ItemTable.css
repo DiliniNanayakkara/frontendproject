@@ -93,16 +93,21 @@ border-color: black;
 }
 
 .back-btn {
-    background-color: rgb(120, 230, 120);
+    background-color: rgb(141, 150, 141);
     border-radius: 5px;
     width: 70px;
     height: 40px;
 } 
+.back-btn:hover {
+    background-color: black;
+    font-weight: 800;
+    color: white;
+}
 
 .addNewItem-btn {
-    background-color: rgb(120, 230, 120);
+    background-color: rgb(141, 150, 141);
     border-radius: 5px;
-    width: 70px;
+    width: 100px;
     height: 40px;
 } 
 
