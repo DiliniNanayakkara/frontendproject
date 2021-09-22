@@ -25,12 +25,12 @@ export default function AddItem() {
     
       useEffect(() => {
         setUser(localStorage.getItem("user"));
-        axios.get(`http://localhost:5000/toolDetails/${user}`)
+        axios.get(`http://localhost:5000/products`)
         .then((response) => {
-               console.log(response.data);
+               console.log(response);
                setOrderList(response.data);
         });
-      });
+      },[]);
     
       const removeItem = () => {
         axios
@@ -59,14 +59,13 @@ export default function AddItem() {
                       </thead>
               </table>
       {orderList.map((val) => {
-                for(var i=0; i<orderList.length; i++){
                   return <table className="carttable">
                       <tr >
-                          <td className="td1">{val.artname}</td>
-                          <td className="td2">{val.location}</td>
-                          <td className="td6"> {val.price}</td>
+                          <td className="td1">{val.tool_id}</td>
+                          <td className="td2">{val.tool_name}</td>
+                          <td className="td6"> {val.tool_price}</td>
                          
-                          <td className="td3">{val.price}</td>
+                          <td className="td3">{val.tool_quantity}</td>
                           <td className="td4"><button onClick={removeItem}><i  class="far fa-trash-alt ml-auto" aria-hidden="true" ></i></button></td>
                       </tr>
                       
@@ -78,7 +77,7 @@ export default function AddItem() {
                           <td></td>
                       </tr> */}
                       </table>
-                }
+                
                 
                 })}
                       <br/><br/><br/><br/><br/>
