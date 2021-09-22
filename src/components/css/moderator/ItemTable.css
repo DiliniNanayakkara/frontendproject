@@ -4,7 +4,7 @@
 }
 
 .outer_div{
-    background-color: rgb(232, 240, 247);
+    background-color: white(232, 240, 247);
 }
 
 .table_header-{
@@ -16,19 +16,34 @@
 }
 .th1 {
     width: 100px;
-    background: white;
+    background: rgb(184, 177, 177);
+    border-color: black;
 }
 
 .th2{
     width: 150px;
+    background: rgb(184, 177, 177);
 }
 
 .td1{
     width: 100px;
+    background: rgb(223, 218, 218);
 }
 
 .td2 {
     width: 150px;
+    background: rgb(223, 218, 218);
 }
+
+.td1:hover {
+    background-color: rgb(250, 104, 104);
+    font-weight: 200;
+}
+.td2:hover {
+    background-color: rgb(250, 104, 104);
+    font-weight: 200;
+}
+
+
 
 
