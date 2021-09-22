@@ -1,171 +1,244 @@
-import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React, { useState, useEffect } from "react";
+
 import ModeratorNavbar from "./ModeratorNavbar";
 import axios from "axios";
+import { Link } from 'react-router-dom';
+import { Alert } from "@material-ui/lab";
+export default function ArtworkUpload() {
+    
+    const [file, setfile] = useState(null);
+    const [artworkUpload, setArtworkUpload] = useState([]);
+    const [artworkName, setArtworkName] = useState("");
+    const [artworkDescription, setArtworkDescription] = useState("");
+    const [artworkPrice, setArtworkPrice] = useState(0);
+    const [artworkArtist, setArtworkArtist] = useState("");
+    const [artworkCategory, setArtworkCategory] = useState("");
+    const [artistdistrict, setArtistDistrict] = useState("");
+    const [artworkDimension, setArtworkDimension] = useState("");
+    const [perkmcharge, setPerKmCharge] = useState(0);
+    const [artworkArtistEmail, setArtworkArtistEmail] = useState("");
+    
+    const addArtwork = () => {
+        axios
+          .post("http://localhost:5000/addItem", {
+            artworkUpload: artworkUpload,
+            artworkName: artworkName,
+            artworkDescription: artworkDescription,
+            artworkPrice: artworkPrice,
+            artworkArtist: artworkArtist,
+            artworkCategory: artworkCategory,
+            artworkDimension: artworkDimension,
+            artistdistrict: artistdistrict,
+            artworkArtistEmail: artworkArtistEmail,
 
-export default function Advertisement_upload() {
-  //const classes = useStyles();
-  // const [tag, setTag] = useState('all');
-  // const [filteredImages, setFilteredImages] = useState([]);
+          })
+          .then(() => {
+            console.log("success");
+          });
+      };
+    const onFormSubmit = (e) => {
+        e.preventDefault();
 
-  const [advertisementUpload, setAdvertisementUpload] = useState([]);
-  const [uploadStatus, setUploadStatus] = useState("");
-  const [exhi_date, setExhiDate] = useState("");
-  const [start_date, setStartDate] = useState("");
-  const [expiry_date, setExpiryDate] = useState("");
-  const [file, setFile] = useState(null);
-  // <h2> {uploadStatus} </h2>;
+        const formData = new FormData();
+        formData.append('photo', file);
+        formData.append('artworkName', artworkName);
+        formData.append('artworkDescription', artworkDescription);
+        formData.append('artworkPrice', artworkPrice);
+        formData.append('artworkArtist', artworkArtist);
+        formData.append('artworkCategory', artworkCategory);
+        formData.append('artworkDimension', artworkDimension);
+        formData.append('artistdistrict', artistdistrict);
+        formData.append('perkmcharge', perkmcharge);
+        formData.append('artworkArtistEmail', artworkArtistEmail);
+       
+        const config = {
+            headers: {
+                'content-type': 'multipart/form-data',
+            },
+        };
+   
+    axios.
+    post("http://localhost:5000/addItem", formData, config)
+    .then((response) => {
+        alert('Artwork Uploaded Successfully');
+    })
+    .catch((err) => {
+        console.log('err', err);
+    });
+};
+    const onInputChange = (e) => {
+        setfile(e.target.files[0]);
+        setArtworkUpload(e.target.value);
+    }
+    let date = new Date();
+    console.log(date);
+    return(
+        <div className="A">
+        <ModeratorNavbar />
 
-  const addAdvertisement = () => {
-    axios
-      .post("http://localhost:5000/api/image", {
-        advertisementUpload: advertisementUpload,
-        exhi_date: exhi_date,
-        start_date: start_date,
-        expiry_date: expiry_date,
-        //artworkArtist: artworkArtist,
-        //artworkCategory: artworkCategory,
-      })
-      .then(() => {
-        console.log("success");
-      });
-  };
-
-  const onFormSubmit = (event) => {
-    //const file = event.target.files[0];
-    const formData = new FormData();
-    formData.append("image", file);
-    formData.append("exhi_date", exhi_date);
-    formData.append("start_date", start_date);
-    formData.append("expiry_date", expiry_date);
-
-    const config = {
-      headers: {
-        "content-type": "multipart/form-data",
-      },
-    };
-
-    axios
-      .post("http://localhost:3001/api/image", formData, config)
-      .then((response) => {
-        //alert("Image Uploaded Successfully");
-        setUploadStatus(response.data);
-        <h2> {uploadStatus} </h2>;
-        alert(uploadStatus);
-        //alert("******************");
-      })
-      .catch((err) => {
-        console.log("err", err);
-      });
-
-    //-----------------------------------------------------------------
-
-    // axios
-    //   .get("http://localhost:3001/api/image")
-    //   .then((response) => this.setUploadStatus({ items: response.data }))
-    //   .catch((err) => {
-    //     this.setUploadStatus({ errorMessage: err.message });
-    //   });
-
-    // {
-    //   this.uploadStatus.items && <h3> {this.uploadStatus.items} </h3>;
-    // }
-
-    //-----------------------------------------------------------------
-
-    //---------------------------------------------------------
-    // axios
-    //   .post("http://localhost:3001/api/image", {
-    //     //method: "POST",
-    //     body: formData,
-    //     headers: {
-    //       Accept: "multipart/form-data",
-    //     },
-    //     //credentials: "include",
-    //     advertisementUpload: advertisementUpload,
-    //     exhi_date: exhi_date,
-    //     start_date: start_date,
-    //     expiry_date: expiry_date,
-    //     //       artworkArtist: artworkArtist,
-    //     //       artworkCategory: artworkCategory,
-    //   })
-    //   //.then((res) => res.json())
-    //   .then((res) => {
-    //     setUploadStatus(res.msg);
-    //     <h2> {uploadStatus} </h2>;
-    //     console.log("Successssssss................");
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //     <h2> {uploadStatus} </h2>;
-    //     console.log("Errorrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
-    //   });
-
-    //--------------------------------------------------------
-  };
-
-  const imageHandler = (event) => {
-    setFile(event.target.files[0]);
-    setAdvertisementUpload(event.target.value);
-  };
-
-  return (
-    <div className="A">
-      <ModeratorNavbar />
-      <form onSubmit={onFormSubmit}>
-        <div>
-          <h1>Upload Advertisements</h1>
-        </div>
-        <div>
-          <div>
-            <label>Exhibition Date: </label>
+        <div className="uploadform">
+        <form onSubmit={onFormSubmit}>
+            
+            <div className="uploadforminfo">
+            <h1 className="heading">Artwork Upload</h1>
+            <label>Upload Artwork :                       
+            <input type='file' name='photo' onChange={onInputChange} /></label><br></br>
+            <label> Artwork Name : 
             <input
               type="text"
-              name="exhi_date"
+              name="artworkName"
               onChange={(event) => {
-                setExhiDate(event.target.value);
+                setArtworkName(event.target.value);
               }}
-            ></input>
-          </div>
-
-          <div>
-            <label>Advertisement Broadcasting Start Date: </label>
+            /> </label> <br></br>
+            <label>Artwork Description : 
+            <input
+              type="textarea"
+              height="100px"
+              name="artworkDescription"
+              onChange={(event) => {
+                setArtworkDescription(event.target.value);
+              }}
+            /> </label><br></br>
+            <label> Name of Artist : 
             <input
               type="text"
-              name="start_date"
+              name="artworkArtist"
               onChange={(event) => {
-                setStartDate(event.target.value);
+                setArtworkArtist(event.target.value);
               }}
-            ></input>
-          </div>
-
-          <div>
-            <label>Advertisement Expiry Date: </label>
+            /> </label><br></br>
+            <label> Email of Artist : 
             <input
               type="text"
-              name="expiry_date"
+              name="artworkArtistEmail"
               onChange={(event) => {
-                setExpiryDate(event.target.value);
+                setArtworkArtistEmail(event.target.value);
               }}
-            ></input>
-          </div>
-
-          <div>
-            <label>Upload Advertisement: </label>
+            /> </label><br></br>
+            <label>Artwork Price : 
             <input
-              type="file"
-              name="image"
-              accept="image/*"
-              multiple={false}
-              onChange={imageHandler}
-            />
-          </div>
-
-          {/* <label>Exhibition Date: </label>
-          <input type="text" name="exhi_date"></input> */}
-          <button>Submit</button>
-        </div>
-      </form>
-    </div>
-  );
-}
+              type="text"
+              name="artworkPrice"
+              onChange={(event) => {
+                setArtworkPrice(event.target.value);
+              }}
+            /> </label><br></br>
+            <label>Artwork Dimensions <br></br>(width*height in cm): 
+            <input
+              type="text"
+              name="artworkDimension"
+              onChange={(event) => {
+                setArtworkDimension(event.target.value);
+              }}
+            /> </label><br></br>
+            {/* <label>Artwork Category : </label>
+            <input
+              type="text"
+              name="artworkCategory"
+              onChange={(event) => {
+                setArtworkCategory(event.target.value);
+              }}
+            /> */}
+            <label> Enter your district : 
+            <select
+                       className="district"
+                       onChange={(event) => {
+                        setArtistDistrict(event.target.value);
+                       }}
+                        name="artistdistrict"
+                       
+                      >
+                        <option value="">- Choose your district -</option>
+                        <option value="Ampara">Ampara</option>
+                        <option value="Anuradhapura">Anuradhapura</option>
+                        <option value="Badulla">Badulla</option>
+                        <option value="Batticaloa">Batticaloa</option>
+                        <option value="Colombo">Colombo</option>
+                        <option value="Galle">Galle</option>
+                        <option value="Gampaha">Gampaha</option>
+                        <option value="Hambantota">Hambanthota</option>
+                        <option value="Jaffna">Jaffna</option>
+                        <option value="Kalutara">Kalutara</option>
+                        <option value="Kandy">kandy</option>
+                        <option value="Kegalle">kegalle</option>
+                        <option value="Kilinochchi">Kilinochchi</option>
+                        <option value="Kurunegala">Kurunegala</option>
+                        <option value="Mannar">Mannar</option>
+                        <option value="Matale">Matale</option>
+                        <option value="Matara">Matara</option>
+                        <option value="Moneragala">Moneragala</option>
+                        <option value="Mullaitivu">Mullaitivu</option>
+                        <option value="Nuwara Eliya">Nuwara Eliya</option>
+                        <option value="Polonnaruwa">Polonnaruwa</option>
+                        <option value="Puttalam">Puttalam</option>
+                        <option value="Rathnapura">Ratnapura</option>
+                        <option value="Trincomalee">Trincomalee</option>
+                        <option value="Vavuniya">Vavuniya</option>
+                        
+                      </select>
+            {/* <input
+              type="text"
+              name="artistProvince"
+              onChange={(event) => {
+                setArtistProvince(event.target.value);
+              }}
+            />  */}
+            </label> <br></br>
+            <label> Enter per km delivery charge : 
+            <select
+                       className="district"
+                       onChange={(event) => {
+                        setPerKmCharge(event.target.value);
+                       }}
+                        name="perkmcharge"
+                       
+                      >
+                        <option value="1"> Rs. 1.00</option>
+                        <option value="2">Rs. 2.00</option>
+                        <option value="3">Rs. 3.00</option>
+                        <option value="3">Rs. 4.00</option>
+                        </select>
+            </label><br></br>
+            <label className="cate">Select Artwork Category : 
+            <label for="html" className="category">Historical
+            <input type="radio" name="artworkCategory" value="Historical" onChange={(event) => {
+                setArtworkCategory(event.target.value);
+              }}/></label> 
+{/*                 <label for="html">Historical</label> */}
+            <label for="css" className="category">Painting
+            <input type="radio" name="artworkCategory" value="Painting" onChange={(event) => {
+                setArtworkCategory(event.target.value);
+              }}/>
+              </label>
+            <label for="javascript" className="category">Drawing
+              <input type="radio" name="artworkCategory" value="Drawing" onChange={(event) => {
+                setArtworkCategory(event.target.value);
+              }}/>
+              </label>
+            <label for="javascript" className="category">Fine Art
+              <input type="radio" name="artworkCategory" value="Fine Art" onChange={(event) => {
+                setArtworkCategory(event.target.value);
+              }}/>
+              </label>
+            <label for="javascript" className="category">Portrait
+              <input type="radio" name="artworkCategory" value="Portrait" onChange={(event) => {
+                setArtworkCategory(event.target.value);
+              }}/>
+              </label>
+            </label>
+            
+{/*             
+            <Link
+              to='/artistartworks'
+              
+            >  */}
+            <button className="but"> Submit Artwork </button>
+            {/* </Link>      */}
+            </div>
+            </form>
+            </div>
+            </div>
+        
+    );
+};
