@@ -8,7 +8,7 @@ export default function FnQ() {
       {/* <ModeratorNavbar />
         <HelpCenterHomeInfo /> */}
 
-        <h1>Freaquently Ask Questions</h1>
+        <h1 className="header">Freaquently Ask Questions</h1>
 {/* //************1st DIV tag********** */ }
 
         <div className="oneline div1">
@@ -25,7 +25,7 @@ export default function FnQ() {
             <div className="imageDiv">
 
             </div>
-        <h3 className="h1-content-before"> What are the benefits of being part of the DelArt?</h3>
+        <h3 className="question"> What are the benefits of being part of the DelArt?</h3>
 
         <h3>What is the difference between exhibitin and art gallery?</h3>
 

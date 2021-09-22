@@ -37,9 +37,21 @@
 }
 
 .h1-content-before {
+
+    text-align: center;
     
 }
 .imageDiv {
     background-color: aquamarine;
     height: 50px;
 }
+
+
+.header {
+    text-align: center;
+}
+
+.question {
+    margin-top: 20px;
+}
+
