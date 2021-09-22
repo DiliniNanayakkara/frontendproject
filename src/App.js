@@ -92,7 +92,7 @@ import buyerartists from "./components/pages/buyerartists";
 import viewartists from "./components/pages/viewartists";
 import viewexhibition from "./components/pages/viewexhibition";
 import viewerArtistprof from "./components/pages/viewerArtistprof";
-
+import MessageWindow from "./components/messageComponent/MessageWindow";
 //*******************************Moderator */
 import FnQ from "./components/pages/moderator/FnQ";
 
@@ -201,6 +201,7 @@ function App() {
         <Route path="/returnitemchart" component={ReternItemChart} />
         <Route path="/moderator_profile" component={Moderator_Profile} />
         <Route path="/advertisement_upload" component={Advertisement_upload} />
+        <Route path="/artistsmessage" component={MessageWindow} />
 
         {/* <Route path="/" exact component={Home} />
         <Route path="/products" component={Products} />
@@ -267,8 +268,7 @@ function App() {
         <Route path="/artist_profile" component={Artist_Profile} />
         <Route path="/customer_profile" component={Customer_Profile} />
 
-
-        {/* //***********MODERATOR************/ }
+        {/* //***********MODERATOR************/}
         <Route path="/fnq" component={FnQ} />
       </Switch>
     </Router>
