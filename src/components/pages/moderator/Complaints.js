@@ -93,7 +93,7 @@ export default function AddItem() {
         <div  className="link-outer-div">
           <div className="oneline-btn back-btn-div">
             <Link to="/modeHome" onClick={closeMobileMenu}>
-              <button>
+              <button className="back-btn">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
               </button>
             </Link>
