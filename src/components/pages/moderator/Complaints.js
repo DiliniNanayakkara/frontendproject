@@ -69,7 +69,7 @@ export default function AddItem() {
                           <td className="td2"> {val.tool_price}</td>
                          
                           <td className="td2">{val.tool_quantity}</td>
-                          <td className="td2"><button onClick={removeItem}>Update</button></td>
+                          <td className="td2 "><button className="update-btn" onClick={removeItem}>Update</button></td>
                       </tr>
                       
                       {/* <tr></tr><br/><br/>
