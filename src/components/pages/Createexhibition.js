@@ -63,6 +63,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Customized_Artist() {
   const classes = useStyles();
 
+  const [selectedFiles, setSelectedFiles] = useState([]);
+
   // const [selectedFiles, setSelectedFiles] = useState([]);
 
   // const imageHandler = (e) => {
