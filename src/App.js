@@ -96,6 +96,8 @@ import viewerArtistprof from "./components/pages/viewerArtistprof";
 import FnQ from "./components/pages/moderator/FnQ";
 //import Complaints from "./components/pages/moderator/Complaints";
 import Complaints from "./components/pages/moderator/Complaints";
+import AddNewItem from "./components/pages/moderator/AddNewItem";
+
 
 
 function App() {
@@ -273,6 +275,7 @@ function App() {
         {/* //***********MODERATOR************/ }
         <Route path="/fnq" component={FnQ} />
         <Route path="/modeHome" component={ModeratorHome} />
+        <Route path="/addNewItem" component={AddModarator} />
       </Switch>
     </Router>
   );

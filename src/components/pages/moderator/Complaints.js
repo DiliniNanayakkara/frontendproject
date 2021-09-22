@@ -89,7 +89,7 @@ export default function AddItem() {
                           </button> 
                           </Link>
                           <Link
-                              to='/artworkcheckout'
+                              to='/addNewItem'
                               onClick={closeMobileMenu}
                           ><button className="checkout"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>               Checkout         
                           </button> 
