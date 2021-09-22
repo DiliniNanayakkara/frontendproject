@@ -20,14 +20,14 @@ const PaymentModal = ({ orderId, name, amount }) => {
     .then((response) => {
            console.log(response.data);
            setOrderList(response.data);
-           setOrderPrice(response.data.map((ele)=>{return parseFloat(ele.price)}).reduce((a, b) => a + b, 0).toFixed(2).toString());
+           setOrderPrice(response.data.map((ele)=>{return parseFloat(ele.cart_price)}).reduce((a, b) => a + b, 0).toFixed(2).toString());
     });
   });
   
   var payment = {
     sandbox: true, // if the account is sandbox or real
     merchant_id: '1217639', // Replace your Merchant ID
-    return_url: 'http://sample.com/return',
+    return_url: 'http://localhost:3000/c_home',
     cancel_url: 'http://sample.com/cancel',
     notify_url: 'http://sample.com/notify',
     order_id: orderId,
@@ -52,8 +52,8 @@ const PaymentModal = ({ orderId, name, amount }) => {
   window.payhere.onCompleted = function onCompleted(orderId) {
     console.log("Payment completed. OrderID:" + orderId);
     {orderList.map((val) => {
-        setArt = val.tool;
-        setQuantity = val.quantity;
+        setArt = val.cart_tool;
+        setQuantity = val.cart_quantity;
         setUser(localStorage.getItem("user"));
     axios
       .post("http://localhost:5000/quantityupdate", {
@@ -61,7 +61,7 @@ const PaymentModal = ({ orderId, name, amount }) => {
         quantity: setQuantity,
       })
       .then(() => {
-        alert('');
+        
       });
     axios
       .post("http://localhost:5000/ordercomplete", {

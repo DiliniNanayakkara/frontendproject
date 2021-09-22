@@ -1,20 +1,29 @@
 import React ,{useState, useEffect }from "react";
 import '../css/Checkout.css';
 import { Link } from 'react-router-dom';
+import RegCusNavbar from '../RegCusNavbar';
 import '../css/CartTable.css';
 import axios from 'axios';
 import PaymentModal from "./PaymentModal";
 
 
-function CheckoutComponent(props) {
+function CheckoutComponent() {
+  let orders = [];
     const [click, setClick] = useState(false);
     const [orderprice, setOrderPrice] = useState(0);
     const [orderList, setOrderList] = useState([]);
+
+    let [orderItem, setOrderItem] = useState("");
+    let [orderPrice, setPrice] = useState("");
     const closeMobileMenu = () => setClick(false);
     let [user, setUser] = useState("");
     // console.log(localStorage.getItem("user"));
     useEffect(() => {
       setOrderPrice(window.location.pathname.split("/")[2]);
+    }, [window.location.pathname]);
+
+    useEffect(() => {
+      setUser(window.location.pathname.split("/")[3]);
     }, [window.location.pathname]);
     
     useEffect(() => {
@@ -23,10 +32,27 @@ function CheckoutComponent(props) {
       .then((response) => {
              console.log(response.data);
              setOrderList(response.data);
-             setOrderPrice(response.data.map((ele)=>{return parseFloat(ele.price)}).reduce((a, b) => a + b, 0).toFixed(2).toString());
+             setOrderPrice(response.data.map((ele)=>{return parseFloat(ele.cart_price)}).reduce((a, b) => a + b, 0).toFixed(2).toString());
       });
     });
     
+      const setOrder = () => {
+        // setUser(localStorage.getItem("user"));
+        setUser = localStorage.getItem("user");
+        axios
+          .post("http://localhost:5000/setorder", {
+            user : setUser,
+            orderItem : setOrderItem,
+            orderPrice: setPrice,
+    
+          })
+          .then(() => {
+            console.log("success");
+          });
+      };
+    
+    
+
   return (
     <main>
       <div className="App">
@@ -38,22 +64,22 @@ function CheckoutComponent(props) {
              
              </table>
       {orderList.map((val) => {
-       
-        for(var i=0; i<orderList.length; i++){
-          
+          // for(var i=0; i< orderList.length; i++){
+          orders.push(val.cart_tool);
+        //  console.log(orders[1]);
           return <table className="carttable">
               
               <tr >
-                  <td className="td1">Product : {val.tool}</td>
-                  <td className="td5">Quantity : {val.quantity}</td>
-                  <td className="td3">Price : Rs. {val.price}.00</td>
+                  <td className="td1">Product : {val.cart_tool}</td>
+                  <td className="td5">Quantity : {val.cart_quantity}</td>
+                  <td className="td3">Price : Rs. {val.cart_price}.00</td>
                   
               </tr>
              
               
               </table>
-             
-        }
+          
+        
       })}
       <table className="carttable">
                 <tr >
@@ -64,12 +90,12 @@ function CheckoutComponent(props) {
                 
             </tr>
             </table>
-      <text className="del">Delivery Information :</text>
+      {/* <text className="del">Delivery Information :</text>
       <div className="pencil">
             <img className="pencile" src= { require('../../assests/artworks.png').default} alt="" width="300" height="300"></img>
         
-            </div>
-      <div className="inputForm">
+            </div> */}
+      {/* <div className="inputForm">
       <form className="Form">
           <text className="rec">Recipient's Name  : </text>
         <input
@@ -128,16 +154,15 @@ function CheckoutComponent(props) {
        
       </form>
       
-      <PaymentModal
       
-	// Use a unique value for the orderId
-	orderId={45896588}
-	name="Artwork Tools"
-	amount={orderprice}
-      />
       
-      </div>
-      
+      </div> */}
+     
+      <Link 
+                                 to={`/deliverydetails/${orderprice}`} 
+                                onClick={setOrder}
+                                >
+                                  <button className="cartbtn">Proceed To Payment</button></Link>
       <div className="footer">
         <div className="footercard">
           <h1>De'lart</h1>

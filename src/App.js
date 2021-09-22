@@ -45,6 +45,8 @@ import ArtistProductBrushes from "./components/pages/ArtistProductBrushes";
 import ArtistProductCanvas from "./components/pages/ArtistProductCanvas";
 import ArtistProductSupplies from "./components/pages/ArtistProductSupplies";
 import ArtistProductEasels from "./components/pages/ArtistProductEasels";
+import ArtworkDeliveryDetails from "./components/pages/ArtworkDeliveryDetails";
+import DeliveryDetails from "./components/pages/DeliveryDetails";
 import Customer_Home from "./components/pages/Customer_Home";
 import Customer_Artworks from "./components/pages/Customer_Artworks";
 import Customer_Artists from "./components/pages/Customer_Artists";
@@ -106,6 +108,8 @@ function App() {
   return (
     <Router>
       <Switch>
+      <Route path="/deliverydetails" component={DeliveryDetails} />
+      <Route path="/artworkdeliverydetails" component={ArtworkDeliveryDetails} />
         <Route path="/addrow" component={addrow} />
         <Route path="/" exact component={Home} />
         <Route path="/roles" component={Roles} />

@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Orders() {
   let [user, setUser] = useState("");
   const [requestList, setRequestList] = useState([]);
+  const [orderList, setOrderList] = useState([]);
   let [requestid, setRequestId] = useState([]);
   let [artname, setArtname] = useState(0);
   let [location, setLocation] = useState([]);
@@ -42,6 +43,13 @@ export default function Orders() {
     axios.get(`http://localhost:5000/getOrders/${user}`).then((response) => {
       console.log(response.data);
       setRequestList(response.data);
+    });
+  });
+  useEffect(() => {
+    setUser(localStorage.getItem("userName"));
+    axios.get(`http://localhost:5000/getCompletedOrders/${user}`).then((response) => {
+      console.log(response.data);
+      setOrderList(response.data);
     });
   });
   
@@ -67,6 +75,15 @@ export default function Orders() {
     
     const res = await axios.post("http://localhost:5000/rejectstatusUpdate", {
       request_id: id,
+      
+    });
+  };
+
+  const orderComplete = async (id ) => {
+    console.log(id);
+    
+    const res = await axios.post("http://localhost:5000/completeOrder", {
+      order_id: id,
       
     });
   };
@@ -124,6 +141,65 @@ export default function Orders() {
                   Reject
                 </button>
               </TableCell>
+            </TableRow>
+          ))}
+          
+          
+        </TableBody>
+      </Table>
+<br /><br /><br />
+      <Title>Artwork Orders</Title>
+      <Table size="small">
+        <TableHead>
+          <TableRow>
+            <TableCell>Artwork</TableCell>
+            <TableCell>Price</TableCell>
+            <TableCell>Buyer Name</TableCell>
+            <TableCell>Buyer Address</TableCell>
+            <TableCell>Buyer Phone Number</TableCell>
+            <TableCell>Buyer Email</TableCell>
+            <TableCell>Delivery Date</TableCell>
+            {/* <TableCell align="right">Sale Amount</TableCell> */}
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {orderList.map((val) => (
+            <TableRow key={val.order_id}>
+              <TableCell>{val.artwork}</TableCell>
+              <TableCell>Rs. {val.order_total}.00</TableCell>
+              <TableCell>{val.firstname}</TableCell>
+              <TableCell>{val.address}</TableCell>
+              <TableCell>{val.phone}</TableCell>
+              <TableCell>{val.email}</TableCell>
+              <TableCell>{val.date}</TableCell>
+              <TableCell align="right">
+                <button
+                  onClick={() => {
+                    orderComplete (val.order_id);
+                  }}
+                >
+                  Completed
+                </button>
+              </TableCell>
+              {/* <TableCell align="right">{val.price}</TableCell>
+              <TableCell align="right">
+                <button
+                  onClick={() => {
+                    approvestatusUpdate (val.request_id);
+                  }}
+                >
+                  Accept
+                </button>
+              </TableCell>
+              <TableCell align="right">
+                <button
+                  onClick={() => {
+                    rejectstatusUpdate(val.request_id);
+                  }}
+                >
+                  Reject
+                </button>
+              </TableCell> */}
             </TableRow>
           ))}
           
