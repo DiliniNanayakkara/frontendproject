@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -13,6 +14,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
 import "../../App.css";
+//import { useState } from "react";
 
 // export default function Login() {
 //   return (
@@ -61,6 +63,32 @@ const useStyles = makeStyles((theme) => ({
 export default function Customized_Artist() {
   const classes = useStyles();
 
+  // const [selectedFiles, setSelectedFiles] = useState([]);
+
+  // const imageHandler = (e) => {
+  //   setSelectedFiles([]);
+  //   if (e.target.images) {
+  //     const filesArray = Array.from(e.target.image).map((image) =>
+  //       URL.createObjectURL(image)
+  //     );
+  //     setSelectedFiles((prevImages) => prevImages.concat(filesArray));
+  //     Array.from(e.target.images).map((image) => URL.revokeObjectURL(image));
+  //   }
+  // };
+
+  // const renderPhotos = (source) => {
+  //   return source.map((photo) => {
+  //     return (
+  //       <img
+  //         src={photo}
+  //         alt=""
+  //         key={photo}
+  //         style={{ width: "20%", height: "180px" }}
+  //       ></img>
+  //     );
+  //   });
+  // };
+
   return (
     <>
       <Grid container component="main" className={classes.root}>
@@ -101,21 +129,19 @@ export default function Customized_Artist() {
               />
               <h3>Upload Artworks:</h3>
 
-              <TextField
+              <input
                 variant="outlined"
                 margin="normal"
                 required
                 fullWidth
-                name="images"
+                name="file[]"
                 type="file"
                 accept="image/*"
-                multiple={false}
-                //onChange={imageHandler}
-                //label="Add Images"
-                //type="Add Images"
+                multiple="true"
+                //onChange={handleImageChange}
                 id="Add Images"
-                // autoComplete="current-password"
               />
+              {/* <div>{renderPhotos(selectedFiles)}</div> */}
 
               <h3>Publish Date: </h3>
               <TextField
