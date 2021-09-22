@@ -1,0 +1,60 @@
+.topnav {
+    background-color: black;
+}
+
+.div1 {
+    background-color: white(242, 247, 247);
+    margin-left: 20px;
+    width: 200px;
+  
+}
+
+.div2 {
+    background-color: rgb(236, 235, 236);
+    width: 1000;
+    
+   
+}
+
+.div3 {
+    background-color: white;
+    margin-left: 20px;
+    width: 200px;
+    
+}
+
+
+.oneline{
+    display: table-cell;
+    
+    height: 600px;
+    padding-left: 20px;
+    justify-content: space-between;    
+    margin-left: 5px;
+    border: 20px;
+   
+   
+}
+
+.h1-content-before {
+
+    text-align: center;
+    
+}
+.imageDiv {
+    background-color: whitesmoke;
+    height: 300px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+
+.header {
+    text-align: center;
+}
+
+.question {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
