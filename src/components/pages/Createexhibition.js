@@ -164,10 +164,10 @@ export default function Customized_Artist() {
                 type="file"
                 accept="image/*"
                 multiple="true"
-                //onChange={handleImageChange}
+                onChange={handleImageChange}
                 id="Add Images"
               />
-              {/* <div>{renderPhotos(selectedFiles)}</div> */}
+              <div>{renderPhotos(selectedFiles)}</div>
 
               <h3>Publish Date: </h3>
               <TextField
