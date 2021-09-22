@@ -42,8 +42,10 @@
     
 }
 .imageDiv {
-    background-color: aquamarine;
-    height: 50px;
+    background-color: whitesmoke;
+    height: 300px;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
 
@@ -52,6 +54,7 @@
 }
 
 .question {
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
