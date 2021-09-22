@@ -21,13 +21,21 @@ export default function Pencilarts() {
       })
       .catch((err) => console.log(err));
   }
+
   const [employeeList, setEmployeeList] = useState([]);
+  const [employeeListy, setEmployeeListy] = useState([]);
   useEffect(() => {
-    Axios.get("http://localhost:5000/pencilearts").then((response) => {
+    let email = localStorage.getItem("userName");
+    Axios.get("http://localhost:5000/pencilearts/" + email).then((response) => {
       setEmployeeList(response.data);
     });
   });
-
+  useEffect(() => {
+    let email = localStorage.getItem("userName");
+    Axios.get("http://localhost:5000/getsize/" + email).then((response) => {
+      setEmployeeListy(response.data);
+    });
+  });
   return (
     <div className="A">
       <ArtistNavbar />
@@ -44,11 +52,11 @@ export default function Pencilarts() {
         <center>
           {employeeList.map((val, key) => {
             return (
-              <div>
+              <div key={key}>
                 <h3 className="artistnameg">
                   {val.first_name + val.last_name}
                 </h3>
-                <p className="gigp">{val.gig}​</p>
+                <p className="gigp">{val.description}​</p>
                 <p>{val.first_name}</p>
                 <Link to="editgig">
                   {" "}
@@ -73,37 +81,29 @@ export default function Pencilarts() {
             <p className="gigpx">
               Contact Jennifer to get a price for a specific size or for more
               information, using the form below. ​
-              <table className="tablexx">
-                <center>
-                  <tr>
+              <center>
+                <table className="tablexx">
+                  <thead>
                     <th className="tableth">Size</th>
                     <th className="tableth">Price</th>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
-                  <tr>
-                    <td className="tabletd">24"x36"</td>
-                    <td className="tabletd">$1800</td>
-                  </tr>
-                </center>
-              </table>
-              <Link to="addrow">
-                <button className="button">Add</button>
-              </Link>
+                  </thead>
+                  {employeeListy.map((val, key) => {
+                    return (
+                      <tbody>
+                        <td className="tabletd">{val.size}</td>
+                        <td className="tabletd">{val.price}</td>
+                      </tbody>
+                    );
+                  })}
+                </table>
+              </center>
+              <div className="btn">
+                <Link to="/addrow">
+                  <button variant="contained" className="button">
+                    ADD
+                  </button>
+                </Link>
+              </div>
             </p>
           </div>
         </center>

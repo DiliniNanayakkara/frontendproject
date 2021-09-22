@@ -159,7 +159,6 @@ export default function Artist_Profile() {
                   height: "auto",
                 }}
               ></img>
-              <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
 
               <h1>{val.first_name + val.last_name}</h1>
               <h3>{val.description}</h3>
@@ -169,11 +168,6 @@ export default function Artist_Profile() {
 
         {/*btn */}
 
-        <div className="btn">
-          <Link to="/pencilarts">
-            <Button variant="contained">Commisions</Button>
-          </Link>
-        </div>
         {/*btn */}
       </div>
       {/*profiledata */}
@@ -239,7 +233,11 @@ export default function Artist_Profile() {
             </center>
 
             {/*btn */}
-
+            <div className="btn">
+              <Link to={`/Customer_Artworks/${val.artist_id}`}>
+                <Button variant="contained">Commisions</Button>
+              </Link>
+            </div>
             {/*btn */}
           </div> /*profiledetails */
         );

@@ -121,12 +121,17 @@ export default function Artist_Profile() {
   const [employeedis, setEmployeedis] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/artistprofile").then((response) => {
-      setEmployeeList(response.data);
-    });
+    let email = localStorage.getItem("userName");
+    Axios.get("http://localhost:5000/artistprofile/" + email).then(
+      (response) => {
+        console.log(response.data);
+        setEmployeeList(response.data);
+      }
+    );
   });
   useEffect(() => {
-    Axios.get("http://localhost:5000/artistdis").then((response) => {
+    let email = localStorage.getItem("userName");
+    Axios.get("http://localhost:5000/artistdis/" + email).then((response) => {
       setEmployeedis(response.data);
     });
   });
@@ -167,7 +172,7 @@ export default function Artist_Profile() {
       {/*profiledata */}
       {employeeList.map((val, key) => {
         return (
-          <div className="profiledetails">
+          <div key={key} className="profiledetails">
             <center>
               <h2>USER PROFILE</h2>
               <TextField
@@ -248,9 +253,7 @@ export default function Artist_Profile() {
         <div className="artpagedata">
           <center>
             <h1>Art Work Gallery</h1>
-            <Link to="/artworkupload">
-            <Button variant="contained">Upload Artwork</Button>
-          </Link>
+            <Button variant="contained">Upload Works</Button>
           </center>
         </div>
         {/*artpagedata */}

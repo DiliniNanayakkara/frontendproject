@@ -170,7 +170,7 @@ export default function Artist_Profile() {
         {/*btn */}
 
         <div className="btn">
-          <Link to="/pencilarts">
+          <Link to="/login">
             <Button variant="contained">Commisions</Button>
           </Link>
         </div>
