@@ -275,7 +275,7 @@ function App() {
         {/* //***********MODERATOR************/ }
         <Route path="/fnq" component={FnQ} />
         <Route path="/modeHome" component={ModeratorHome} />
-        <Route path="/addNewItem" component={AddModarator} />
+        <Route path="/addNewItem" component={AddNewItem} />
       </Switch>
     </Router>
   );

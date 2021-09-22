@@ -91,7 +91,7 @@ export default function AddItem() {
                           <Link
                               to='/addNewItem'
                               onClick={closeMobileMenu}
-                          ><button className="checkout"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>               Checkout         
+                          ><button > <i class="fa fa-shopping-cart" aria-hidden="true"></i>           Add New Itwm       
                           </button> 
                           </Link>
       
