@@ -65,7 +65,7 @@ export default function AddItem() {
                   return <table >
                       <tr >
                           <td className="td1">{val.tool_id}</td>
-                          <td >{val.tool_name}</td>
+                          <td className="td2">{val.tool_name}</td>
                           <td > {val.tool_price}</td>
                          
                           <td >{val.tool_quantity}</td>
