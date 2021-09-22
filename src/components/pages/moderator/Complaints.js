@@ -55,9 +55,9 @@ export default function AddItem() {
                       <tr >
                           <th className="th1">Item ID</th>
                           <th className="th2">Item Type</th>
-                          <th >Unit Price</th>
-                          <th >Total Amount</th>
-                          <th>Actions</th>
+                          <th className="th2">Unit Price</th>
+                          <th className="th2">Total Quantity</th>
+                          <th className="th2">Actions</th>
                       </tr>
                       </thead>
               </table>
@@ -66,10 +66,10 @@ export default function AddItem() {
                       <tr >
                           <td className="td1">{val.tool_id}</td>
                           <td className="td2">{val.tool_name}</td>
-                          <td > {val.tool_price}</td>
+                          <td className="td2"> {val.tool_price}</td>
                          
-                          <td >{val.tool_quantity}</td>
-                          <td ><button onClick={removeItem}><i  class="far fa-trash-alt ml-auto" aria-hidden="true" ></i></button></td>
+                          <td className="td2">{val.tool_quantity}</td>
+                          <td className="td2"><button onClick={removeItem}>Update</button></td>
                       </tr>
                       
                       {/* <tr></tr><br/><br/>
