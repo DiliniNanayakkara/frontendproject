@@ -1,3 +1,26 @@
 .header {
     text-align: center;
+    background-color: antiquewhite;
 }
+
+.outer_div{
+    background-color: rgb(232, 240, 247);
+}
+
+.table_header-{
+    background-color: blue;
+}
+
+.table-div {
+    background-color: white;
+}
+.th1 {
+    width: 100px;
+    background: white;
+}
+
+.td1{
+    width: 100px;
+}
+
+

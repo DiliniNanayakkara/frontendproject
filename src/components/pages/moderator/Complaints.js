@@ -47,12 +47,14 @@ export default function AddItem() {
     <div >
       {/* <nav className="topnav">Hello world</nav> */}
      <ModeratorNavbar />
-     <text className="header">Item Details</text>
+     <h1 className="header">Item Details</h1>
+     <div className="outer_div">
+           <div className="table-div">
       <table >
                   <thead>
                       <tr >
-                          <th >Item ID</th>
-                          <th >Item Name</th>
+                          <th className="th1">Item ID</th>
+                          <th >Item Type</th>
                           <th >Unit Price</th>
                           <th >Total Amount</th>
                           <th>Actions</th>
@@ -60,14 +62,14 @@ export default function AddItem() {
                       </thead>
               </table>
       {orderList.map((val) => {
-                  return <table className="carttable">
+                  return <table >
                       <tr >
                           <td className="td1">{val.tool_id}</td>
-                          <td className="td2">{val.tool_name}</td>
-                          <td className="td6"> {val.tool_price}</td>
+                          <td >{val.tool_name}</td>
+                          <td > {val.tool_price}</td>
                          
-                          <td className="td3">{val.tool_quantity}</td>
-                          <td className="td4"><button onClick={removeItem}><i  class="far fa-trash-alt ml-auto" aria-hidden="true" ></i></button></td>
+                          <td >{val.tool_quantity}</td>
+                          <td ><button onClick={removeItem}><i  class="far fa-trash-alt ml-auto" aria-hidden="true" ></i></button></td>
                       </tr>
                       
                       {/* <tr></tr><br/><br/>
@@ -78,9 +80,11 @@ export default function AddItem() {
                           <td></td>
                       </tr> */}
                       </table>
-                
+               
                 
                 })}
+
+</div>
                       <br/><br/><br/><br/><br/>
                       <Link
                               to='/modeHome'
@@ -94,6 +98,8 @@ export default function AddItem() {
                           ><button > <i class="fa fa-shopping-cart" aria-hidden="true"></i>           Add New Itwm       
                           </button> 
                           </Link>
+
+                          </div>
       
          <div className="footer">
         <div className="footercard">
