@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import ModeratorNavbar from "./ModeratorNavbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "../../../components/css/moderator/ItemTable.css";
 
 
 export default function AddItem() {
@@ -46,7 +47,7 @@ export default function AddItem() {
     <div >
       {/* <nav className="topnav">Hello world</nav> */}
      <ModeratorNavbar />
-     <text>Tools Details</text>
+     <text className="header">Item Details</text>
       <table >
                   <thead>
                       <tr >
