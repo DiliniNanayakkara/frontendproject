@@ -99,5 +99,12 @@ border-color: black;
     height: 40px;
 } 
 
+.addNewItem-btn {
+    background-color: rgb(120, 230, 120);
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+} 
+
 
 
