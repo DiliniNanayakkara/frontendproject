@@ -18,7 +18,7 @@ export default function Advertisement_upload() {
 
   const addAdvertisement = () => {
     axios
-      .post("http://localhost:3001/api/image", {
+      .post("http://localhost:5000/adUpload", {
         advertisementUpload: advertisementUpload,
         exhi_date: exhi_date,
         start_date: start_date,
@@ -46,7 +46,7 @@ export default function Advertisement_upload() {
     };
 
     axios
-      .post("http://localhost:3001/api/image", formData, config)
+      .post("http://localhost:5000/adUpload", formData, config)
       .then((response) => {
         //alert("Image Uploaded Successfully");
         setUploadStatus(response.data);
