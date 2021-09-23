@@ -47,7 +47,7 @@ function ArtistNavbar() {
           </a>
           <a>
             {" "}
-            <Link to="/exhibitions" onClick={closeMobileMenu}>
+            <Link to="/createexhibition" onClick={closeMobileMenu}>
               Exhibitions
             </Link>
           </a>
