@@ -96,39 +96,58 @@ export default function Customized_Artist() {
         <Grid item xs={false} sm={4} md={7} className={classes.image} />
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <div className={classes.paper}>
-            {/* <Avatar className={classes.avatar}>
-              <LockOutlinedIcon />
-            </Avatar> */}
             <Typography component="h1" variant="h5">
               Create Exhibition
             </Typography>
+
             <form className={classes.form} noValidate>
-              <h3>ArtistId:</h3>
+              <h3>Artist Name:</h3>
               <TextField
                 variant="outlined"
                 margin="normal"
                 required
                 fullWidth
-                id="ArtistId"
-                label="ArtistId"
-                name="ArtistId"
-                autoComplete="ArtistId"
+                id="Artist Name"
+                label="Artist Name"
+                name="ArtistName"
                 autoFocus
               />
-              <h3>Category type:</h3>
+
+              <h3>Exhibition Category:</h3>
+              <TextField
+                variant="outlined"
+                margin="normal"
+                fullWidth
+                name="Category"
+                label="Exhibition Category"
+                type="varchar"
+                id="category"
+              />
+
+              <h3>Exhibition Name:</h3>
               <TextField
                 variant="outlined"
                 margin="normal"
                 required
                 fullWidth
-                name="Category type"
-                label="Category type"
-                type="Category type"
-                id="Category type"
-                // autoComplete="current-password"
+                name="exhi_name"
+                label="Exhibition Name"
+                type="varchar"
+                id="exhi_name"
               />
-              <h3>Upload Artworks:</h3>
 
+              <h3>Expected Exhibition Date: </h3>
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                id="exhi_date"
+                name="exhi_date"
+                type="date"
+              />
+
+              <h3>Upload Artworks:</h3>
               <input
                 variant="outlined"
                 margin="normal"
@@ -143,34 +162,6 @@ export default function Customized_Artist() {
               />
               <div>{renderPhotos(selectedFiles)}</div>
 
-              <h3>Publish Date: </h3>
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="Publish Date"
-                label="Publish Date"
-                name="Publish Date"
-                autoComplete="Publish Date"
-                // autoFocus
-              />
-              <h3>Ticket Price:</h3>
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="Ticket Price"
-                label="Ticket Price"
-                name="Ticket Price"
-                autoComplete="Ticket Price"
-                // autoFocus
-              />
-              {/* <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              /> */}
               <Button
                 type="submit"
                 fullWidth
@@ -178,7 +169,7 @@ export default function Customized_Artist() {
                 color="primary"
                 className={classes.submit}
               >
-                Create Exhibitions
+                Create Exhibition
               </Button>
               <Grid container>
                 <Grid item></Grid>
