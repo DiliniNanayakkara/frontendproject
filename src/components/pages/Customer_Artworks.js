@@ -16,10 +16,9 @@ export default function Pencilarts() {
         e.target,
         "user_dPVAaukwy8q1IV78FQj4A"
       )
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
+      .then(() => {
+        alert("Request sent to artist");
+      });
   }
   const [artistID, setArtworkID] = useState(
     window.location.pathname.split("/")[2]
@@ -50,7 +49,7 @@ export default function Pencilarts() {
       <div className=" commitionbac">
         <div className="del">
           <center>
-            <h1>CUSTOM COMMITIONS</h1>
+            <h1>CUSTOMIZE ARTWORKS</h1>
           </center>
         </div>
       </div>
@@ -123,7 +122,9 @@ export default function Pencilarts() {
           <input className="inputfl" type="file" name="photo"></input>
           <label className="formlab">MESSAGE</label>
           <textarea className="inputflar" name="message" rows="4" />
-          <input className="inputflz" type="submit" value="send"></input>
+          <button className="button" value="send">
+            ADD
+          </button>
         </form>
       </div>
 

@@ -130,13 +130,6 @@ export default function Artist_Profile() {
       }
     );
   });
-  useEffect(() => {
-    Axios.get(`http://localhost:5000/Artistlistbydis/${artistID}`).then(
-      (response) => {
-        setEmployeedis(response.data);
-      }
-    );
-  });
 
   return (
     <div className="A">
@@ -146,94 +139,94 @@ export default function Artist_Profile() {
           <button className="button">BACK</button>
         </Link>
       </div>
-      <div className="profiledata">
+      <div>
         {employeedis.map((val, key) => {
           return (
-            <center>
-              <img
-                src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-                style={{
-                  width: "100px",
-                  marginTop: "20px",
-                  marginBottom: "50px",
-                  height: "auto",
-                }}
-              ></img>
+            <div>
+              <div className="profiledata">
+                <center>
+                  <img
+                    src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+                    style={{
+                      width: "100px",
+                      marginTop: "20px",
+                      marginBottom: "50px",
+                      height: "auto",
+                    }}
+                  ></img>
 
-              <h1>{val.first_name + val.last_name}</h1>
-              <h3>{val.description}</h3>
-            </center>
+                  <h1>{val.first_name + val.last_name}</h1>
+                  <h3>{val.description}</h3>
+                </center>
+
+                {/*btn */}
+
+                <div className="btn">
+                  <Link to="/login">
+                    <Button variant="contained">Customizeart</Button>
+                  </Link>
+                </div>
+                {/*btn */}
+              </div>
+
+              <div className="profiledetails">
+                <center>
+                  <h2>USER PROFILE</h2>
+                  <TextField
+                    className="feild"
+                    id="standard-read-only-input"
+                    label="UserID:"
+                    defaultValue={val.artist_id}
+                    InputProps={{
+                      readOnly: true,
+                    }}
+                  />
+                  <TextField
+                    className="feild"
+                    id="standard-read-only-input"
+                    label="Name:"
+                    defaultValue={val.first_name + val.last_name}
+                    InputProps={{
+                      readOnly: true,
+                    }}
+                  />
+                  <TextField
+                    className="feild"
+                    id="standard-read-only-input"
+                    label="Email address:"
+                    defaultValue={val.email}
+                    InputProps={{
+                      readOnly: true,
+                    }}
+                  />
+                  <TextField
+                    className="feild"
+                    id="standard-read-only-input"
+                    label="Phone:"
+                    defaultValue={val.contact_no}
+                    InputProps={{
+                      readOnly: true,
+                    }}
+                  />
+                  <TextField
+                    className="feild"
+                    id="standard-read-only-input"
+                    label="Location:"
+                    defaultValue={val.location}
+                    InputProps={{
+                      readOnly: true,
+                    }}
+                  />
+                </center>
+              </div>
+
+              {/*btn */}
+
+              {/*btn */}
+            </div>
           );
         })}
-
-        {/*btn */}
-
-        <div className="btn">
-          <Link to="/login">
-            <Button variant="contained">Commisions</Button>
-          </Link>
-        </div>
-        {/*btn */}
       </div>
-      {/*profiledata */}
-      {employeeList.map((val, key) => {
-        return (
-          <div className="profiledetails">
-            <center>
-              <h2>USER PROFILE</h2>
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="UserID:"
-                defaultValue={val.artist_id}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Name:"
-                defaultValue={val.first_name + val.last_name}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Email address:"
-                defaultValue={val.email}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Phone:"
-                defaultValue={val.contact_no}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-              <TextField
-                className="feild"
-                id="standard-read-only-input"
-                label="Location:"
-                defaultValue={val.location}
-                InputProps={{
-                  readOnly: true,
-                }}
-              />
-            </center>
-
-            {/*btn */}
-
-            {/*btn */}
-          </div> /*profiledetails */
-        );
-      })}
       <div className="ArtistPortfolio"></div>
       {/*ArtistPortfolio */}
       <div className="uploadArts">

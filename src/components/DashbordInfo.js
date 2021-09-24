@@ -5,11 +5,16 @@ import { Link } from "react-router-dom";
 import Axios from "axios";
 
 export default function FeaturedInfo() {
-  const [employeeList, setEmployeeList] = useState([]);
-
+  const [employeeListx, setEmployeeListx] = useState([]);
+  const [employeeListy, setEmployeeListy] = useState([]);
   useEffect(() => {
     Axios.get("http://localhost:5000/ArtistList").then((response) => {
-      setEmployeeList(response.data);
+      setEmployeeListx(response.data);
+    });
+  });
+  useEffect(() => {
+    Axios.get("http://localhost:5000/orderlist").then((response) => {
+      setEmployeeListy(response.data);
     });
   });
   return (
@@ -17,28 +22,21 @@ export default function FeaturedInfo() {
       <div className="featuredItem">
         <span className="featuredTitle">System Users</span>
         <div className="featuredMoneyContainer">
-          {employeeList.map((val, key) => {
+          {employeeListx.map((val, key) => {
             return <span className="featuredMoney">{val.count}</span>;
           })}
           {/*Status eka eka wena ewagen panding orders ganna puluwn wei*/}
-          <span className="featuredMoneyRate">
-            +3 New Users
-            <ArrowUpward className="featuredIcon" />
-          </span>
         </div>
-        <span className="featuredSub">3min ago joined last user</span>
       </div>
       {/*order table eken count ekath me wageema ganna*/}
 
       <div className="featuredItem1">
         <span className="featuredTitle">Orders</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">34</span>
-          <span className="featuredMoneyRate">
-            -2 <ArrowDownward className="featuredIcon negative" />
-          </span>
+          {employeeListy.map((val, key) => {
+            return <span className="featuredMoney">{val.count}</span>;
+          })}
         </div>
-        <span className="featuredSub">Compared to last month</span>
       </div>
       <div className="featuredItem2">
         <span className="featuredTitle"></span>
@@ -53,9 +51,7 @@ export default function FeaturedInfo() {
             </div>
           </span>
         </div>
-        <span className="featuredSub">
-          Include progress compared to last month
-        </span>
+
         <button className="repobtn">View Report</button>
       </div>
     </div>

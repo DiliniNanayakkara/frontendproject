@@ -33,19 +33,6 @@ const FormSignup = ({ submitForm }) => {
           </li>
         </ul>
       </div>
-      <div className="leftside">
-        <div className="circle"></div>
-        <h1>
-          <span>SignUp</span>
-          <br />
-          <span>With</span>
-          <br />
-          <span>Delart</span>
-          <br />
-          <span>Today</span>
-          <br />
-        </h1>
-      </div>
 
       <div className="form-content-right1">
         <form onSubmit={handleSubmit} className="form1" noValidate>

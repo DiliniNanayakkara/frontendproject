@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+
 import Home from "./components/pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Roles from "./components/pages/Roles";
@@ -96,6 +96,7 @@ import viewerArtistprof from "./components/pages/viewerArtistprof";
 import MessageWindow from "./components/messageComponent/MessageWindow";
 import MessageWindow2 from "./components/messageComponent/MessageWindow2";
 import ComplainViewMod from "./components/pages/moderator/ComplainViewMod";
+import BuyerArtistProf from "./components/pages/BuyerArtistProf";
 
 //*******************************Moderator */
 import FnQ from "./components/pages/moderator/FnQ";
@@ -107,8 +108,11 @@ function App() {
   return (
     <Router>
       <Switch>
-      <Route path="/deliverydetails" component={DeliveryDetails} />
-      <Route path="/artworkdeliverydetails" component={ArtworkDeliveryDetails} />
+        <Route path="/deliverydetails" component={DeliveryDetails} />
+        <Route
+          path="/artworkdeliverydetails"
+          component={ArtworkDeliveryDetails}
+        />
         <Route path="/addrow" component={addrow} />
         <Route path="/" exact component={Home} />
         <Route path="/roles" component={Roles} />
@@ -181,6 +185,8 @@ function App() {
           path="/artistproductsupplies"
           component={ArtistProductSupplies}
         />
+
+        <Route path="/BuyerArtistProf" component={BuyerArtistProf} />
         <Route path="/artworkcheckout" component={ArtworkCheckout} />
         <Route path="/artistproducteasels" component={ArtistProductEasels} />
         <Route path="/customer_home" component={Customer_Home} />

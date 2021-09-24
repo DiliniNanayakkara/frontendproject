@@ -43,7 +43,7 @@ export default function Pencilarts() {
       <div className=" commitionbac">
         <div className="del">
           <center>
-            <h1>CUSTOM COMMITIONS</h1>
+            <h1>CUSTOMIZED ARTWORK</h1>
           </center>
         </div>
       </div>

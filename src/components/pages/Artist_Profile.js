@@ -155,7 +155,7 @@ export default function Artist_Profile() {
 
               <div className="btn">
                 <Link to="/pencilarts">
-                  <Button variant="contained">Commisions</Button>
+                  <Button variant="contained">Customizeart</Button>
                 </Link>
               </div>
               {/*btn */}
@@ -220,24 +220,26 @@ export default function Artist_Profile() {
                   }}
                 />
               </center>
-              <div className="btn">
-                <Link to="Artist_Profile_Edit">
-                  {" "}
-                  <Button variant="contained">Edit Profile</Button>
-                </Link>
-              </div>
+
               {/*btn */}
-              <div className="btn">
-                <Link to="artisthome">
-                  {" "}
-                  <Button variant="contained">Dashbord</Button>
-                </Link>
-              </div>
+
               {/*btn */}
             </div>
           </div>
         );
       })}
+      <div className="btn">
+        <Link to="Artist_Profile_Edit">
+          {" "}
+          <Button variant="contained">Edit Profile</Button>
+        </Link>
+      </div>
+      <div className="btn">
+        <Link to="artisthome">
+          {" "}
+          <Button variant="contained">Dashbord</Button>
+        </Link>
+      </div>
 
       <div className="ArtistPortfolio"></div>
       {/*ArtistPortfolio */}
@@ -258,19 +260,16 @@ export default function Artist_Profile() {
             tagActive={tag === "all" ? true : false}
             handleSetTag={setTag}
           />{" "}
-          /
           <TagButton
             name="oil"
             tagActive={tag === "oil" ? true : false}
             handleSetTag={setTag}
           />{" "}
-          /
           <TagButton
             name="water"
             tagActive={tag === "water" ? true : false}
             handleSetTag={setTag}
           />{" "}
-          /
           <TagButton
             name="pencile"
             tagActive={tag === "pencile" ? true : false}

@@ -8,7 +8,7 @@ export default function Artists() {
   const [employeeList, setEmployeeList] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:5000/Artistlist").then((response) => {
+    Axios.get("http://localhost:5000/Artistlista").then((response) => {
       setEmployeeList(response.data);
     });
   });
@@ -26,14 +26,13 @@ export default function Artists() {
               <div className="profdata">
                 <h3>{val.first_name + val.last_name}</h3>
 
-                <p>⭐⭐⭐⭐⭐ 5.0 (827 reviews)</p>
                 <p>{val.email}</p>
                 <p>{val.description}</p>
 
                 <p>{val.contact_no}</p>
 
                 <div className="buttonz">
-                  <Link to={`/BuyerArtistProf/${val.artist_Id}`}>
+                  <Link to={`/BuyerArtistProf/${val.artist_id}`}>
                     {" "}
                     <button>VIEW PROFILE</button>
                   </Link>

@@ -15,7 +15,7 @@ import Badge from "@material-ui/core/Badge";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import Link from "@material-ui/core/Link";
+
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
@@ -26,6 +26,7 @@ import Deposits from "../BuyerDashbord/Deposits";
 import Orders from "../BuyerDashbord/Orders";
 import RegCusNavbar from "../RegCusNavbar";
 import "../css/dashbordbuyer.css";
+import { Link } from "react-router-dom";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -131,7 +132,10 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             {/* Chart */}
             <button className="buttonx">MY PROFILE</button>
-            <button className="buttonx">COMPLAINTS</button>
+            <Link to="helpcenter">
+              {" "}
+              <button className="buttonx">COMPLAINTS</button>
+            </Link>
             <button className="buttonx">HELP CENTER</button>
             {/* Recent Orders */}
             <Grid item xs={12}>

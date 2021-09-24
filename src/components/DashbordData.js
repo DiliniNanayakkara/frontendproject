@@ -10,13 +10,13 @@ export default function WidgetLg() {
   const [contact_no, setcontact] = useState("");
   const [nic, setnic] = useState("");
 
-  const [employeeList, setEmployeeList] = useState([]);
+  const [employeeListn, setEmployeeListn] = useState([]);
   const Button = ({ type }) => {
     return <button className={"widgetLgButton " + type}>{type}</button>;
   };
   useEffect(() => {
     Axios.get("http://localhost:5000/staff").then((response) => {
-      setEmployeeList(response.data);
+      setEmployeeListn(response.data);
     });
   });
 
@@ -38,7 +38,7 @@ export default function WidgetLg() {
                 <th>NIC</th>
               </tr>{" "}
             </thead>
-            {employeeList.map((val, key) => {
+            {employeeListn.map((val, key) => {
               return (
                 <tbody>
                   <tr>
